@@ -16,6 +16,11 @@ export default function Header() {
             <NavButton icon="icon-search" text="Search" />
           </li>
         </ul>
+        <a href="#" id="leftNavPhone">
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </a>
         <h1>
           <a href="#">DressUp</a>
         </h1>

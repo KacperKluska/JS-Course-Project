@@ -1,5 +1,7 @@
+$bgcolor: green;
+
 #secondNavbar {
-  text-align: center;
+  padding: 0 10%;
   background-color: #333;
   color: white;
   height: 4vh;
@@ -8,10 +10,31 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     list-style: none;
+    height: 100%;
 
     #thirdNavbaritem {
       font-size: 3rem;
+      border-right: 1px solid white;
+    }
+
+    #thirdNavbaritem:hover {
+      background-color: #555;
+    }
+
+    li:hover {
+      background-color: #555;
+    }
+
+    #thirdNavbaritem {
+      a:hover {
+        color: red;
+      }
+    }
+
+    a:hover {
+      color: red;
     }
   }
 }
