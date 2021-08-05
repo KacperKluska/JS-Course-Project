@@ -7,13 +7,13 @@ export default function Header() {
       <nav id="firstNavbar">
         <ul id="leftNav">
           <li>
-            <NavButton text="Sign in" />
+            <NavButton icon="icon-login" text="Sign in" />
           </li>
           <li>
             <NavButton text="Register" />
           </li>
           <li>
-            <NavButton text="Search" />
+            <NavButton icon="icon-search" text="Search" />
           </li>
         </ul>
         <h1>
@@ -21,10 +21,10 @@ export default function Header() {
         </h1>
         <ul id="rightNav">
           <li>
-            <NavButton text="Gift Certificate" />
+            <NavButton icon="icon-gift" text="Gift Certificate" />
           </li>
           <li>
-            <NavButton text="Cart" />
+            <NavButton icon="icon-basket" text="Cart" />
           </li>
         </ul>
       </nav>
