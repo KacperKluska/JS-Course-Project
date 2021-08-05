@@ -1,0 +1,17 @@
+#secondNavbar {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  height: 4vh;
+
+  #thirdList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+
+    #thirdNavbaritem {
+      font-size: 3rem;
+    }
+  }
+}
