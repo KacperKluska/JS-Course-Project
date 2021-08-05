@@ -1,8 +1,13 @@
-import Header from './components/header/Header'
+import Header from "./components/header/Header";
+import "./App.scss";
+import Navbar from "./components/navbar/Navbar";
 
 function App() {
   return (
-    <Header/>
+    <div>
+      <Header />
+      <Navbar />
+    </div>
   );
 }
 
