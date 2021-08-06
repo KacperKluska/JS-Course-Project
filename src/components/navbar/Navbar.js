@@ -15,6 +15,9 @@ export default function Navbar() {
             <a href="#">Kids</a>
           </li>
           <li className="thirdNavbaritem">
+            <a href="#">About</a>
+          </li>
+          <li className="thirdNavbaritem">
             <a href="#">Contact</a>
           </li>
           {/* <a href="#">
