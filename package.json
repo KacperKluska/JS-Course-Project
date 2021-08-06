@@ -1,7 +1,18 @@
 {
   "name": "js_course_project",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
+  "description": "It is a portfolio project in JS",
+  "author": {
+    "name": "Kacper Kluska",
+    "email": "kacperkluska130@gmail.com",
+    "url": "https://github.com/KacperKluska"
+  },
+  "homepage": "https://github.com/KacperKluska/js_course_project",
+  "bugs": {
+    "url": "https://github.com/KacperKluska/js_course_project/issues",
+    "email": "kacperkluska130@gmail.com"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
