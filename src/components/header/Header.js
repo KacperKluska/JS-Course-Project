@@ -41,7 +41,7 @@ export default function Header() {
           <span className="bar"></span>
         </a>
         <h1>
-          <a href="#">DressUp</a>
+          <a href="#">SuitUp</a>
         </h1>
         <ul id="rightNav">
           <li>
