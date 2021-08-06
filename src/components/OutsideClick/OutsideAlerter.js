@@ -1,16 +1,10 @@
 import React, { useRef, useEffect } from "react";
 
-function useOutsideAlerter(ref) {
+function useOutsideAlerter(ref, func) {
   useEffect(() => {
     function handleClickOutside(event) {
       if (ref.current && !ref.current.contains(event.target)) {
-        const leftNav = document.getElementById("leftNavDiv");
-        const toggleButton = document.getElementById("leftNavPhone");
-        // if (toggleButton.style.display == "flex") {
-        // leftNav.style.display = "none";
-        // leftNav.classList.toggle("active");
-        leftNav.classList.remove("active");
-        // }
+        func();
       }
     }
 
@@ -23,10 +17,10 @@ function useOutsideAlerter(ref) {
 
 export default function OutsideAlerter(props) {
   const wrapperRef = useRef(null);
-  useOutsideAlerter(wrapperRef);
+  useOutsideAlerter(wrapperRef, props.func);
 
   return (
-    <div id="leftNavDiv" ref={wrapperRef}>
+    <div id={props.id} ref={wrapperRef}>
       {props.children}
     </div>
   );
