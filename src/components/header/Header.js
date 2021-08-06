@@ -1,10 +1,9 @@
-import { useState, useEffect, useRef } from "react";
 import NavButton from "../navButton/NavButton";
 import "./index.scss";
 import OutsideAlerter from "../OutsideClick/OutsideAlerter";
 
 export default function Header() {
-  const handleClick = () => {
+  const handleShowLeftMenu = () => {
     const leftNav = document.getElementById("leftNavDiv");
     leftNav.classList.add("active");
   };
@@ -21,10 +20,10 @@ export default function Header() {
     searchInput.focus();
   };
 
-  const handleSearchClose = () => {
-    const search = document.getElementById("search");
-    search.classList.remove("active");
-  };
+  // const handleSearchClose = () => {
+  //   const search = document.getElementById("search");
+  //   search.classList.remove("active");
+  // };
 
   return (
     <header>
@@ -46,7 +45,7 @@ export default function Header() {
             </li>
           </ul>
         </OutsideAlerter>
-        <a href="#" id="leftNavPhone" onClick={handleClick}>
+        <a href="#" id="leftNavPhone" onClick={handleShowLeftMenu}>
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
