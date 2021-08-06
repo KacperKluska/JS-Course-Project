@@ -17,6 +17,9 @@ export default function Navbar() {
           <li className="thirdNavbaritem">
             <a href="#">Contact</a>
           </li>
+          {/* <a href="#">
+            <li className="thirdNavbaritem">Contact</li>
+          </a> */}
         </ul>
       </div>
     </nav>
