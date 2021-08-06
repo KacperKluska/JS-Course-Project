@@ -2,7 +2,7 @@ import "./index.scss";
 
 export default function Navbar() {
   return (
-    <nav>
+    <nav className="sticky">
       <div id="secondNavbar">
         <ul id="thirdList">
           <li className="thirdNavbaritem">
