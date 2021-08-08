@@ -1,16 +1,18 @@
+import React from "react";
 import NavButton from "../navButton/NavButton";
 import "./index.scss";
 import OutsideAlerter from "../OutsideClick/OutsideAlerter";
+import Search from "../search/Search";
 
 export default function Header() {
-  const handleShowLeftMenu = () => {
-    const leftNav = document.getElementById("leftNavDiv");
-    leftNav.classList.add("active");
-  };
+  const [navActive, setNavActive] = React.useState(false);
 
-  const handleHideLeftMenu = () => {
-    const leftNav = document.getElementById("leftNavDiv");
-    leftNav.classList.remove("active");
+  /**
+    TODO: change nav and search logic to useState based
+  */
+
+  const handleNavVisibility = () => {
+    setNavActive((prev) => !prev);
   };
 
   const handleSearch = () => {
@@ -28,8 +30,16 @@ export default function Header() {
   return (
     <header>
       <nav id="firstNavbar">
-        <OutsideAlerter id={"leftNavDiv"} func={handleHideLeftMenu}>
+        <OutsideAlerter
+          id="leftNavDiv"
+          className={navActive ? "active" : "inactive"}
+          func={handleNavVisibility}
+        >
           <ul id="leftNav">
+            {/**
+             * TODO: move li to NavButton component (should be renamed to
+            NavItem)
+             */}
             <li>
               <NavButton icon="icon-login" text="Sign in" />
             </li>
@@ -45,7 +55,10 @@ export default function Header() {
             </li>
           </ul>
         </OutsideAlerter>
-        <a href="#" id="leftNavPhone" onClick={handleShowLeftMenu}>
+        <a href="#" id="leftNavPhone" onClick={handleNavVisibility}>
+          {/**
+            TODO: create element e.g HamburgerMenu
+          */}
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>

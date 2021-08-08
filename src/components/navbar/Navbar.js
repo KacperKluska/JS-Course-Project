@@ -5,6 +5,11 @@ export default function Navbar() {
     <nav className="sticky">
       <div id="secondNavbar">
         <ul id="thirdList">
+           {
+             /**
+              * TODO: close li <a> li in one component
+              */
+           }
           <li className="thirdNavbaritem">
             <a href="#">For her</a>
           </li>
