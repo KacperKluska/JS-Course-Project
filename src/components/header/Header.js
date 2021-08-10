@@ -20,23 +20,16 @@ export default function Header() {
     searchInput.focus();
   };
 
-  // const handleSearchClose = () => {
-  //   const search = document.getElementById("search");
-  //   search.classList.remove("active");
-  // };
-
   return (
     <header>
       <nav id="firstNavbar">
         <OutsideAlerter id={"leftNavDiv"} func={handleHideLeftMenu}>
           <ul id="leftNav">
-            <NavButton icon="icon-login" text="Sign in" />
-            <NavButton text="Register" />
-            <NavButton
-              icon="icon-search"
-              text="Search"
-              onClick={handleSearch}
-            />
+            <NavButton icon="icon-login">Sign in</NavButton>
+            <NavButton>Register</NavButton>
+            <NavButton icon="icon-search" onClick={handleSearch}>
+              Search
+            </NavButton>
           </ul>
         </OutsideAlerter>
         <div href="#" id="leftNavPhone" onClick={handleShowLeftMenu}>
@@ -48,8 +41,8 @@ export default function Header() {
           SuitUp
         </h1>
         <ul id="rightNav">
-          <NavButton icon="icon-gift" text="Gift Certificate" />
-          <NavButton icon="icon-basket" text="Cart" />
+          <NavButton icon="icon-gift">Gift Certificate</NavButton>
+          <NavButton icon="icon-basket">Cart</NavButton>
         </ul>
       </nav>
     </header>
