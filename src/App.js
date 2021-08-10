@@ -1,9 +1,9 @@
-import Header from "./components/header/Header";
+import Header from "./components/Header/Header";
 import "./App.scss";
 import "./fontello/css/fontello.css";
-import Navbar from "./components/navbar/Navbar";
-import Footer from "./components/footer/Footer";
-import Search from "./components/search/Search";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import Search from "./components/Search/Search";
 import OutsideAlerter from "./components/OutsideClick/OutsideAlerter";
 import InfoText from "./components/InfoText/InfoText";
 import MainPhoto from "./images/barney5.jpg";

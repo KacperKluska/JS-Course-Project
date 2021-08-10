@@ -1,5 +1,5 @@
-import NavButton from "../navButton/NavButton";
-import "./index.scss";
+import NavButton from "../NavButton/NavButton";
+import "./style.scss";
 import OutsideAlerter from "../OutsideClick/OutsideAlerter";
 
 export default function Header() {
