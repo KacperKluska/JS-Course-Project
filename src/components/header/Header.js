@@ -40,9 +40,13 @@ export default function Header() {
   return (
     <header>
       <nav id="firstNavbar">
-        <OutsideAlerter func={handleLeftMenuClose}>
-          <div id={"leftNavDiv"} className={leftMenu ? "active" : null}>
-            <ul id="leftNav">
+        <OutsideAlerter
+          id="outsideAlert"
+          func={handleLeftMenuClose}
+          class={leftMenu ? "active" : null}
+        >
+          <div id="leftNavDiv" className={leftMenu ? "active" : null}>
+            <ul id="leftNav" className={leftMenu ? "active" : null}>
               <NavButton icon="icon-login">Sign in</NavButton>
               <NavButton>Register</NavButton>
               <NavButton icon="icon-search" onClick={handleSearch}>
@@ -50,7 +54,11 @@ export default function Header() {
               </NavButton>
             </ul>
           </div>
-          <div id="leftNavPhone" onClick={handleLeftMenuShow}>
+          <div
+            id="leftNavPhone"
+            onClick={handleLeftMenuShow}
+            style={{ display: leftMenu ? "none" : "flex" }}
+          >
             <span className="bar"></span>
             <span className="bar"></span>
             <span className="bar"></span>

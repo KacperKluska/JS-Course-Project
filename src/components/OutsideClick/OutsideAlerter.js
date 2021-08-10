@@ -20,7 +20,7 @@ export default function OutsideAlerter(props) {
   useOutsideAlerter(wrapperRef, props.func);
 
   return (
-    <div id={props.id} ref={wrapperRef}>
+    <div id={props.id} className={props.class} ref={wrapperRef}>
       {props.children}
     </div>
   );

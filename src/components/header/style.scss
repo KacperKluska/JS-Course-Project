@@ -16,6 +16,11 @@ header {
   #leftNavDiv {
     display: flex;
     height: 100%;
+    z-index: 10;
+  }
+
+  #outsideAlert {
+    z-index: 10;
   }
 
   #logo {
@@ -26,6 +31,7 @@ header {
   ul {
     list-style: none;
     height: 100%;
+    z-index: 10;
 
     li {
       padding: 1rem;
@@ -41,6 +47,7 @@ header {
   #leftNav,
   #rightNav {
     display: flex;
+    z-index: 10;
   }
 
   #leftNavPhone {
@@ -85,8 +92,29 @@ header {
       }
     }
 
+    #outsideAlert.active {
+      z-index: 10;
+      position: absolute;
+      top: 0;
+    }
+
     #leftNavDiv.active {
       display: flex;
+      // animation: showLeftMenu 10s ease-in-out;
+    }
+
+    #leftNav.active {
+      display: flex;
+      animation: showLeftMenu 0.5s ease-in-out;
+    }
+  }
+
+  @keyframes showLeftMenu {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
     }
   }
 }
