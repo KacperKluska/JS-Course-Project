@@ -30,36 +30,26 @@ export default function Header() {
       <nav id="firstNavbar">
         <OutsideAlerter id={"leftNavDiv"} func={handleHideLeftMenu}>
           <ul id="leftNav">
-            <li>
-              <NavButton icon="icon-login" text="Sign in" />
-            </li>
-            <li>
-              <NavButton text="Register" />
-            </li>
-            <li>
-              <NavButton
-                icon="icon-search"
-                text="Search"
-                onClick={handleSearch}
-              />
-            </li>
+            <NavButton icon="icon-login" text="Sign in" />
+            <NavButton text="Register" />
+            <NavButton
+              icon="icon-search"
+              text="Search"
+              onClick={handleSearch}
+            />
           </ul>
         </OutsideAlerter>
-        <a href="#" id="leftNavPhone" onClick={handleShowLeftMenu}>
+        <div href="#" id="leftNavPhone" onClick={handleShowLeftMenu}>
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
-        </a>
-        <h1>
-          <a href="#">SuitUp</a>
+        </div>
+        <h1 id="logo" onClick="">
+          SuitUp
         </h1>
         <ul id="rightNav">
-          <li>
-            <NavButton icon="icon-gift" text="Gift Certificate" />
-          </li>
-          <li>
-            <NavButton icon="icon-basket" text="Cart" />
-          </li>
+          <NavButton icon="icon-gift" text="Gift Certificate" />
+          <NavButton icon="icon-basket" text="Cart" />
         </ul>
       </nav>
     </header>

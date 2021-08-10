@@ -19,15 +19,14 @@ header {
     z-index: 10;
   }
 
-  h1 {
+  #logo {
     font-size: 2.5rem;
-    // margin-left: 1rem;
+    cursor: pointer;
   }
 
   ul {
     list-style: none;
     height: 100%;
-    // height: 8vh;
 
     li {
       padding: 1rem;
@@ -48,10 +47,6 @@ header {
   #leftNavPhone {
     width: 30px;
     height: 21px;
-    // position: absolute;
-    // top: 1.5rem;
-    // left: 1.5rem;
-    // position: fixed;
     margin-left: 1rem;
     display: none;
     flex-direction: column;
@@ -63,7 +58,6 @@ header {
       border: white solid 2px;
       background-color: white;
       border-radius: 10px;
-      // margin: 2px;
     }
   }
 
@@ -81,11 +75,12 @@ header {
       top: 0;
       flex-direction: column;
       width: 50vw;
-      height: 100vh;
+      height: 100%;
       background-color: #333;
 
       li {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
       }
     }
 
