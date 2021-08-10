@@ -16,6 +16,7 @@ header {
   #leftNavDiv {
     display: flex;
     height: 100%;
+    z-index: 10;
   }
 
   h1 {
