@@ -1,4 +1,4 @@
-header {
+#mainHeader {
   background-color: #333;
   color: white;
   border-bottom: 1px solid #555;
@@ -78,7 +78,11 @@ header {
       display: flex;
     }
 
-    #leftNavDiv {
+    // #leftNavDiv {
+    //   display: none;
+    // }
+
+    #leftNav {
       display: none;
     }
 
@@ -98,19 +102,18 @@ header {
     }
 
     #outsideAlert.active {
-      z-index: 10;
       position: absolute;
       top: 0;
-    }
-
-    #leftNavDiv.active {
-      display: flex;
-      // animation: showLeftMenu 10s ease-in-out;
     }
 
     #leftNav.active {
       display: flex;
       animation: showLeftMenu 0.5s ease-in-out;
+    }
+
+    #leftNav.disable {
+      animation: hideLeftMenu 0.5s ease-in-out forwards;
+      display: flex;
     }
 
     #leftNavPhone.hide {
@@ -124,6 +127,15 @@ header {
     }
     100% {
       transform: translateX(0%);
+    }
+  }
+
+  @keyframes hideLeftMenu {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
     }
   }
 }

@@ -11,24 +11,33 @@ import Photo1 from "./images/barney4.jpg";
 import Suit1 from "./images/suit1.jpg";
 import Suit2 from "./images/suit2.jpg";
 import Suit3 from "./images/suit3.jpg";
+import { useState } from "react";
 
 function App() {
+  const [searchVisible, setSearchVisible] = useState(false);
+
   const handleSearchClose = () => {
-    const search = document.getElementById("search");
-    search.classList.remove("active");
+    setSearchVisible(false);
+  };
+
+  const handleSearchShow = () => {
+    setSearchVisible(true);
   };
 
   return (
     <div>
-      <Header />
+      <Header
+        searchVisible={searchVisible}
+        setSearchVisible={handleSearchShow}
+      />
       <Navbar />
       <OutsideAlerter func={handleSearchClose}>
-        <Search />
+        <Search class={searchVisible} />
       </OutsideAlerter>
       <main>
         <div id="test">
           {/* <img src="./images/barney2.png"></img> */}
-          <img src={MainPhoto}></img>
+          <img src={MainPhoto} alt="Barney Stinson"></img>
         </div>
         <InfoText title="About">
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
@@ -45,17 +54,17 @@ function App() {
           voluptas veritatis tempore qui temporibus.
         </InfoText>
         <div id="test">
-          <img src={Photo1}></img>
+          <img src={Photo1} alt="Barney Stinson 2"></img>
         </div>
         <div id="flexPhotos">
           <div className="photo">
-            <img src={Suit1}></img>
+            <img src={Suit1} alt="Suit 1"></img>
           </div>
           <div className="photo">
-            <img src={Suit2}></img>
+            <img src={Suit2} alt="Suit 2"></img>
           </div>
           <div className="photo">
-            <img src={Suit3}></img>
+            <img src={Suit3} alt="Suit 3"></img>
           </div>
         </div>
         <InfoText title="Contact">

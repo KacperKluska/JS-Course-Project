@@ -1,14 +1,14 @@
 import NavButton from "../NavButton/NavButton";
 import "./style.scss";
 import OutsideAlerter from "../OutsideClick/OutsideAlerter";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
-export default function Header() {
+export default function Header({ searchVisible, setSearchVisible }) {
   const [leftMenu, setLeftMenu] = useState(false);
 
-  const handleLeftMenu = () => {
-    // setLeftMenu((prev) => (prev = !prev));
-  };
+  // const handleLeftMenu = () => {
+  //   setLeftMenu((prev) => (prev = !prev));
+  // };
 
   const handleLeftMenuShow = () => {
     setLeftMenu(true);
@@ -19,25 +19,30 @@ export default function Header() {
   };
 
   const handleSearch = () => {
-    const search = document.getElementById("search");
-    search.classList.toggle("active");
+    setSearchVisible();
     const searchInput = document.getElementById("searchInput");
     searchInput.focus();
   };
 
   return (
-    <header>
+    <header id="mainHeader">
       <nav id="firstNavbar">
         <OutsideAlerter
           id="outsideAlert"
           func={handleLeftMenuClose}
           class={leftMenu ? "active" : null}
         >
-          <div id="leftNavDiv" className={leftMenu ? "active" : null}>
-            <ul id="leftNav" className={leftMenu ? "active" : null}>
+          <div id="leftNavDiv">
+            <ul id="leftNav" className={leftMenu ? "active" : "disable"}>
               <NavButton icon="icon-login">Sign in</NavButton>
               <NavButton>Register</NavButton>
-              <NavButton icon="icon-search" onClick={handleSearch}>
+              <NavButton
+                icon="icon-search"
+                onClick={() => {
+                  handleSearch();
+                  handleLeftMenuClose();
+                }}
+              >
                 Search
               </NavButton>
             </ul>
