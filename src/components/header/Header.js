@@ -4,18 +4,29 @@ import OutsideAlerter from "../OutsideClick/OutsideAlerter";
 import { useState } from "react";
 
 export default function Header({ searchVisible, setSearchVisible }) {
-  const [leftMenu, setLeftMenu] = useState(false);
+  const [leftMenu, setLeftMenu] = useState("active");
 
   // const handleLeftMenu = () => {
   //   setLeftMenu((prev) => (prev = !prev));
   // };
 
   const handleLeftMenuShow = () => {
-    setLeftMenu(true);
+    setLeftMenu("active");
   };
 
   const handleLeftMenuClose = () => {
-    setLeftMenu(false);
+    console.log(leftMenu);
+    // setLeftMenu("disable");
+    setLeftMenu((prev) => {
+      if (prev === "active") {
+        return "disable";
+      } else {
+        return "none";
+      }
+    });
+    setTimeout(() => {
+      setLeftMenu("none");
+    }, 300);
   };
 
   const handleSearch = () => {
@@ -30,10 +41,12 @@ export default function Header({ searchVisible, setSearchVisible }) {
         <OutsideAlerter
           id="outsideAlert"
           func={handleLeftMenuClose}
-          class={leftMenu ? "active" : null}
+          // class={leftMenu ? "active" : null}
+          class={leftMenu}
         >
           <div id="leftNavDiv">
-            <ul id="leftNav" className={leftMenu ? "active" : "disable"}>
+            {/* <ul id="leftNav" className={leftMenu ? "active" : "disable"}> */}
+            <ul id="leftNav" className={leftMenu}>
               <NavButton icon="icon-login">Sign in</NavButton>
               <NavButton>Register</NavButton>
               <NavButton
@@ -51,7 +64,7 @@ export default function Header({ searchVisible, setSearchVisible }) {
             id="leftNavPhone"
             onClick={handleLeftMenuShow}
             // style={{ display: leftMenu ? "none" : "flex" }}
-            className={leftMenu ? "hide" : null}
+            className={leftMenu === "disable" ? "hide" : null}
           >
             <span className="bar"></span>
             <span className="bar"></span>
