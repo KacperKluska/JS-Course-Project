@@ -1,10 +1,10 @@
-import "./index.scss";
+import "./style.scss";
 
-export default function NavButton({ icon, text, onClick }) {
+export default function NavButton({ icon, children, onClick }) {
   return (
-    <a href="#" onClick={onClick}>
+    <li className="navButton" onClick={onClick}>
       <i className={icon}></i>
-      {text}
-    </a>
+      {children}
+    </li>
   );
 }

@@ -1,12 +1,12 @@
 import "./style.scss";
 
-export default function InfoText({ title, text }) {
+export default function InfoText({ title, children }) {
   return (
     <section>
       <header>
         <h1>{title}</h1>
       </header>
-      <div id="text">{text}</div>
+      <div id="text">{children}</div>
     </section>
   );
 }

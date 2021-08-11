@@ -16,17 +16,22 @@ header {
   #leftNavDiv {
     display: flex;
     height: 100%;
+    z-index: 10;
   }
 
-  h1 {
+  #outsideAlert {
+    z-index: 10;
+  }
+
+  #logo {
     font-size: 2.5rem;
-    // margin-left: 1rem;
+    cursor: pointer;
   }
 
   ul {
     list-style: none;
     height: 100%;
-    // height: 8vh;
+    z-index: 10;
 
     li {
       padding: 1rem;
@@ -42,19 +47,17 @@ header {
   #leftNav,
   #rightNav {
     display: flex;
+    z-index: 10;
   }
 
   #leftNavPhone {
     width: 30px;
     height: 21px;
-    // position: absolute;
-    // top: 1.5rem;
-    // left: 1.5rem;
-    // position: fixed;
     margin-left: 1rem;
     display: none;
     flex-direction: column;
     justify-content: space-between;
+    cursor: pointer;
 
     .bar {
       height: 2px;
@@ -62,7 +65,6 @@ header {
       border: white solid 2px;
       background-color: white;
       border-radius: 10px;
-      // margin: 2px;
     }
   }
 
@@ -82,14 +84,37 @@ header {
       width: 50vw;
       height: 100vh;
       background-color: #333;
+      z-index: 10;
 
       li {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
       }
+    }
+
+    #outsideAlert.active {
+      z-index: 10;
+      position: absolute;
+      top: 0;
     }
 
     #leftNavDiv.active {
       display: flex;
+      // animation: showLeftMenu 10s ease-in-out;
+    }
+
+    #leftNav.active {
+      display: flex;
+      animation: showLeftMenu 0.5s ease-in-out;
+    }
+  }
+
+  @keyframes showLeftMenu {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
     }
   }
 }

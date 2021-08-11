@@ -1,17 +1,34 @@
-import NavButton from "../navButton/NavButton";
-import "./index.scss";
+import NavButton from "../NavButton/NavButton";
+import "./style.scss";
 import OutsideAlerter from "../OutsideClick/OutsideAlerter";
+import { useRef, useState } from "react";
 
 export default function Header() {
-  const handleShowLeftMenu = () => {
-    const leftNav = document.getElementById("leftNavDiv");
-    leftNav.classList.add("active");
+  const [leftMenu, setLeftMenu] = useState(false);
+
+  const handleLeftMenu = () => {
+    // setLeftMenu((prev) => (prev = !prev));
   };
 
-  const handleHideLeftMenu = () => {
-    const leftNav = document.getElementById("leftNavDiv");
-    leftNav.classList.remove("active");
+  const handleLeftMenuShow = () => {
+    setLeftMenu(true);
   };
+
+  const handleLeftMenuClose = () => {
+    setLeftMenu(false);
+  };
+
+  // const handleShowLeftMenu = () => {
+  //   const leftNav = document.getElementById("leftNavDiv");
+  //   console.log("pokazuje");
+  //   leftNav.classList.add("active");
+  // };
+
+  // const handleHideLeftMenu = () => {
+  //   const leftNav = document.getElementById("leftNavDiv");
+  //   console.log("zamykam");
+  //   leftNav.classList.remove("active");
+  // };
 
   const handleSearch = () => {
     const search = document.getElementById("search");
@@ -20,46 +37,37 @@ export default function Header() {
     searchInput.focus();
   };
 
-  // const handleSearchClose = () => {
-  //   const search = document.getElementById("search");
-  //   search.classList.remove("active");
-  // };
-
   return (
     <header>
       <nav id="firstNavbar">
-        <OutsideAlerter id={"leftNavDiv"} func={handleHideLeftMenu}>
-          <ul id="leftNav">
-            <li>
-              <NavButton icon="icon-login" text="Sign in" />
-            </li>
-            <li>
-              <NavButton text="Register" />
-            </li>
-            <li>
-              <NavButton
-                icon="icon-search"
-                text="Search"
-                onClick={handleSearch}
-              />
-            </li>
-          </ul>
+        <OutsideAlerter
+          id="outsideAlert"
+          func={handleLeftMenuClose}
+          class={leftMenu ? "active" : null}
+        >
+          <div id="leftNavDiv" className={leftMenu ? "active" : null}>
+            <ul id="leftNav" className={leftMenu ? "active" : null}>
+              <NavButton icon="icon-login">Sign in</NavButton>
+              <NavButton>Register</NavButton>
+              <NavButton icon="icon-search" onClick={handleSearch}>
+                Search
+              </NavButton>
+            </ul>
+          </div>
+          <div
+            id="leftNavPhone"
+            onClick={handleLeftMenuShow}
+            style={{ display: leftMenu ? "none" : "flex" }}
+          >
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </div>
         </OutsideAlerter>
-        <a href="#" id="leftNavPhone" onClick={handleShowLeftMenu}>
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
-        </a>
-        <h1>
-          <a href="#">SuitUp</a>
-        </h1>
+        <h1 id="logo">SuitUp</h1>
         <ul id="rightNav">
-          <li>
-            <NavButton icon="icon-gift" text="Gift Certificate" />
-          </li>
-          <li>
-            <NavButton icon="icon-basket" text="Cart" />
-          </li>
+          <NavButton icon="icon-gift">Gift Certificate</NavButton>
+          <NavButton icon="icon-basket">Cart</NavButton>
         </ul>
       </nav>
     </header>
