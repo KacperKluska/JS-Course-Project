@@ -18,18 +18,6 @@ export default function Header() {
     setLeftMenu(false);
   };
 
-  // const handleShowLeftMenu = () => {
-  //   const leftNav = document.getElementById("leftNavDiv");
-  //   console.log("pokazuje");
-  //   leftNav.classList.add("active");
-  // };
-
-  // const handleHideLeftMenu = () => {
-  //   const leftNav = document.getElementById("leftNavDiv");
-  //   console.log("zamykam");
-  //   leftNav.classList.remove("active");
-  // };
-
   const handleSearch = () => {
     const search = document.getElementById("search");
     search.classList.toggle("active");
@@ -57,7 +45,8 @@ export default function Header() {
           <div
             id="leftNavPhone"
             onClick={handleLeftMenuShow}
-            style={{ display: leftMenu ? "none" : "flex" }}
+            // style={{ display: leftMenu ? "none" : "flex" }}
+            className={leftMenu ? "hide" : null}
           >
             <span className="bar"></span>
             <span className="bar"></span>
