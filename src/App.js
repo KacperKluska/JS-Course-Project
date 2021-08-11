@@ -48,9 +48,15 @@ function App() {
           <img src={Photo1}></img>
         </div>
         <div id="flexPhotos">
-          <img src={Suit1}></img>
-          <img src={Suit2}></img>
-          <img src={Suit3}></img>
+          <div className="photo">
+            <img src={Suit1}></img>
+          </div>
+          <div className="photo">
+            <img src={Suit2}></img>
+          </div>
+          <div className="photo">
+            <img src={Suit3}></img>
+          </div>
         </div>
         <InfoText title="Contact">
           "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero
