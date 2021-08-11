@@ -3,6 +3,8 @@ header {
   color: white;
   border-bottom: 1px solid #555;
   min-height: 2.5rem;
+  position: relative;
+  z-index: 100;
 }
 
 #firstNavbar {

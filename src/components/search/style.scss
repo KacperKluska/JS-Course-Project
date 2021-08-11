@@ -18,16 +18,14 @@
 
 #search.active {
   display: flex;
-  animation: dropSearch 1s ease-in forwards;
+  animation: dropSearch 0.5s ease-in forwards;
 }
 
 @keyframes dropSearch {
   0% {
     transform: translateY(-100%);
-    opacity: 0;
   }
   100% {
     transform: translateY(0%);
-    opacity: 1;
   }
 }
