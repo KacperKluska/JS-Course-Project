@@ -14,29 +14,28 @@ import Suit3 from "./images/suit3.jpg";
 import { useState } from "react";
 
 function App() {
-  const [searchVisible, setSearchVisible] = useState(false);
+  const [searchVisible, setSearchVisible] = useState("none");
 
-  const handleSearchClose = () => {
-    setSearchVisible(false);
-  };
-
-  const handleSearchShow = () => {
-    setSearchVisible(true);
+  const handleSearchVisible = () => {
+    setSearchVisible((prev) => {
+      if (prev === "active") {
+        setTimeout(() => {
+          setSearchVisible("none");
+        }, 500);
+        return "disable";
+      } else {
+        setSearchVisible("active");
+      }
+    });
   };
 
   return (
     <div>
-      <Header
-        searchVisible={searchVisible}
-        setSearchVisible={handleSearchShow}
-      />
+      <Header setSearchVisible={handleSearchVisible} />
       <Navbar />
-      <OutsideAlerter func={handleSearchClose}>
-        <Search class={searchVisible} />
-      </OutsideAlerter>
+      <Search class={searchVisible} />
       <main>
         <div id="test">
-          {/* <img src="./images/barney2.png"></img> */}
           <img src={MainPhoto} alt="Barney Stinson"></img>
         </div>
         <InfoText title="About">

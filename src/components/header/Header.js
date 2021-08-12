@@ -4,7 +4,7 @@ import OutsideAlerter from "../OutsideClick/OutsideAlerter";
 import { useState } from "react";
 
 export default function Header({ searchVisible, setSearchVisible }) {
-  const [leftMenu, setLeftMenu] = useState("active");
+  const [leftMenu, setLeftMenu] = useState("none");
 
   // const handleLeftMenu = () => {
   //   setLeftMenu((prev) => (prev = !prev));
@@ -15,7 +15,7 @@ export default function Header({ searchVisible, setSearchVisible }) {
   };
 
   const handleLeftMenuClose = () => {
-    console.log(leftMenu);
+    // console.log(leftMenu);
     // setLeftMenu("disable");
     setLeftMenu((prev) => {
       if (prev === "active") {
@@ -50,7 +50,9 @@ export default function Header({ searchVisible, setSearchVisible }) {
               <NavButton icon="icon-login">Sign in</NavButton>
               <NavButton>Register</NavButton>
               <NavButton
-                icon="icon-search"
+                icon={
+                  searchVisible === "active" ? "icon-cancel" : "icon-search"
+                }
                 onClick={() => {
                   handleSearch();
                   handleLeftMenuClose();
