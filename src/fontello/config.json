@@ -41,6 +41,12 @@
       "css": "login",
       "code": 59397,
       "src": "fontawesome"
+    },
+    {
+      "uid": "1dq4tek4k8ea7zlj4kc3w83itnutaxg5",
+      "css": "cancel",
+      "code": 59398,
+      "src": "typicons"
     }
   ]
 }
