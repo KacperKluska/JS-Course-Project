@@ -4,26 +4,33 @@
   background-color: #333;
   border-top: #555 solid 1px;
   display: none;
-  align-items: center;
-  justify-content: center;
   position: absolute;
   list-style: none;
+  // align-items: center;
+  // justify-content: center;
+
+  .navItem {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
 }
 
 #searchInput {
   width: 60%;
   height: 2rem;
   padding-left: 0.5rem;
+  margin: 34px 20%;
   outline: none;
 }
 
 #search.active {
-  display: flex;
+  display: block;
   animation: dropSearch 0.5s ease-in forwards;
 }
 
 #search.disable {
-  display: flex;
+  display: block;
   animation: hideSearch 0.5s ease-in forwards;
 }
 

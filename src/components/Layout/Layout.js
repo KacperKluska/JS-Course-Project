@@ -34,7 +34,7 @@ export default function Layout() {
         setSearchVisible={handleSearchVisible}
       />
       <Navbar />
-      <Search class={searchVisible} />
+      <Search class={searchVisible} func={handleSearchVisible} />
       <main>
         <div id="test">
           <img src={MainPhoto} alt="Barney Stinson"></img>
