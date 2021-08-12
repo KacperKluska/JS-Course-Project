@@ -4,7 +4,6 @@ import "./fontello/css/fontello.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Search from "./components/Search/Search";
-import OutsideAlerter from "./components/OutsideClick/OutsideAlerter";
 import InfoText from "./components/InfoText/InfoText";
 import MainPhoto from "./images/barney5.jpg";
 import Photo1 from "./images/barney4.jpg";
@@ -31,7 +30,10 @@ function App() {
 
   return (
     <div>
-      <Header setSearchVisible={handleSearchVisible} />
+      <Header
+        searchVisible={searchVisible}
+        setSearchVisible={handleSearchVisible}
+      />
       <Navbar />
       <Search class={searchVisible} />
       <main>

@@ -1,4 +1,5 @@
 import "./style.scss";
+import NavItem from "../NavItem/NavItem";
 
 export default function Search(props) {
   return (

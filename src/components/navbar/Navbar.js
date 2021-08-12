@@ -1,4 +1,4 @@
-import NavButton from "../NavButton/NavButton";
+import NavItem from "../NavItem/NavItem";
 import "./style.scss";
 
 export default function Navbar() {
@@ -6,11 +6,11 @@ export default function Navbar() {
     <nav className="sticky">
       <div id="secondNavbar">
         <ul id="thirdList">
-          <NavButton>For him</NavButton>
-          <NavButton>For her</NavButton>
-          <NavButton>Kids</NavButton>
-          <NavButton>Aboutr</NavButton>
-          <NavButton>Contact</NavButton>
+          <NavItem>For him</NavItem>
+          <NavItem>For her</NavItem>
+          <NavItem>Kids</NavItem>
+          <NavItem>Aboutr</NavItem>
+          <NavItem>Contact</NavItem>
         </ul>
       </div>
     </nav>

@@ -1,4 +1,4 @@
-import NavButton from "../NavButton/NavButton";
+import NavItem from "../NavItem/NavItem";
 import "./style.scss";
 import OutsideAlerter from "../OutsideClick/OutsideAlerter";
 import { useState } from "react";
@@ -47,9 +47,9 @@ export default function Header({ searchVisible, setSearchVisible }) {
           <div id="leftNavDiv">
             {/* <ul id="leftNav" className={leftMenu ? "active" : "disable"}> */}
             <ul id="leftNav" className={leftMenu}>
-              <NavButton icon="icon-login">Sign in</NavButton>
-              <NavButton>Register</NavButton>
-              <NavButton
+              <NavItem icon="icon-login">Sign in</NavItem>
+              <NavItem>Register</NavItem>
+              <NavItem
                 icon={
                   searchVisible === "active" ? "icon-cancel" : "icon-search"
                 }
@@ -59,7 +59,7 @@ export default function Header({ searchVisible, setSearchVisible }) {
                 }}
               >
                 Search
-              </NavButton>
+              </NavItem>
             </ul>
           </div>
           <div
@@ -75,8 +75,8 @@ export default function Header({ searchVisible, setSearchVisible }) {
         </OutsideAlerter>
         <h1 id="logo">SuitUp</h1>
         <ul id="rightNav">
-          <NavButton icon="icon-gift">Gift Certificate</NavButton>
-          <NavButton icon="icon-basket">Cart</NavButton>
+          <NavItem icon="icon-gift">Gift Certificate</NavItem>
+          <NavItem icon="icon-basket">Cart</NavItem>
         </ul>
       </nav>
     </header>
