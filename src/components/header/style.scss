@@ -55,33 +55,7 @@
     z-index: 10;
   }
 
-  #leftNavPhone {
-    width: 30px;
-    height: 21px;
-    margin-left: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-
-    .bar {
-      height: 2px;
-      width: 100%;
-      border: white solid 2px;
-      background-color: white;
-      border-radius: 10px;
-    }
-  }
-
   @media (max-width: 700px) {
-    #leftNavPhone {
-      display: flex;
-    }
-
-    // #leftNavDiv {
-    //   display: none;
-    // }
-
     #leftNav {
       display: none;
     }
@@ -114,10 +88,6 @@
     #leftNav.disable {
       animation: hideLeftMenu 0.5s ease-in-out forwards;
       display: flex;
-    }
-
-    #leftNavPhone.hide {
-      display: none;
     }
   }
 

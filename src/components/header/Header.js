@@ -2,6 +2,7 @@ import NavItem from "../NavItem/NavItem";
 import "./style.scss";
 import OutsideAlerter from "../OutsideClick/OutsideAlerter";
 import { useState } from "react";
+import HamburgerButton from "../HamburgerButton/HamburgerButton";
 
 export default function Header({ searchVisible, setSearchVisible }) {
   const [leftMenu, setLeftMenu] = useState("none");
@@ -15,8 +16,6 @@ export default function Header({ searchVisible, setSearchVisible }) {
   };
 
   const handleLeftMenuClose = () => {
-    // console.log(leftMenu);
-    // setLeftMenu("disable");
     setLeftMenu((prev) => {
       if (prev === "active") {
         return "disable";
@@ -41,11 +40,9 @@ export default function Header({ searchVisible, setSearchVisible }) {
         <OutsideAlerter
           id="outsideAlert"
           func={handleLeftMenuClose}
-          // class={leftMenu ? "active" : null}
           class={leftMenu}
         >
           <div id="leftNavDiv">
-            {/* <ul id="leftNav" className={leftMenu ? "active" : "disable"}> */}
             <ul id="leftNav" className={leftMenu}>
               <NavItem icon="icon-login">Sign in</NavItem>
               <NavItem>Register</NavItem>
@@ -62,16 +59,7 @@ export default function Header({ searchVisible, setSearchVisible }) {
               </NavItem>
             </ul>
           </div>
-          <div
-            id="leftNavPhone"
-            onClick={handleLeftMenuShow}
-            // style={{ display: leftMenu ? "none" : "flex" }}
-            className={leftMenu === "disable" ? "hide" : null}
-          >
-            <span className="bar"></span>
-            <span className="bar"></span>
-            <span className="bar"></span>
-          </div>
+          <HamburgerButton trigger={leftMenu} func={handleLeftMenuShow} />
         </OutsideAlerter>
         <h1 id="logo">SuitUp</h1>
         <ul id="rightNav">
