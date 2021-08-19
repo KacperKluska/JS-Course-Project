@@ -6,6 +6,8 @@ import "../../fontello/css/fontello.css";
 import { useState } from "react";
 import MainPage from "../MainPage/MainPage";
 import { Switch, Route } from "react-router-dom";
+import Login from "../Login/Login";
+import Register from "../Register/Register";
 
 export default function Layout() {
   const [searchVisible, setSearchVisible] = useState("none");
@@ -36,8 +38,12 @@ export default function Layout() {
           <Route path="/" exact>
             <MainPage />
           </Route>
-          <Route path="/login">{/* <MainPage /> */}</Route>
-          <Route path="/register">{/* <MainPage /> */}</Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/register">
+            <Register />
+          </Route>
         </Switch>
       </main>
       <Footer />
