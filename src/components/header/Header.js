@@ -3,6 +3,8 @@ import "./style.scss";
 import OutsideAlerter from "../OutsideClick/OutsideAlerter";
 import { useState } from "react";
 import HamburgerButton from "../HamburgerButton/HamburgerButton";
+import { Link } from "react-router-dom";
+import CustomLink from "../CustomLink/CustomLink";
 
 export default function Header({ searchVisible, setSearchVisible }) {
   const [leftMenu, setLeftMenu] = useState("none");
@@ -44,8 +46,12 @@ export default function Header({ searchVisible, setSearchVisible }) {
         >
           <div id="leftNavDiv">
             <ul id="leftNav" className={leftMenu}>
-              <NavItem icon="icon-login">Sign in</NavItem>
-              <NavItem>Register</NavItem>
+              <CustomLink path="/login">
+                <NavItem icon="icon-login">Sign in</NavItem>
+              </CustomLink>
+              <CustomLink path="/register">
+                <NavItem>Register</NavItem>
+              </CustomLink>
               <NavItem
                 icon={
                   searchVisible === "active" ? "icon-cancel" : "icon-search"
@@ -61,7 +67,9 @@ export default function Header({ searchVisible, setSearchVisible }) {
           </div>
           <HamburgerButton trigger={leftMenu} func={handleLeftMenuShow} />
         </OutsideAlerter>
-        <h1 id="logo">SuitUp</h1>
+        <CustomLink path="/">
+          <h1 id="logo">SuitUp</h1>
+        </CustomLink>
         <ul id="rightNav">
           <NavItem icon="icon-gift">Gift Certificate</NavItem>
           <NavItem icon="icon-basket">Cart</NavItem>
