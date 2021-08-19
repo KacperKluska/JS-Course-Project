@@ -3,7 +3,6 @@ import "./style.scss";
 import OutsideAlerter from "../OutsideClick/OutsideAlerter";
 import { useState } from "react";
 import HamburgerButton from "../HamburgerButton/HamburgerButton";
-import { Link } from "react-router-dom";
 import CustomLink from "../CustomLink/CustomLink";
 
 export default function Header({ searchVisible, setSearchVisible }) {
