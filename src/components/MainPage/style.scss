@@ -1,0 +1,33 @@
+#test {
+  height: auto;
+  // width: 1280px;
+  max-width: 1280px;
+  margin: auto;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+#flexPhotos {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .photo {
+    min-width: 250px;
+    overflow: hidden;
+  }
+
+  .photo:hover img {
+    transform: scale(1.15);
+  }
+
+  .photo img {
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+}
