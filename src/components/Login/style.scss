@@ -1,5 +1,5 @@
 .emptyScreen {
-  height: 83vh;
+  height: calc(100vh - 50px - 80px - 50px);
   width: 100%;
   background-color: transparent;
   display: flex;
@@ -34,6 +34,10 @@
     height: 2rem;
     outline: none;
   }
+
+  input:focus {
+    outline: 1px solid blue;
+  }
 }
 
 .submitButtons {
@@ -66,4 +70,5 @@
 .submitButton:hover {
   cursor: pointer;
   background-color: #51bd70;
+  border-color: blue;
 }
