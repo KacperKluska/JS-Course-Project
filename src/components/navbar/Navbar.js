@@ -9,7 +9,7 @@ export default function Navbar() {
           <NavItem>For him</NavItem>
           <NavItem>For her</NavItem>
           <NavItem>Kids</NavItem>
-          <NavItem>Aboutr</NavItem>
+          <NavItem>About</NavItem>
           <NavItem>Contact</NavItem>
         </ul>
       </div>
