@@ -1,5 +1,7 @@
 .emptyScreen {
-  height: calc(100vh - 50px - 80px - 50px);
+  height: calc(
+    100vh - 50px - 80px - 50px
+  ); //50px - navbar/footer, 80px - header
   width: 100%;
   background-color: transparent;
   display: flex;
