@@ -9,7 +9,7 @@
 
 #login {
   width: 400px;
-  height: 50%;
+  // height: 60%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -56,13 +56,16 @@
   width: 100px;
   background-color: #57cf79;
   border: 1px solid green;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
-#forgotLabel {
+#underlineLabel {
   color: black;
 }
 
-#forgotLabel:hover {
+#underlineLabel:hover {
   color: blue;
   text-decoration: underline;
 }

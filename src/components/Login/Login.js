@@ -6,7 +6,7 @@ export default function Login() {
     <div className="emptyScreen">
       <form action="">
         <section id="login">
-          <header className="loginLogo">
+          <header>
             <h1>Login</h1>
           </header>
           <div className="inputs">
@@ -15,8 +15,7 @@ export default function Login() {
           </div>
           <div className="submitButtons">
             <CustomLink path="/error">
-              {/* style={{ color: "black" }} */}
-              <div id="forgotLabel">Forgot password ?</div>
+              <div id="underlineLabel">Forgot password ?</div>
             </CustomLink>
             <button className="submitButton" type="submit">
               Login
