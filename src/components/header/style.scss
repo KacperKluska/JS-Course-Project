@@ -73,6 +73,12 @@
         flex-direction: row;
         justify-content: center;
       }
+
+      a {
+        li {
+          width: 100%;
+        }
+      }
     }
 
     #outsideAlert.active {
