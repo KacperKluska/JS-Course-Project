@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`footer text snapshot 1`] = `
+<footer>
+  Copyrigth © Kacper Kluska 2021. Szkolenie JavaScript
+</footer>
+`;
