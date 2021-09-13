@@ -1,4 +1,4 @@
-#leftNavPhone {
+.hamburgerButton {
   width: 30px;
   height: 21px;
   margin-left: 1rem;
@@ -17,11 +17,20 @@
 }
 
 @media (max-width: 700px) {
-  #leftNavPhone {
+  .hamburgerButton {
     display: flex;
+    visibility: visible;
   }
 
-  #leftNavPhone.hide {
-    display: none;
+  .hamburgerButton.hidden {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 400px) {
+  .hamburgerButton {
+    width: 21px;
+    height: 21px;
+    margin-left: 0.3rem;
   }
 }
