@@ -10,16 +10,23 @@
   }
 }
 
+.imagesDiv {
+  min-height: 200px;
+  margin: 3rem;
+}
+
 #flexPhotos {
   height: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 3rem;
 
   .photo {
     min-width: 250px;
     overflow: hidden;
+    border: 1px solid black;
   }
 
   .photo:hover img {
