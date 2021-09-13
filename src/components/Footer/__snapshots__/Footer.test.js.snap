@@ -2,6 +2,6 @@
 
 exports[`footer text snapshot 1`] = `
 <footer>
-  Copyrigth © Kacper Kluska 2021. Szkolenie JavaScript
+  Copyrigth © Kacper Kluska 2021. JavaScript course
 </footer>
 `;

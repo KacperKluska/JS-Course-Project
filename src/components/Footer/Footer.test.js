@@ -5,7 +5,7 @@ import Footer from "./Footer";
 test("footer text test", () => {
   const wrapper = shallow(<Footer />);
   expect(wrapper.find("footer").text()).toContain(
-    `Copyrigth © Kacper Kluska 2021. Szkolenie JavaScript`
+    `Copyrigth © Kacper Kluska 2021. JavaScript course`
   );
 });
 
