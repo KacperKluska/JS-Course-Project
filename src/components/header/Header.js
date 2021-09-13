@@ -6,11 +6,7 @@ import HamburgerButton from "../HamburgerButton/HamburgerButton";
 import CustomLink from "../CustomLink/CustomLink";
 
 export default function Header({ searchVisible, setSearchVisible }) {
-  const [leftMenu, setLeftMenu] = useState("none");
-
-  // const handleLeftMenu = () => {
-  //   setLeftMenu((prev) => (prev = !prev));
-  // };
+  const [leftMenu, setLeftMenu] = useState("");
 
   const handleLeftMenuShow = () => {
     setLeftMenu("active");
@@ -19,14 +15,14 @@ export default function Header({ searchVisible, setSearchVisible }) {
   const handleLeftMenuClose = () => {
     setLeftMenu((prev) => {
       if (prev === "active") {
+        setTimeout(() => {
+          setLeftMenu("");
+        }, 500);
         return "disable";
       } else {
-        return "none";
+        return "";
       }
     });
-    setTimeout(() => {
-      setLeftMenu("none");
-    }, 300);
   };
 
   const handleSearch = () => {
@@ -37,35 +33,33 @@ export default function Header({ searchVisible, setSearchVisible }) {
 
   return (
     <header id="mainHeader">
+      <OutsideAlerter
+        id="outsideAlert"
+        func={handleLeftMenuClose}
+        class={leftMenu}
+      >
+        <div id="leftNavDiv">
+          <ul id="leftNav" className={leftMenu}>
+            <CustomLink path="/login">
+              <NavItem icon="icon-login">Sign in</NavItem>
+            </CustomLink>
+            <CustomLink path="/register">
+              <NavItem>Register</NavItem>
+            </CustomLink>
+            <NavItem
+              icon={searchVisible === "active" ? "icon-cancel" : "icon-search"}
+              onClick={() => {
+                handleSearch();
+                handleLeftMenuClose();
+              }}
+            >
+              Search
+            </NavItem>
+          </ul>
+        </div>
+      </OutsideAlerter>
       <nav id="firstNavbar">
-        <OutsideAlerter
-          id="outsideAlert"
-          func={handleLeftMenuClose}
-          class={leftMenu}
-        >
-          <div id="leftNavDiv">
-            <ul id="leftNav" className={leftMenu}>
-              <CustomLink path="/login">
-                <NavItem icon="icon-login">Sign in</NavItem>
-              </CustomLink>
-              <CustomLink path="/register">
-                <NavItem>Register</NavItem>
-              </CustomLink>
-              <NavItem
-                icon={
-                  searchVisible === "active" ? "icon-cancel" : "icon-search"
-                }
-                onClick={() => {
-                  handleSearch();
-                  handleLeftMenuClose();
-                }}
-              >
-                Search
-              </NavItem>
-            </ul>
-          </div>
-          <HamburgerButton trigger={leftMenu} func={handleLeftMenuShow} />
-        </OutsideAlerter>
+        <HamburgerButton trigger={leftMenu} func={handleLeftMenuShow} />
         <CustomLink path="/">
           <h1 id="logo">SuitUp</h1>
         </CustomLink>
