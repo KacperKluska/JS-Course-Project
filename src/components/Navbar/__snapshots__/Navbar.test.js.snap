@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar snapshot 1`] = `
+<nav
+  className="sticky"
+>
+  <div
+    id="secondNavbar"
+  >
+    <ul
+      id="thirdList"
+    >
+      <li
+        className="navItem"
+      >
+        <i />
+        For him
+      </li>
+      <li
+        className="navItem"
+      >
+        <i />
+        For her
+      </li>
+      <li
+        className="navItem"
+      >
+        <i />
+        Kids
+      </li>
+      <li
+        className="navItem"
+      >
+        <i />
+        About
+      </li>
+      <li
+        className="navItem"
+      >
+        <i />
+        Contact
+      </li>
+    </ul>
+  </div>
+</nav>
+`;
