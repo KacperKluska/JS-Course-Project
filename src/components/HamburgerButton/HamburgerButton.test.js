@@ -7,14 +7,9 @@ let showed;
 let noProps;
 
 beforeAll(() => {
-  hidded = shallow(<HamburgerButton trigger={"active"} />);
-  showed = shallow(<HamburgerButton trigger={""} />);
+  hidded = shallow(<HamburgerButton trigger="active" />);
+  showed = shallow(<HamburgerButton trigger="" />);
   noProps = shallow(<HamburgerButton />);
-});
-
-test("undefinied props", () => {
-  expect(noProps.prop("trigger")).toBe(undefined);
-  expect(noProps.prop("func")).toBe(undefined);
 });
 
 test("visibility tests", () => {
@@ -24,8 +19,8 @@ test("visibility tests", () => {
   expect(showed.html()).toEqual(
     '<div class="hamburgerButton"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>'
   );
-  expect(hidded.html()).toContain("hamburgerButton hidden");
-  expect(showed.html()).toContain("hamburgerButton");
+  expect(hidded.html()).toContain('"hamburgerButton hidden"');
+  expect(showed.html()).toContain('"hamburgerButton"');
 });
 
 test("checking blcoks types and nuber", () => {
