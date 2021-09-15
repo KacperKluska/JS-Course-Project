@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavItem snapshot 1`] = `
+<li
+  className="navItem"
+>
+  <i
+    className="icon-search"
+  />
+  Test me
+</li>
+`;
