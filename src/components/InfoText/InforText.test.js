@@ -10,6 +10,10 @@ beforeAll(() => {
   );
 });
 
+test("renders", () => {
+  expect(wrapper).not.toBeNull();
+});
+
 test("type test", () => {
   expect(wrapper.type()).toBe("section");
 });

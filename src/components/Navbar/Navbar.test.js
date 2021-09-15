@@ -9,6 +9,10 @@ beforeAll(() => {
   wrapper = shallow(<Navbar />);
 });
 
+test("renders", () => {
+  expect(wrapper).not.toBeNull();
+});
+
 test("checking blocks", () => {
   expect(wrapper.find(".sticky").html()).toContain('<div id="secondNavbar">');
   expect(wrapper.find("#secondNavbar").html()).toContain('<ul id="thirdList">');

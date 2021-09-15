@@ -12,6 +12,12 @@ beforeAll(() => {
   noProps = shallow(<HamburgerButton />);
 });
 
+test("renders", () => {
+  expect(hidded).not.toBeNull();
+  expect(showed).not.toBeNull();
+  expect(noProps).not.toBeNull();
+});
+
 test("visibility tests", () => {
   expect(hidded.html()).toEqual(
     '<div class="hamburgerButton hidden"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>'
