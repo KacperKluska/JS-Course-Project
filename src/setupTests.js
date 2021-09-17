@@ -3,6 +3,7 @@ import "@testing-library/jest-dom";
 import React from "react";
 import Enzyme, { shallow, render, mount } from "enzyme";
 import { createSerializer, toJson } from "enzyme-to-json";
+import renderer from "react-test-renderer";
 // import sinon from "sinon";
 
 //Set the default serializer for Jest to be the from enzyme-to-json
@@ -18,4 +19,5 @@ global.shallow = shallow;
 global.render = render;
 global.mount = mount;
 global.toJson = toJson;
+global.renderer = renderer;
 // global.sinon = sinon;
