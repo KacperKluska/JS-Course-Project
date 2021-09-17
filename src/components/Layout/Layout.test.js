@@ -22,3 +22,7 @@ test("renders", () => {
   expect(wrapper.find(Search)).not.toBe(undefined);
   expect(wrapper.find(Footer)).not.toBe(undefined);
 });
+
+test("layout snapshot", () => {
+  expect(wrapper).toMatchSnapshot();
+});
