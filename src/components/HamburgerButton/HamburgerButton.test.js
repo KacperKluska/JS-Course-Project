@@ -63,3 +63,15 @@ test("simulate click", () => {
     '"hamburgerButton hidden"'
   );
 });
+
+test("simulate click with mock function", () => {
+  const spyFunction = jest.fn();
+  const wrapper = mount(<HamburgerButton func={spyFunction} trigger="none" />);
+  expect(spyFunction).toBeCalledTimes(0);
+  wrapper.find(".hamburgerButton").simulate("click");
+  expect(spyFunction).toBeCalledTimes(1);
+  wrapper.find(".hamburgerButton").simulate("click");
+  wrapper.find(".hamburgerButton").simulate("click");
+  wrapper.find(".hamburgerButton").simulate("click");
+  expect(spyFunction).toBeCalledTimes(4);
+});
