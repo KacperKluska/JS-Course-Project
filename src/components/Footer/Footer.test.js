@@ -1,5 +1,3 @@
-import { shallow, render } from "enzyme";
-import renderer from "react-test-renderer";
 import Footer from "./Footer";
 
 let wrapper;

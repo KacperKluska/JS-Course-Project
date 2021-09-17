@@ -1,5 +1,3 @@
-import { shallow, render } from "enzyme";
-import renderer from "react-test-renderer";
 import HamburgerButton from "./HamburgerButton";
 
 let hidded;

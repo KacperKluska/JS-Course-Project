@@ -1,4 +1,3 @@
-import renderer from "react-test-renderer";
 import NavItem from "../NavItem/NavItem";
 import Search from "./Search";
 
@@ -15,7 +14,6 @@ test("renders", () => {
 test("test block tags", () => {
   expect(mountWrapper.find("#search").type()).toBe("div");
   expect(mountWrapper.find("#searchInput").type()).toBe("input");
-  console.log(mountWrapper.find("#searchInput").props());
   expect(mountWrapper.find(NavItem)).not.toBe(undefined);
 });
 
