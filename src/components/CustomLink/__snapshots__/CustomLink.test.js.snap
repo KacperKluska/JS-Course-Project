@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomLink snapshot 1`] = `
+<a
+  className="link"
+  href="/testPage"
+  onClick={[Function]}
+>
+  Test me
+</a>
+`;
