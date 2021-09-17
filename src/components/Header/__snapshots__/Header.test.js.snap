@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header snapshot 1`] = `
+<header
+  id="mainHeader"
+>
+  <div
+    className=""
+    id="outsideAlert"
+  >
+    <div
+      id="leftNavDiv"
+    >
+      <ul
+        className=""
+        id="leftNav"
+      >
+        <a
+          className="link"
+          href="/login"
+          onClick={[Function]}
+        >
+          <li
+            className="navItem"
+          >
+            <i
+              className="icon-login"
+            />
+            Sign in
+          </li>
+        </a>
+        <a
+          className="link"
+          href="/register"
+          onClick={[Function]}
+        >
+          <li
+            className="navItem"
+          >
+            <i />
+            Register
+          </li>
+        </a>
+        <li
+          className="navItem"
+          onClick={[Function]}
+        >
+          <i
+            className="icon-search"
+          />
+          Search
+        </li>
+      </ul>
+    </div>
+  </div>
+  <nav
+    id="firstNavbar"
+  >
+    <div
+      className="hamburgerButton"
+      onClick={[Function]}
+    >
+      <span
+        className="bar"
+      />
+      <span
+        className="bar"
+      />
+      <span
+        className="bar"
+      />
+    </div>
+    <a
+      className="link"
+      href="/"
+      onClick={[Function]}
+    >
+      <h1
+        id="logo"
+      >
+        SuitUp
+      </h1>
+    </a>
+    <ul
+      id="rightNav"
+    >
+      <li
+        className="navItem"
+      >
+        <i
+          className="icon-gift"
+        />
+        Gift Certificate
+      </li>
+      <li
+        className="navItem"
+      >
+        <i
+          className="icon-basket"
+        />
+        Cart
+      </li>
+    </ul>
+  </nav>
+</header>
+`;
