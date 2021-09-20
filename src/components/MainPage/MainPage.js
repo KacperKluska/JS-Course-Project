@@ -1,18 +1,17 @@
 import "./style.scss";
 import InfoText from "../InfoText/InfoText";
-import MainPhoto from "../../images/barney5.jpg";
-import Photo1 from "../../images/barney4.jpg";
-import HeaderPhoto from "../../images/barney6.jpg";
-import AsidePhoto from "../../images/barney3.jpg";
-import Suit1 from "../../images/suit1.jpg";
-import Suit2 from "../../images/suit2.jpg";
-import Suit3 from "../../images/suit3.jpg";
+import mainPhoto from "../../images/barney5.jpg";
+import headerPhoto from "../../images/barney6.jpg";
+import asidePhoto from "../../images/barney3.jpg";
+import suit1 from "../../images/suit1.jpg";
+import suit2 from "../../images/suit2.jpg";
+import suit3 from "../../images/suit3.jpg";
 
 export default function MainPage() {
   return (
     <div>
       <div className="mainPhoto">
-        <img src={MainPhoto} alt="Barney Stinson"></img>
+        <img src={mainPhoto} alt="Barney Stinson"></img>
       </div>
       <InfoText title="About">
         <p>
@@ -57,19 +56,19 @@ export default function MainPage() {
         </h1>
         <div className="gridCollage">
           <div className="photo headerImg">
-            <img src={HeaderPhoto} alt="Suit 1"></img>
+            <img src={headerPhoto} alt="Suit 1"></img>
           </div>
           <div className="photo asideImg">
-            <img src={AsidePhoto} alt="Suit 1"></img>
+            <img src={asidePhoto} alt="Suit 1"></img>
           </div>
           <div className="photo normalIMG">
-            <img src={Suit1} alt="Suit 1"></img>
+            <img src={suit1} alt="Suit 1"></img>
           </div>
           <div className="photo normalIMG">
-            <img src={Suit2} alt="Suit 2"></img>
+            <img src={suit2} alt="Suit 2"></img>
           </div>
           <div className="photo normalIMG">
-            <img src={Suit3} alt="Suit 3"></img>
+            <img src={suit3} alt="Suit 3"></img>
           </div>
         </div>
         {/* <div id="flexPhotos">
