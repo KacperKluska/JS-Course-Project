@@ -1,4 +1,4 @@
-#test {
+.mainPhoto {
   height: auto;
   // width: 1280px;
   max-width: 1280px;
@@ -11,8 +11,16 @@
 }
 
 .imagesDiv {
-  min-height: 200px;
-  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+
+  min-height: calc(100vh - 50px);
+  width: 100%;
+
+  padding: 3rem;
 }
 
 #flexPhotos {
@@ -22,19 +30,50 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 3rem;
+}
 
-  .photo {
-    min-width: 250px;
-    overflow: hidden;
-    border: 1px solid black;
-  }
+.photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  // border: 1px solid black;
+}
 
-  .photo:hover img {
-    transform: scale(1.15);
-  }
+.photo:hover img {
+  transform: scale(1.15);
+}
 
-  .photo img {
-    height: 100%;
-    transition: transform 0.5s ease-in-out;
-  }
+.photo img {
+  height: 100%;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.gridCollage {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 40%;
+  grid-auto-rows: minmax(250px, 350px);
+  justify-items: center;
+  gap: 1rem;
+
+  width: 80%;
+}
+
+.headerImg {
+  grid-column: 1 / 4;
+  background-color: transparent;
+}
+
+.asideImg {
+  grid-column: 4;
+  grid-row: 1 / 3;
+  background-color: transparent;
+}
+
+.normalIMG {
+  grid-row: 2;
+  background-color: transparent;
 }

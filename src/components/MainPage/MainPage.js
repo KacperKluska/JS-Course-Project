@@ -2,6 +2,8 @@ import "./style.scss";
 import InfoText from "../InfoText/InfoText";
 import MainPhoto from "../../images/barney5.jpg";
 import Photo1 from "../../images/barney4.jpg";
+import HeaderPhoto from "../../images/barney6.jpg";
+import AsidePhoto from "../../images/barney3.jpg";
 import Suit1 from "../../images/suit1.jpg";
 import Suit2 from "../../images/suit2.jpg";
 import Suit3 from "../../images/suit3.jpg";
@@ -9,7 +11,7 @@ import Suit3 from "../../images/suit3.jpg";
 export default function MainPage() {
   return (
     <div>
-      <div id="test">
+      <div className="mainPhoto">
         <img src={MainPhoto} alt="Barney Stinson"></img>
       </div>
       <InfoText title="About">
@@ -49,11 +51,28 @@ export default function MainPage() {
           non aperiam quas quasi excepturi atque laudantium impedit.
         </p>
       </InfoText>
-      <div id="test">
-        <img src={Photo1} alt="Barney Stinson 2"></img>
-      </div>
       <div className="imagesDiv">
-        <div id="flexPhotos">
+        <h1>
+          <b>Check out our new collection</b>
+        </h1>
+        <div className="gridCollage">
+          <div className="photo headerImg">
+            <img src={HeaderPhoto} alt="Suit 1"></img>
+          </div>
+          <div className="photo asideImg">
+            <img src={AsidePhoto} alt="Suit 1"></img>
+          </div>
+          <div className="photo normalIMG">
+            <img src={Suit1} alt="Suit 1"></img>
+          </div>
+          <div className="photo normalIMG">
+            <img src={Suit2} alt="Suit 2"></img>
+          </div>
+          <div className="photo normalIMG">
+            <img src={Suit3} alt="Suit 3"></img>
+          </div>
+        </div>
+        {/* <div id="flexPhotos">
           <div className="photo">
             <img src={Suit1} alt="Suit 1"></img>
           </div>
@@ -63,7 +82,7 @@ export default function MainPage() {
           <div className="photo">
             <img src={Suit3} alt="Suit 3"></img>
           </div>
-        </div>
+        </div> */}
       </div>
       <InfoText title="Contact">
         <p>
