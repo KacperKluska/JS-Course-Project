@@ -168,7 +168,7 @@ exports[`layout snapshot 1`] = `
   <main>
     <div>
       <div
-        id="test"
+        className="mainPhoto"
       >
         <img
           alt="Barney Stinson"
@@ -196,21 +196,34 @@ exports[`layout snapshot 1`] = `
         </div>
       </section>
       <div
-        id="test"
-      >
-        <img
-          alt="Barney Stinson 2"
-          src="barney4.jpg"
-        />
-      </div>
-      <div
         className="imagesDiv"
       >
+        <h1>
+          <b>
+            Check out our new collection
+          </b>
+        </h1>
         <div
-          id="flexPhotos"
+          className="gridCollage"
         >
           <div
-            className="photo"
+            className="photo headerImg"
+          >
+            <img
+              alt="Suit 1"
+              src="barney6.jpg"
+            />
+          </div>
+          <div
+            className="photo asideImg"
+          >
+            <img
+              alt="Suit 1"
+              src="barney3.jpg"
+            />
+          </div>
+          <div
+            className="photo normalIMG"
           >
             <img
               alt="Suit 1"
@@ -218,7 +231,7 @@ exports[`layout snapshot 1`] = `
             />
           </div>
           <div
-            className="photo"
+            className="photo normalIMG"
           >
             <img
               alt="Suit 2"
@@ -226,7 +239,7 @@ exports[`layout snapshot 1`] = `
             />
           </div>
           <div
-            className="photo"
+            className="photo normalIMG"
           >
             <img
               alt="Suit 3"
