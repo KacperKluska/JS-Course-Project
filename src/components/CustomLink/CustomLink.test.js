@@ -15,20 +15,6 @@ beforeAll(() => {
   );
 });
 
-test("renders", () => {
-  expect(wrapper).not.toBe(null);
-});
-
-test("blocks tags", () => {
-  expect(wrapper.find("a")).not.toBe(undefined);
-  expect(wrapper.find(".link")).not.toBe(undefined);
-});
-
-test("values", () => {
-  expect(wrapper.find("a").text()).toBe("Test me");
-  expect(wrapper.find("a").props().href).toBe("/testPage");
-});
-
 test("CustomLink snapshot", () => {
   expect(wrapper).toMatchSnapshot();
 });

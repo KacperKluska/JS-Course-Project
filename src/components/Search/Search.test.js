@@ -1,4 +1,3 @@
-import NavItem from "../NavItem/NavItem";
 import Search from "./Search";
 
 let mountWrapper;
@@ -6,29 +5,6 @@ let mountWrapper;
 beforeAll(() => {
   mountWrapper = mount(<Search class="active" />);
 });
-
-test("renders", () => {
-  expect(mountWrapper).not.toBe(null);
-});
-
-test("test block tags", () => {
-  expect(mountWrapper.find("#search").type()).toBe("div");
-  expect(mountWrapper.find("#searchInput").type()).toBe("input");
-  expect(mountWrapper.find(NavItem)).not.toBe(undefined);
-});
-
-test("values tests", () => {
-  expect(mountWrapper.find("#searchInput").props().placeholder).toBe(
-    "Search..."
-  );
-  expect(mountWrapper.find(NavItem).text()).toBe("Close");
-});
-
-/**
- * TOASK
- * if I simulated "click" on NavItem component,
- * should I simulate it also in other components that use NavItem ?
- */
 
 test("simulate click", () => {
   const spyFunction = jest.fn();
