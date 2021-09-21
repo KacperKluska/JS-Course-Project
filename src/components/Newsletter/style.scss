@@ -1,0 +1,56 @@
+@import "../../colors.scss";
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.newsletterForm {
+  margin-top: 0.5rem;
+}
+
+.newsletterInput {
+  height: 3rem;
+  width: 300px;
+
+  padding: 0.5rem;
+
+  outline: none;
+  border: none;
+
+  background-color: white;
+
+  color: black;
+  font-size: 1rem;
+
+  &:focus {
+    border: 3px solid $blue-button-color;
+  }
+}
+
+.newsletterButton {
+  height: 3rem;
+  width: 100px;
+
+  padding: 0.5rem;
+
+  background-color: $blue-button-color;
+
+  color: white;
+  font-size: 1rem;
+
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $blue-button-color - #222;
+  }
+}
+
+@media (max-width: 550px) {
+  .newsletterInput {
+    width: 250px;
+  }
+}
