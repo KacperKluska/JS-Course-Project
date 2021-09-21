@@ -270,8 +270,80 @@ exports[`layout snapshot 1`] = `
       </section>
     </div>
   </main>
-  <footer>
-    Copyrigth © Kacper Kluska 2021. JavaScript course
+  <footer
+    className="footer"
+  >
+    <div
+      className="footerCollumns"
+    >
+      <div
+        className="footerCollumn"
+      >
+        <b>
+          Help
+        </b>
+        <label>
+          Returns
+        </label>
+        <label>
+          Change
+        </label>
+        <label>
+          FAQ
+        </label>
+      </div>
+      <div
+        className="footerCollumn"
+      >
+        <b>
+          Payment and shipment
+        </b>
+        <label>
+          Payment forms
+        </label>
+        <label>
+          Shipment forms
+        </label>
+      </div>
+      <div
+        className="newsletter"
+      >
+        <b>
+          Sign in for our Newsletter
+        </b>
+        <label
+          style={
+            Object {
+              "textAlign": "start",
+            }
+          }
+        >
+          Sign in if you want to be informed about sales and new collections.
+        </label>
+        <form
+          className="newsletterForm"
+          onSubmit={[Function]}
+        >
+          <input
+            className="newsletterInput"
+            onChange={[Function]}
+            placeholder="Your email..."
+            required={true}
+            type="email"
+            value=""
+          />
+          <button
+            className="newsletterButton"
+            type="submit"
+          >
+            Sign in
+          </button>
+        </form>
+      </div>
+    </div>
+    <b>
+      Copyrigth © Kacper Kluska 2021. JavaScript course
+    </b>
   </footer>
 </div>
 `;

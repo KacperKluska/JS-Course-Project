@@ -17,10 +17,6 @@ test("simulate click", () => {
   expect(spyFunction).toBeCalledTimes(0);
   newWrapper.find(".navItem").simulate("click");
   expect(spyFunction).toBeCalledTimes(1);
-  newWrapper.find(".navItem").simulate("click");
-  newWrapper.find(".navItem").simulate("click");
-  newWrapper.find(".navItem").simulate("click");
-  expect(spyFunction).toBeCalledTimes(4);
 });
 
 test("NavItem snapshot", () => {
