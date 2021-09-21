@@ -1,13 +1,18 @@
 import "./style.scss";
 import NavItem from "../NavItem/NavItem";
 
-export default function Search(props) {
+export default function Search({ searchRef, styleClass, onClick }) {
   return (
-    <div id="search" className={props.class}>
-      <NavItem icon="icon-cancel" onClick={props.func}>
+    <div id="search" className={styleClass}>
+      <NavItem icon="icon-cancel" onClick={onClick}>
         Close
       </NavItem>
-      <input type="text" id="searchInput" placeholder="Search..." />
+      <input
+        ref={searchRef}
+        type="text"
+        id="searchInput"
+        placeholder="Search..."
+      />
     </div>
   );
 }

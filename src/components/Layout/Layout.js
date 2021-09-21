@@ -3,7 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import Search from "../Search/Search";
 import "../../fontello/css/fontello.css";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import MainPage from "../MainPage/MainPage";
 import { Switch, Route } from "react-router-dom";
 import Login from "../Login/Login";
@@ -11,7 +11,7 @@ import Register from "../Register/Register";
 
 export default function Layout() {
   const [searchVisible, setSearchVisible] = useState("none");
-
+  const searchRef = useRef();
   const handleSearchVisible = () => {
     setSearchVisible((prev) => {
       if (prev === "active") {
@@ -28,11 +28,16 @@ export default function Layout() {
   return (
     <div>
       <Header
+        searchRef={searchRef}
         searchVisible={searchVisible}
         setSearchVisible={handleSearchVisible}
       />
       <Navbar />
-      <Search class={searchVisible} func={handleSearchVisible} />
+      <Search
+        searchRef={searchRef}
+        styleClass={searchVisible}
+        onClick={handleSearchVisible}
+      />
       <main>
         <Switch>
           <Route path="/" exact>

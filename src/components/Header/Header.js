@@ -5,7 +5,7 @@ import { useState } from "react";
 import HamburgerButton from "../HamburgerButton/HamburgerButton";
 import CustomLink from "../CustomLink/CustomLink";
 
-export default function Header({ searchVisible, setSearchVisible }) {
+export default function Header({ searchRef, searchVisible, setSearchVisible }) {
   const [leftMenu, setLeftMenu] = useState("");
 
   const handleLeftMenuShow = () => {
@@ -19,16 +19,14 @@ export default function Header({ searchVisible, setSearchVisible }) {
           setLeftMenu("");
         }, 500);
         return "disable";
-      } else {
-        return "";
       }
+      return "";
     });
   };
 
   const handleSearch = () => {
     setSearchVisible();
-    const searchInput = document.getElementById("searchInput");
-    searchInput.focus();
+    searchRef.current.focus();
   };
 
   return (
@@ -59,7 +57,7 @@ export default function Header({ searchVisible, setSearchVisible }) {
         </div>
       </OutsideAlerter>
       <nav id="firstNavbar">
-        <HamburgerButton trigger={leftMenu} func={handleLeftMenuShow} />
+        <HamburgerButton trigger={leftMenu} onClick={handleLeftMenuShow} />
         <CustomLink path="/">
           <h1 id="logo">SuitUp</h1>
         </CustomLink>

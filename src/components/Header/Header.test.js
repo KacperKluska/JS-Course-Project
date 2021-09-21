@@ -11,10 +11,6 @@ beforeAll(() => {
   );
 });
 
-test("renders", () => {
-  expect(wrapper).not.toBe(null);
-});
-
 test("Header snapshot", () => {
   expect(wrapper).toMatchSnapshot();
 });
