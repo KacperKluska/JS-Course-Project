@@ -4,13 +4,13 @@
   z-index: 1;
 }
 
-#secondNavbar {
+.secondNavbar {
   padding: 0 10%;
   background-color: #333;
   color: white;
   height: 50px;
 
-  #thirdList {
+  .thirdList {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -18,12 +18,12 @@
     list-style: none;
     height: 100%;
 
-    #thirdNavbaritem {
+    .thirdNavbaritem {
       font-size: 3rem;
       border-right: 1px solid white;
     }
 
-    #thirdNavbaritem:hover {
+    .thirdNavbaritem:hover {
       background-color: #555;
     }
 
@@ -34,7 +34,6 @@
       width: 100%;
       height: 100%;
       border-right: #555 solid 1px;
-      // padding: 1rem;
     }
 
     li:first-child {
@@ -44,10 +43,11 @@
     li:hover {
       background-color: #555;
     }
+  }
+}
 
-    // a {
-    //   height: 100%;
-    //   width: 100%;
-    // }
+@media (max-width: 550px) {
+  .secondNavbar {
+    padding: 0;
   }
 }

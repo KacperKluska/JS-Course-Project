@@ -2,3 +2,9 @@
   color: white;
   cursor: pointer;
 }
+
+@media (max-width: 550px) {
+  .navItem {
+    padding: 0.5rem;
+  }
+}

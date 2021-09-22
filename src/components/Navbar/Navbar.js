@@ -4,8 +4,8 @@ import "./style.scss";
 export default function Navbar() {
   return (
     <nav className="sticky">
-      <div id="secondNavbar">
-        <ul id="thirdList">
+      <div className="secondNavbar">
+        <ul className="thirdList">
           <NavItem>For him</NavItem>
           <NavItem>For her</NavItem>
           <NavItem>Kids</NavItem>
