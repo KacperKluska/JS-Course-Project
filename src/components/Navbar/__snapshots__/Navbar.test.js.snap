@@ -5,10 +5,10 @@ exports[`Navbar snapshot 1`] = `
   className="sticky"
 >
   <div
-    id="secondNavbar"
+    className="secondNavbar"
   >
     <ul
-      id="thirdList"
+      className="thirdList"
     >
       <li
         className="navItem"
