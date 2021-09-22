@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Newsletter snapshot 1`] = `
+<div
+  className="newsletter"
+>
+  <b>
+    Sign in for our Newsletter
+  </b>
+  <label
+    style={
+      Object {
+        "textAlign": "start",
+      }
+    }
+  >
+    Sign in if you want to be informed about sales and new collections.
+  </label>
+  <form
+    className="newsletterForm"
+    onSubmit={[Function]}
+  >
+    <input
+      className="newsletterInput"
+      onChange={[Function]}
+      placeholder="Your email..."
+      required={true}
+      type="email"
+      value=""
+    />
+    <button
+      className="newsletterButton"
+      type="submit"
+    >
+      Sign in
+    </button>
+  </form>
+</div>
+`;
