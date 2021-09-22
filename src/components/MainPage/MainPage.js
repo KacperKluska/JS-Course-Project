@@ -51,7 +51,7 @@ export default function MainPage() {
         </p>
       </InfoText>
       <div className="imagesDiv">
-        <h1>
+        <h1 className="title">
           <b>Check out our new collection</b>
         </h1>
         <div className="gridCollage">
@@ -71,17 +71,6 @@ export default function MainPage() {
             <img src={suit3} alt="Suit 3"></img>
           </div>
         </div>
-        {/* <div id="flexPhotos">
-          <div className="photo">
-            <img src={Suit1} alt="Suit 1"></img>
-          </div>
-          <div className="photo">
-            <img src={Suit2} alt="Suit 2"></img>
-          </div>
-          <div className="photo">
-            <img src={Suit3} alt="Suit 3"></img>
-          </div>
-        </div> */}
       </div>
       <InfoText title="Contact">
         <p>
