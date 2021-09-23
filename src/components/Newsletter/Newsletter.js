@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./style.scss";
 
 const Newsletter = () => {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = React.useState("");
 
   const sendEmail = (event) => {
     event.preventDefault();
