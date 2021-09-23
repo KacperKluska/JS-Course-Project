@@ -1,0 +1,108 @@
+@import "../../_colors";
+
+.mainPhoto {
+  display: flex;
+  justify-content: center;
+  height: calc(100vh - 50px);
+  width: 100%;
+  background-color: $background-color;
+
+  img {
+    max-height: 100%;
+    max-width: 100vw;
+  }
+}
+
+.imagesDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+
+  min-height: calc(100vh - 50px);
+  width: 100%;
+
+  padding: 3rem;
+}
+
+#flexPhotos {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.photo:hover img {
+  transform: scale(1.08);
+}
+
+.photo img {
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.gridCollage {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 40%;
+  grid-auto-rows: minmax(250px, 350px);
+  justify-items: center;
+  gap: 1rem;
+
+  width: 80%;
+}
+
+.headerImg {
+  grid-column: 1 / 4;
+  background-color: transparent;
+}
+
+.asideImg {
+  grid-column: 4;
+  grid-row: 1 / 3;
+  background-color: transparent;
+}
+
+.normalIMG {
+  grid-row: 2;
+  background-color: transparent;
+}
+
+@media (max-width: 1200px) {
+  .gridCollage {
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(250px, 350px);
+    gap: 1rem;
+    height: auto;
+
+    width: 95%;
+  }
+
+  .headerImg {
+    display: none;
+  }
+
+  .asideImg {
+    grid-column: 1;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+  }
+
+  .normalIMG {
+    grid-column: 1;
+    grid-row: inherit;
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search snapshot, different snap test 1`] = `
+<div
+  id="search"
+>
+  <li
+    className="navItem"
+  >
+    <i
+      className="icon-cancel"
+    />
+    Close
+  </li>
+  <input
+    id="searchInput"
+    placeholder="Search..."
+    type="text"
+  />
+</div>
+`;
+
+exports[`Search snapshot, different snap test 2`] = `
+<div
+  id="search"
+>
+  <li
+    className="navItem"
+  >
+    <i
+      className="icon-cancel"
+    />
+    Close
+  </li>
+  <input
+    id="searchInput"
+    placeholder="Search..."
+    type="text"
+  />
+</div>
+`;
+
+exports[`Search snapshot, different snap test 3`] = `
+<div
+  id="search"
+>
+  <NavItem
+    icon="icon-cancel"
+  >
+    Close
+  </NavItem>
+  <input
+    id="searchInput"
+    placeholder="Search..."
+    type="text"
+  />
+</div>
+`;
+
+exports[`Search snapshot, different snap test 4`] = `
+<div
+  id="search"
+>
+  <li
+    class="navItem"
+  >
+    <i
+      class="icon-cancel"
+    />
+    Close
+  </li>
+  <input
+    id="searchInput"
+    placeholder="Search..."
+    type="text"
+  />
+</div>
+`;

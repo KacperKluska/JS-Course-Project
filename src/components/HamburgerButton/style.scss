@@ -1,0 +1,36 @@
+.hamburgerButton {
+  width: 30px;
+  height: 21px;
+  margin-left: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+
+  .bar {
+    height: 2px;
+    width: 100%;
+    border: white solid 2px;
+    background-color: white;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hamburgerButton {
+    display: flex;
+    visibility: visible;
+  }
+
+  .hamburgerButton.hidden {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 400px) {
+  .hamburgerButton {
+    width: 21px;
+    height: 21px;
+    margin-left: 0.3rem;
+  }
+}

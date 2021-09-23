@@ -12,7 +12,7 @@ function useOutsideAlerter(ref, func) {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [ref]);
+  }, [ref, func]);
 }
 
 export default function OutsideAlerter(props) {

@@ -1,0 +1,38 @@
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem 3rem 1rem 3rem;
+
+  b {
+    margin-bottom: 2rem;
+  }
+}
+
+.footerCollumns {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 3rem;
+
+  margin-bottom: 3rem;
+}
+
+.footerCollumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  min-width: 10%;
+
+  label {
+    margin-top: 0.3rem;
+
+    &:hover {
+      cursor: pointer;
+      color: gray;
+    }
+  }
+}
