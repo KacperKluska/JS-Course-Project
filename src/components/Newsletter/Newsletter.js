@@ -28,7 +28,7 @@ const Newsletter = () => {
           }}
         ></input>
         <button type="submit" className="newsletterButton">
-          Sign in
+          <i className="icon-mail" />
         </button>
       </form>
     </div>
