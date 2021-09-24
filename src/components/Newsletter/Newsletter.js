@@ -12,7 +12,9 @@ const Newsletter = () => {
 
   return (
     <div className="newsletter">
-      <b>Sign in for our Newsletter</b>
+      <b>
+        <h3>Sign in for our Newsletter</h3>
+      </b>
       <label style={{ textAlign: "start" }}>
         Sign in if you want to be informed about sales and new collections.
       </label>
