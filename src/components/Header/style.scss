@@ -1,12 +1,14 @@
+@import "../.././_colors";
+
 #mainHeader {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 
-  background-color: #333;
+  background-color: $primary-color;
   color: white;
 
-  border-bottom: 1px solid #555;
+  border-bottom: 1px solid $primary-color - #111;
   height: 80px;
 
   position: relative;
@@ -55,7 +57,7 @@ ul {
   }
 
   li:hover {
-    background-color: #555;
+    background-color: $primary-color + #111;
   }
 }
 
@@ -80,8 +82,10 @@ ul {
     flex-direction: column;
     width: 50vw;
     height: 100vh;
-    background-color: #333;
+    background-color: $primary-color;
     z-index: 100;
+
+    border-right: 1px solid $primary-color - #111;
 
     li {
       flex-direction: row;
