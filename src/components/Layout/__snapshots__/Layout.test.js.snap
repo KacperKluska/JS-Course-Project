@@ -133,12 +133,14 @@ exports[`layout snapshot 1`] = `
         </li>
         <li
           className="navItem"
+          onClick={[Function]}
         >
           <i />
           About
         </li>
         <li
           className="navItem"
+          onClick={[Function]}
         >
           <i />
           Contact
@@ -175,7 +177,9 @@ exports[`layout snapshot 1`] = `
           src="barney5.jpg"
         />
       </div>
-      <section>
+      <section
+        id="About"
+      >
         <header>
           <h1>
             About
@@ -183,7 +187,6 @@ exports[`layout snapshot 1`] = `
         </header>
         <div
           className="text"
-          id="About"
         >
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo velit nulla eius ducimus quia suscipit minus consectetur eaque, in iusto sapiente unde voluptate alias libero delectus nesciunt animi minima totam? Obcaecati molestiae officiis vero totam quas similique aliquid deserunt, ipsa odio minima inventore cumque. Eligendi aliquid hic earum veniam dolorum doloribus sequi quidem nisi obcaecati quibusdam iusto quam quae aut quis assumenda, tempora animi illo iste dolorem aliquam? Voluptates atque iusto totam exercitationem et omnis fugit facere enim ipsa quia nisi harum voluptatem, accusantium blanditiis voluptas eum veniam amet numquam. Voluptate amet laudantium soluta. Assumenda, sapiente commodi maxime voluptatibus facere beatae at vero quae culpa provident, ea inventore omnis nemo nesciunt suscipit cum ipsum autem iure eos dolorum temporibus facilis! Fugit maiores aliquam vel explicabo non et praesentium suscipit hic eveniet repudiandae odio corrupti quisquam laboriosam dicta commodi voluptas beatae neque asperiores nam, ipsum autem corporis officia soluta? Dolore, inventore!
@@ -251,7 +254,9 @@ exports[`layout snapshot 1`] = `
           </div>
         </div>
       </div>
-      <section>
+      <section
+        id="Contact"
+      >
         <header>
           <h1>
             Contact
@@ -259,7 +264,6 @@ exports[`layout snapshot 1`] = `
         </header>
         <div
           className="text"
-          id="Contact"
         >
           <p>
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero quisquam omnis fugit hic, nobis eum sit natus ipsum voluptas recusandae commodi molestias temporibus, non voluptatem incidunt dignissimos, suscipit assumenda? Ut, assumenda maxime. Temporibus est perferendis nemo qui accusantium eum, excepturi facilis consectetur totam ex fuga libero in incidunt architecto nam.

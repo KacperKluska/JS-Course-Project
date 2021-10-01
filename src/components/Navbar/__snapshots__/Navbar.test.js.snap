@@ -30,12 +30,14 @@ exports[`Navbar snapshot 1`] = `
       </li>
       <li
         className="navItem"
+        onClick={[Function]}
       >
         <i />
         About
       </li>
       <li
         className="navItem"
+        onClick={[Function]}
       >
         <i />
         Contact
