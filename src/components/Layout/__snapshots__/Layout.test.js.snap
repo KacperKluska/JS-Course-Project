@@ -182,7 +182,8 @@ exports[`layout snapshot 1`] = `
           </h1>
         </header>
         <div
-          id="text"
+          className="text"
+          id="About"
         >
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo velit nulla eius ducimus quia suscipit minus consectetur eaque, in iusto sapiente unde voluptate alias libero delectus nesciunt animi minima totam? Obcaecati molestiae officiis vero totam quas similique aliquid deserunt, ipsa odio minima inventore cumque. Eligendi aliquid hic earum veniam dolorum doloribus sequi quidem nisi obcaecati quibusdam iusto quam quae aut quis assumenda, tempora animi illo iste dolorem aliquam? Voluptates atque iusto totam exercitationem et omnis fugit facere enim ipsa quia nisi harum voluptatem, accusantium blanditiis voluptas eum veniam amet numquam. Voluptate amet laudantium soluta. Assumenda, sapiente commodi maxime voluptatibus facere beatae at vero quae culpa provident, ea inventore omnis nemo nesciunt suscipit cum ipsum autem iure eos dolorum temporibus facilis! Fugit maiores aliquam vel explicabo non et praesentium suscipit hic eveniet repudiandae odio corrupti quisquam laboriosam dicta commodi voluptas beatae neque asperiores nam, ipsum autem corporis officia soluta? Dolore, inventore!
@@ -257,7 +258,8 @@ exports[`layout snapshot 1`] = `
           </h1>
         </header>
         <div
-          id="text"
+          className="text"
+          id="Contact"
         >
           <p>
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero quisquam omnis fugit hic, nobis eum sit natus ipsum voluptas recusandae commodi molestias temporibus, non voluptatem incidunt dignissimos, suscipit assumenda? Ut, assumenda maxime. Temporibus est perferendis nemo qui accusantium eum, excepturi facilis consectetur totam ex fuga libero in incidunt architecto nam.
@@ -272,6 +274,18 @@ exports[`layout snapshot 1`] = `
       </section>
     </div>
   </main>
+  <div
+    className="fixedToRight"
+  >
+    <button
+      className="emailButton"
+      onClick={[Function]}
+    >
+      <i
+        className="icon-mail"
+      />
+    </button>
+  </div>
   <footer
     className="footer"
   >
@@ -282,7 +296,9 @@ exports[`layout snapshot 1`] = `
         className="footerCollumn"
       >
         <b>
-          Help
+          <h3>
+            Help
+          </h3>
         </b>
         <label>
           Returns
@@ -298,7 +314,9 @@ exports[`layout snapshot 1`] = `
         className="footerCollumn"
       >
         <b>
-          Payment and shipment
+          <h3>
+            Payment and shipment
+          </h3>
         </b>
         <label>
           Payment forms
@@ -311,7 +329,9 @@ exports[`layout snapshot 1`] = `
         className="newsletter"
       >
         <b>
-          Sign in for our Newsletter
+          <h3>
+            Sign in for our Newsletter
+          </h3>
         </b>
         <label
           style={
@@ -341,6 +361,47 @@ exports[`layout snapshot 1`] = `
             Sign in
           </button>
         </form>
+      </div>
+    </div>
+    <div
+      className="socialMedias"
+    >
+      <h3>
+        Join us!
+      </h3>
+      <div>
+        <a
+          href="https://www.facebook.com/"
+          target="_blanc"
+        >
+          <i
+            className="icon-facebook-official"
+          />
+        </a>
+        <a
+          href="https://www.youtube.com/"
+          target="_blanc"
+        >
+          <i
+            className="icon-youtube"
+          />
+        </a>
+        <a
+          href="https://twitter.com/?lang=pl"
+          target="_blanc"
+        >
+          <i
+            className="icon-twitter"
+          />
+        </a>
+        <a
+          href="https://www.google.com/"
+          target="_blanc"
+        >
+          <i
+            className="icon-gplus"
+          />
+        </a>
       </div>
     </div>
     <b>

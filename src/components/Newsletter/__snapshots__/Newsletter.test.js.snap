@@ -5,7 +5,9 @@ exports[`Newsletter snapshot 1`] = `
   className="newsletter"
 >
   <b>
-    Sign in for our Newsletter
+    <h3>
+      Sign in for our Newsletter
+    </h3>
   </b>
   <label
     style={
