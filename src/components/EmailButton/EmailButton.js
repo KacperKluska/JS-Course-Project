@@ -3,15 +3,22 @@ import "./style.scss";
 
 const EmailButton = () => {
   const [buttonState, setButtonState] = useState(true);
+  const [activeClass, setActiveClass] = useState("");
 
   const handleClick = () => {
     setButtonState((prev) => (prev = !prev));
+    if (activeClass === "") {
+      setActiveClass("active");
+      setTimeout(() => {
+        setActiveClass("");
+      }, 500);
+    }
   };
 
   return (
     <div className="fixedToRight">
       {!buttonState && (
-        <form className="emailForm">
+        <form className={`emailForm ${activeClass}`}>
           <div className="navigation">
             Write email to us!
             <i className="icon-cancel" onClick={handleClick} />

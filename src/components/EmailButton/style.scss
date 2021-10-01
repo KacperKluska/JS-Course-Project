@@ -26,6 +26,10 @@
   border: 1px solid $primary-color;
 }
 
+.emailForm.active {
+  animation: showEmailForm 0.5s ease-in-out forwards;
+}
+
 .navigation {
   display: flex;
   flex-direction: row;
@@ -60,6 +64,8 @@
 
 .emailHelpTextarea {
   min-height: 50%;
+
+  resize: none;
 }
 
 .emailFormButton {
@@ -85,4 +91,19 @@
   position: fixed;
   bottom: 4rem;
   right: 2.5rem;
+}
+
+@media (max-width: 500px) {
+  .fixedToRight {
+    right: 1.5rem;
+  }
+}
+
+@keyframes showEmailForm {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
