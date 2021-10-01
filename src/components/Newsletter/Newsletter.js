@@ -30,7 +30,7 @@ const Newsletter = () => {
           }}
         ></input>
         <button type="submit" className="newsletterButton">
-          <i className="icon-mail" />
+          Sign in
         </button>
       </form>
     </div>
