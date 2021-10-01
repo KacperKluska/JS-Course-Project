@@ -2,6 +2,16 @@ import NavItem from "../NavItem/NavItem";
 import "./style.scss";
 
 export default function Navbar() {
+  const scrollToElById = (id) => {
+    const offset = document.getElementById(`${id}`).offsetTop;
+    window.scrollTo({ top: offset - 50, behavior: "smooth" });
+  };
+
+  /**
+   * TOASK
+   * How can I do it with useRef ?
+   */
+
   return (
     <nav className="sticky">
       <div className="secondNavbar">
@@ -9,8 +19,8 @@ export default function Navbar() {
           <NavItem>For him</NavItem>
           <NavItem>For her</NavItem>
           <NavItem>Kids</NavItem>
-          <NavItem>About</NavItem>
-          <NavItem>Contact</NavItem>
+          <NavItem onClick={() => scrollToElById("About")}>About</NavItem>
+          <NavItem onClick={() => scrollToElById("Contact")}>Contact</NavItem>
         </ul>
       </div>
     </nav>
