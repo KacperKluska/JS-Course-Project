@@ -1,6 +1,6 @@
 @import "../.././_colors";
 
-section {
+.infoText {
   background-color: $secondary-color;
   display: flex;
   flex-direction: column;
@@ -26,5 +26,15 @@ section {
     margin-top: 3rem;
     text-align: justify;
     letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 500px) {
+  .infoText {
+    padding: 3rem;
+  }
+
+  .text {
+    letter-spacing: 1px;
   }
 }
