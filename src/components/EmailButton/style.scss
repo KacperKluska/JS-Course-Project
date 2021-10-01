@@ -1,0 +1,88 @@
+@import "../../colors";
+
+.emailButton {
+  width: 4rem;
+  height: 4rem;
+
+  font-size: 1.5rem;
+  color: white;
+
+  border: none;
+  border-radius: 2rem;
+
+  background-color: $blue-button-color;
+
+  &:hover {
+    background-color: $blue-button-color + #111;
+  }
+}
+
+.emailForm {
+  width: 400px;
+  height: 500px;
+
+  background-color: $background-color;
+
+  border: 1px solid $primary-color;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding: 0.5rem;
+
+  color: white;
+
+  background-color: $primary-color;
+
+  label:hover {
+    color: gray;
+  }
+}
+
+.emailHelpInput {
+  width: 90%;
+  height: 2rem;
+
+  padding: 0.5rem;
+  margin: 1rem 1rem 0rem 1rem;
+
+  outline: none;
+
+  &:focus {
+    border: 2px solid $blue-button-color;
+  }
+}
+
+.emailHelpTextarea {
+  min-height: 50%;
+}
+
+.emailFormButton {
+  width: 90%;
+
+  outline: none;
+  border: none;
+
+  padding: 0.5rem;
+  margin: 1.5rem 1rem 1rem 1rem;
+
+  background-color: $blue-button-color;
+
+  font-size: 1rem;
+  color: white;
+
+  &:hover {
+    background-color: $blue-button-color + #111;
+  }
+}
+
+.fixedToRight {
+  position: fixed;
+  bottom: 4rem;
+  right: 2.5rem;
+}
