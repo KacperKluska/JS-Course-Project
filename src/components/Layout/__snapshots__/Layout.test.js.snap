@@ -178,6 +178,7 @@ exports[`layout snapshot 1`] = `
         />
       </div>
       <section
+        className="infoText"
         id="About"
       >
         <header>
@@ -255,6 +256,7 @@ exports[`layout snapshot 1`] = `
         </div>
       </div>
       <section
+        className="infoText"
         id="Contact"
       >
         <header>

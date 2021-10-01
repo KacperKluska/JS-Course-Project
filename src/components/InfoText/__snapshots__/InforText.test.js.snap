@@ -2,6 +2,7 @@
 
 exports[`InfoText snapshot 1`] = `
 <section
+  className="infoText"
   id="Some title"
 >
   <header>
