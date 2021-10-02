@@ -1,33 +1,55 @@
 import "./style.scss";
 import CustomLink from "../CustomLink/CustomLink";
+import Sectionlogo from "../SectionLogo/SectionLogo";
 
 export default function Register() {
   return (
     <div className="emptyScreen">
-      <form action="">
-        <section id="register">
+      <Sectionlogo>Sign up!</Sectionlogo>
+      <section className="login">
+        <form className="loginForm">
           <header>
             <h1>Register</h1>
           </header>
           <div className="inputs">
-            <input type="text" placeholder="Name"></input>
-            <input type="email" placeholder="Email"></input>
-            <input type="password" placeholder="Password"></input>
-            <input type="password" placeholder="Repeat password"></input>
+            Name
+            <input type="text" placeholder="Name..." required></input>
+            Email
+            <input type="email" placeholder="Email..." required></input>
+            Password
+            <input type="password" placeholder="Password..." required></input>
+            Password
+            <input
+              type="password"
+              placeholder="Repeat password..."
+              required
+            ></input>
           </div>
           <div className="submitButtons">
             <div>
               Have an account ?
               <CustomLink path="/login">
-                <div id="underlineLabel">Sign in !</div>
+                <div className="underlineLink">Sign in !</div>
               </CustomLink>
             </div>
             <button className="submitButton" type="submit">
               Register
             </button>
           </div>
-        </section>
-      </form>
+        </form>
+        <div className="loginInfo">
+          <h1>
+            <b>Sign up rules</b>
+          </h1>
+          <ul className="loginInfoList">
+            <li>Name you provide will be displayed on page and in comments</li>
+            <li>
+              Password must constain from 8 to 20 characters, 1 capital leter
+              and 1 number
+            </li>
+          </ul>
+        </div>
+      </section>
     </div>
   );
 }
