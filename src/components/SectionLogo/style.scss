@@ -1,0 +1,16 @@
+@import "../../colors";
+
+.sectionLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  font-size: 4rem;
+  color: white;
+
+  padding: 3rem;
+
+  background-color: $secondary-color;
+}
