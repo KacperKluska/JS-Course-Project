@@ -3,6 +3,10 @@ import CustomLink from "../CustomLink/CustomLink";
 import Sectionlogo from "../SectionLogo/SectionLogo";
 
 export default function Login() {
+  /**
+   * TODO
+   * I need to move styles to global file, becouse register uses the same styles classes
+   */
   return (
     <div className="emptyScreen">
       <Sectionlogo>Sign in!</Sectionlogo>
@@ -13,9 +17,9 @@ export default function Login() {
           </header>
           <div className="inputs">
             Email
-            <input type="email" placeholder="Email..."></input>
+            <input type="email" placeholder="Email..." required></input>
             Password
-            <input type="password" placeholder="Password..."></input>
+            <input type="password" placeholder="Password..." required></input>
           </div>
           <div className="submitButtons">
             <CustomLink path="/error">
