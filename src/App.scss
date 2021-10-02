@@ -13,12 +13,17 @@ body {
 }
 
 .emptyScreen {
-  height: calc(100vh - 50px - 80px); //50px - navbar, 80px - header
-  width: 100%;
-  background-color: transparent;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+
+  min-height: calc(100vh - 50px - 80px); //50px - navbar, 80px - header
+  width: 100%;
+
+  background-color: transparent;
+
+  padding-bottom: 3rem;
 }
 
 .title {

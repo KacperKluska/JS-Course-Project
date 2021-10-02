@@ -1,4 +1,4 @@
-@import "../.././_colors";
+@import "../../_colors";
 
 #mainHeader {
   display: flex;
@@ -46,7 +46,8 @@
   cursor: pointer;
 }
 
-ul {
+#leftNav,
+#rightNav {
   list-style: none;
   height: 100%;
 
