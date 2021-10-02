@@ -39,10 +39,23 @@ export default function Header({ searchRef, searchVisible, setSearchVisible }) {
         <div id="leftNavDiv">
           <ul id="leftNav" className={leftMenu}>
             <CustomLink path="/login">
-              <NavItem icon="icon-login">Sign in</NavItem>
+              <NavItem
+                onClick={() => {
+                  handleLeftMenuClose();
+                }}
+                icon="icon-login"
+              >
+                Sign in
+              </NavItem>
             </CustomLink>
             <CustomLink path="/register">
-              <NavItem>Register</NavItem>
+              <NavItem
+                onClick={() => {
+                  handleLeftMenuClose();
+                }}
+              >
+                Register
+              </NavItem>
             </CustomLink>
             <NavItem
               icon={searchVisible === "active" ? "icon-cancel" : "icon-search"}
