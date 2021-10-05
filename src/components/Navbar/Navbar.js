@@ -27,7 +27,6 @@ export default function Navbar() {
           <NavItem>For him</NavItem>
           <NavItem>For her</NavItem>
           <NavItem>Kids</NavItem>
-          {/* <CustomLink to="/">Elo</CustomLink> */}
           <NavItem onClick={() => scrollToElById("About")}>
             <Link className="navbarLink" to="/">
               About

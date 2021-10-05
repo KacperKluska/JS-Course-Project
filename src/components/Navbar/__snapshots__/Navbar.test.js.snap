@@ -33,14 +33,26 @@ exports[`Navbar snapshot 1`] = `
         onClick={[Function]}
       >
         <i />
-        About
+        <a
+          className="navbarLink"
+          href="/"
+          onClick={[Function]}
+        >
+          About
+        </a>
       </li>
       <li
         className="navItem"
         onClick={[Function]}
       >
         <i />
-        Contact
+        <a
+          className="navbarLink"
+          href="/"
+          onClick={[Function]}
+        >
+          Contact
+        </a>
       </li>
     </ul>
   </div>
