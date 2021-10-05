@@ -4,6 +4,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 It is a web application for shops with suits etc. It was made for my Javascript course purpose. The idea for the shop was inspired by fiction person `Barny Stinson`.
 
+## Main page
+![scr_1](https://user-images.githubusercontent.com/50757117/136018749-0991b44d-6813-4c2a-a5ee-075796818f18.PNG)
+![scr_2](https://user-images.githubusercontent.com/50757117/136018781-efb00633-e347-4feb-81dd-7082f46d9b82.PNG)
+![scr_3](https://user-images.githubusercontent.com/50757117/136018794-95a83178-75e1-4dcf-8b91-9995dcd3b21e.PNG)
+
+## Login page
+![scr_4](https://user-images.githubusercontent.com/50757117/136018797-16663165-653c-40a2-b037-d225b609c704.PNG)
+
+## Register page
+![scr_5](https://user-images.githubusercontent.com/50757117/136018804-3fa4b849-f429-4d10-9b81-5a689e467eef.PNG)
+
+
 ## Install
 
 To run this project download and open it. Write `npm i` to install packages and then `npm start` to run the app.
