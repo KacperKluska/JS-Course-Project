@@ -11,7 +11,9 @@ exports[`footer text snapshot 1`] = `
       className="footerCollumn"
     >
       <b>
-        Help
+        <h3>
+          Help
+        </h3>
       </b>
       <label>
         Returns
@@ -27,7 +29,9 @@ exports[`footer text snapshot 1`] = `
       className="footerCollumn"
     >
       <b>
-        Payment and shipment
+        <h3>
+          Payment and shipment
+        </h3>
       </b>
       <label>
         Payment forms
@@ -40,7 +44,9 @@ exports[`footer text snapshot 1`] = `
       className="newsletter"
     >
       <b>
-        Sign in for our Newsletter
+        <h3>
+          Sign in for our Newsletter
+        </h3>
       </b>
       <label
         style={
@@ -70,6 +76,47 @@ exports[`footer text snapshot 1`] = `
           Sign in
         </button>
       </form>
+    </div>
+  </div>
+  <div
+    className="socialMedias"
+  >
+    <h3>
+      Join us!
+    </h3>
+    <div>
+      <a
+        href="https://www.facebook.com/"
+        target="_blanc"
+      >
+        <i
+          className="icon-facebook-official"
+        />
+      </a>
+      <a
+        href="https://www.youtube.com/"
+        target="_blanc"
+      >
+        <i
+          className="icon-youtube"
+        />
+      </a>
+      <a
+        href="https://twitter.com/?lang=pl"
+        target="_blanc"
+      >
+        <i
+          className="icon-twitter"
+        />
+      </a>
+      <a
+        href="https://www.google.com/"
+        target="_blanc"
+      >
+        <i
+          className="icon-gplus"
+        />
+      </a>
     </div>
   </div>
   <b>

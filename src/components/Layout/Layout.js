@@ -8,6 +8,7 @@ import MainPage from "../MainPage/MainPage";
 import { Switch, Route } from "react-router-dom";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
+import EmailButton from "../EmailButton/EmailButton";
 
 export default function Layout() {
   const [searchVisible, setSearchVisible] = useState("none");
@@ -51,6 +52,7 @@ export default function Layout() {
           </Route>
         </Switch>
       </main>
+      <EmailButton />
       <Footer />
     </div>
   );

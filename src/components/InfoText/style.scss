@@ -1,12 +1,14 @@
-section {
-  background-color: #999;
+@import "../.././_colors";
+
+.infoText {
+  background-color: $secondary-color;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 30px 50px;
-  border-bottom: #555 solid 1px;
+  padding: 3rem 5rem 5rem 5rem;
+  border-bottom: $secondary-color - #111 solid 1px;
 
   header {
     border: none;
@@ -18,10 +20,21 @@ section {
     font-size: 2rem;
   }
 
-  #text {
+  .text {
     color: black;
     font-size: 1.2rem;
-    margin-top: 20px;
+    margin-top: 3rem;
     text-align: justify;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 500px) {
+  .infoText {
+    padding: 3rem;
+  }
+
+  .text {
+    letter-spacing: 1px;
   }
 }

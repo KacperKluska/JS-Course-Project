@@ -2,11 +2,11 @@ import "./style.scss";
 
 export default function InfoText({ title, children }) {
   return (
-    <section>
+    <section id={title} className="infoText">
       <header>
         <h1>{title}</h1>
       </header>
-      <div id="text">{children}</div>
+      <div className="text">{children}</div>
     </section>
   );
 }

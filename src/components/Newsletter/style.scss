@@ -8,6 +8,9 @@
 }
 
 .newsletterForm {
+  display: flex;
+  flex-direction: row;
+
   margin-top: 0.5rem;
 }
 
@@ -32,9 +35,9 @@
 
 .newsletterButton {
   height: 3rem;
-  width: 100px;
+  width: 80px;
 
-  padding: 0.5rem;
+  // padding: 0.5rem;
 
   background-color: $blue-button-color;
 

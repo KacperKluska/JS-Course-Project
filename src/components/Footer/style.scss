@@ -1,5 +1,7 @@
+@import "../../_colors";
+
 footer {
-  background-color: #333;
+  background-color: $primary-color;
   color: white;
   text-align: center;
   padding: 2rem 3rem 1rem 3rem;
@@ -32,7 +34,36 @@ footer {
 
     &:hover {
       cursor: pointer;
-      color: gray;
+      color: $primary-color + #333;
     }
+  }
+}
+
+.socialMedias {
+  margin-bottom: 2rem;
+
+  h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  i {
+    font-size: 1.5rem;
+
+    &:hover {
+      color: $primary-color + #333;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  footer b {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .footerCollumns {
+    gap: 1.5rem;
   }
 }

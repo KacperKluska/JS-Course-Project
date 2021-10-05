@@ -1,14 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InfoText snapshot 1`] = `
-<section>
+<section
+  className="infoText"
+  id="Some title"
+>
   <header>
     <h1>
       Some title
     </h1>
   </header>
   <div
-    id="text"
+    className="text"
   >
     Some placeholder text given
   </div>

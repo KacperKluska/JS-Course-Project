@@ -6,17 +6,39 @@ export default function Footer() {
     <footer className="footer">
       <div className="footerCollumns">
         <div className="footerCollumn">
-          <b>Help</b>
+          <b>
+            <h3>Help</h3>
+          </b>
           <label>Returns</label>
           <label>Change</label>
           <label>FAQ</label>
         </div>
         <div className="footerCollumn">
-          <b>Payment and shipment</b>
+          <b>
+            <h3>Payment and shipment</h3>
+          </b>
+
           <label>Payment forms</label>
           <label>Shipment forms</label>
         </div>
         <Newsletter />
+      </div>
+      <div className="socialMedias">
+        <h3>Join us!</h3>
+        <div>
+          <a href="https://www.facebook.com/" target="_blanc">
+            <i className="icon-facebook-official" />
+          </a>
+          <a href="https://www.youtube.com/" target="_blanc">
+            <i className="icon-youtube" />
+          </a>
+          <a href="https://twitter.com/?lang=pl" target="_blanc">
+            <i className="icon-twitter" />
+          </a>
+          <a href="https://www.google.com/" target="_blanc">
+            <i className="icon-gplus" />
+          </a>
+        </div>
       </div>
       <b>Copyrigth &copy; Kacper Kluska 2021. JavaScript course</b>
     </footer>

@@ -3,7 +3,7 @@ import InfoText from "../InfoText/InfoText";
 import mainPhoto from "../../images/barney5.jpg";
 import headerPhoto from "../../images/barney6.jpg";
 import asidePhoto from "../../images/barney3.jpg";
-import suit1 from "../../images/suit1.jpg";
+import suit1 from "../../images/suit4.jpg";
 import suit2 from "../../images/suit2.jpg";
 import suit3 from "../../images/suit3.jpg";
 
