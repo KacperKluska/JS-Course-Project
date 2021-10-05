@@ -22,6 +22,7 @@ exports[`Header snapshot 1`] = `
         >
           <li
             className="navItem"
+            onClick={[Function]}
           >
             <i
               className="icon-login"
@@ -36,6 +37,7 @@ exports[`Header snapshot 1`] = `
         >
           <li
             className="navItem"
+            onClick={[Function]}
           >
             <i />
             Register
