@@ -52,6 +52,8 @@
   "devDependencies": {
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
     "enzyme-adapter-react-16": "^1.15.6",
-    "enzyme-to-json": "^3.6.2"
+    "enzyme-to-json": "^3.6.2",
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.26.1"
   }
 }
