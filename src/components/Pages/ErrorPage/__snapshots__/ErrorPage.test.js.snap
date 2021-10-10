@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorPage snapshot 1`] = `
+<div
+  className="emptyScreen"
+>
+  <h1>
+    404 page not found
+  </h1>
+  <p>
+    This page doesn't exist. Try to go back.
+  </p>
+</div>
+`;
