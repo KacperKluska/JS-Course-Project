@@ -9,6 +9,7 @@ import { Switch, Route } from "react-router-dom";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
 import EmailButton from "../EmailButton/EmailButton";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 export default function Layout() {
   const [searchVisible, setSearchVisible] = useState("none");
@@ -49,6 +50,11 @@ export default function Layout() {
           </Route>
           <Route path="/register">
             <Register />
+          </Route>
+          <Route path="*">
+            <ErrorPage errorCode="404 Page not found!">
+              Try to go back.
+            </ErrorPage>
           </Route>
         </Switch>
       </main>
