@@ -1,11 +1,11 @@
 import "./style.scss";
-import InfoText from "../InfoText/InfoText";
-import mainPhoto from "../../images/barney5.jpg";
-import headerPhoto from "../../images/barney6.jpg";
-import asidePhoto from "../../images/barney3.jpg";
-import suit1 from "../../images/suit4.jpg";
-import suit2 from "../../images/suit2.jpg";
-import suit3 from "../../images/suit3.jpg";
+import InfoText from "../../InfoText/InfoText";
+import mainPhoto from "../../../images/barney5.jpg";
+import headerPhoto from "../../../images/barney6.jpg";
+import asidePhoto from "../../../images/barney3.jpg";
+import suit1 from "../../../images/suit4.jpg";
+import suit2 from "../../../images/suit2.jpg";
+import suit3 from "../../../images/suit3.jpg";
 
 export default function MainPage() {
   return (
@@ -74,7 +74,7 @@ export default function MainPage() {
       </div>
       <InfoText title="Contact">
         <p>
-          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero
           quisquam omnis fugit hic, nobis eum sit natus ipsum voluptas
           recusandae commodi molestias temporibus, non voluptatem incidunt
           dignissimos, suscipit assumenda? Ut, assumenda maxime. Temporibus est
