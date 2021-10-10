@@ -1,11 +1,11 @@
 import React from "react";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
-// import CustomLink from "../../CustomLink/CustomLink";
 import "./style.scss";
 
 const ErrorPage = ({ errorCode, children }) => {
   const location = useLocation();
+
   return (
     <div className="errorScreen">
       <h1>{errorCode}</h1>

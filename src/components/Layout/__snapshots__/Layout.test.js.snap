@@ -282,7 +282,7 @@ exports[`layout snapshot 1`] = `
           className="text"
         >
           <p>
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero quisquam omnis fugit hic, nobis eum sit natus ipsum voluptas recusandae commodi molestias temporibus, non voluptatem incidunt dignissimos, suscipit assumenda? Ut, assumenda maxime. Temporibus est perferendis nemo qui accusantium eum, excepturi facilis consectetur totam ex fuga libero in incidunt architecto nam.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero quisquam omnis fugit hic, nobis eum sit natus ipsum voluptas recusandae commodi molestias temporibus, non voluptatem incidunt dignissimos, suscipit assumenda? Ut, assumenda maxime. Temporibus est perferendis nemo qui accusantium eum, excepturi facilis consectetur totam ex fuga libero in incidunt architecto nam.
           </p>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque autem laborum nobis laudantium vitae voluptatem asperiores omnis quam mollitia dolorum?
