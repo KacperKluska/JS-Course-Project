@@ -1,24 +1,35 @@
 {
+  "extends": [
+    "airbnb",
+    // "plugin:prettier/recommended",
+    // "prettier/react"
+    "prettier"
+  ],
   "env": {
     "browser": true,
-    "es2021": true
+    "commonjs": true,
+    "es6": true,
+    "jest": true,
+    "node": true
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended"],
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 12,
-    "sourceType": "module"
-  },
-  "plugins": ["react"],
   "rules": {
+    "jsx-a11y/href-no-hash": ["off"],
     "react/react-in-jsx-scope": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "indent": ["error", 2],
-    "react/prop-types": "off",
-    // "linebreak-style": ["error", "windows"],
-    "quotes": ["error", "double"],
-    "semi": ["error", "always"]
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+    "react/prop-types": 0,
+    "max-len": [
+      "warn",
+      {
+        "code": 80,
+        "tabWidth": 2,
+        "comments": 80,
+        "ignoreComments": false,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true
+      }
+    ]
   }
 }
