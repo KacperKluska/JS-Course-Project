@@ -1,8 +1,7 @@
-import "./style.scss";
-import React from "react";
+import './style.scss';
 
-const Sectionlogo = ({ children }) => {
-  return <header className="sectionLogo">{children}</header>;
-};
+const Sectionlogo = ({ children }) => (
+  <header className="sectionLogo">{children}</header>
+);
 
 export default Sectionlogo;

@@ -1,6 +1,6 @@
-import "./style.scss";
-import CustomLink from "../CustomLink/CustomLink";
-import Sectionlogo from "../SectionLogo/SectionLogo";
+import './style.scss';
+import CustomLink from '../CustomLink/CustomLink';
+import Sectionlogo from '../SectionLogo/SectionLogo';
 
 export default function Login() {
   /**
@@ -17,9 +17,9 @@ export default function Login() {
           </header>
           <div className="inputs">
             Email
-            <input type="email" placeholder="Email..." required></input>
+            <input type="email" placeholder="Email..." required />
             Password
-            <input type="password" placeholder="Password..." required></input>
+            <input type="password" placeholder="Password..." required />
           </div>
           <div className="submitButtons">
             <CustomLink path="/error">
@@ -41,7 +41,9 @@ export default function Login() {
             <li>Autocomplete form</li>
           </ul>
           <CustomLink path="/register">
-            <button className="loginInfoButton">Sign up</button>
+            <button type="button" className="loginInfoButton">
+              Sign up
+            </button>
           </CustomLink>
         </div>
       </section>

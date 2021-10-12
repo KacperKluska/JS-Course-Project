@@ -1,7 +1,6 @@
-import React from "react";
-import { useLocation } from "react-router";
-import { Link } from "react-router-dom";
-import "./style.scss";
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import './style.scss';
 
 const ErrorPage = ({ errorCode, children }) => {
   const location = useLocation();
@@ -14,10 +13,10 @@ const ErrorPage = ({ errorCode, children }) => {
         <br />
         {children}
         <br />
-        Click{" "}
+        Click{' '}
         <Link className="linkA" to="/">
           <b>here</b>
-        </Link>{" "}
+        </Link>{' '}
         to go back to main page
       </p>
     </div>

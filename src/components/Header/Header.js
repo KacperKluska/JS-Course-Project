@@ -1,26 +1,26 @@
-import NavItem from "../NavItem/NavItem";
-import "./style.scss";
-import OutsideAlerter from "../OutsideClick/OutsideAlerter";
-import { useState } from "react";
-import HamburgerButton from "../HamburgerButton/HamburgerButton";
-import CustomLink from "../CustomLink/CustomLink";
+import './style.scss';
+import { useState } from 'react';
+import NavItem from '../NavItem/NavItem';
+import OutsideAlerter from '../OutsideClick/OutsideAlerter';
+import HamburgerButton from '../HamburgerButton/HamburgerButton';
+import CustomLink from '../CustomLink/CustomLink';
 
 export default function Header({ searchRef, searchVisible, setSearchVisible }) {
-  const [leftMenu, setLeftMenu] = useState("");
+  const [leftMenu, setLeftMenu] = useState('');
 
   const handleLeftMenuShow = () => {
-    setLeftMenu("active");
+    setLeftMenu('active');
   };
 
   const handleLeftMenuClose = () => {
     setLeftMenu((prev) => {
-      if (prev === "active") {
+      if (prev === 'active') {
         setTimeout(() => {
-          setLeftMenu("");
+          setLeftMenu('');
         }, 500);
-        return "disable";
+        return 'disable';
       }
-      return "";
+      return '';
     });
   };
 
@@ -34,7 +34,7 @@ export default function Header({ searchRef, searchVisible, setSearchVisible }) {
       <OutsideAlerter
         id="outsideAlert"
         func={handleLeftMenuClose}
-        class={leftMenu}
+        style={leftMenu}
       >
         <div id="leftNavDiv">
           <ul id="leftNav" className={leftMenu}>
@@ -58,7 +58,7 @@ export default function Header({ searchRef, searchVisible, setSearchVisible }) {
               </NavItem>
             </CustomLink>
             <NavItem
-              icon={searchVisible === "active" ? "icon-cancel" : "icon-search"}
+              icon={searchVisible === 'active' ? 'icon-cancel' : 'icon-search'}
               onClick={() => {
                 handleSearch();
                 handleLeftMenuClose();
