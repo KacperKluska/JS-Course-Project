@@ -7,6 +7,7 @@ exports[`EmailButton snapshot with click simulated 1`] = `
   <button
     className="emailButton"
     onClick={[Function]}
+    type="button"
   >
     <i
       className="icon-mail"
@@ -26,10 +27,14 @@ exports[`EmailButton snapshot with click simulated 2`] = `
       className="navigation"
     >
       Write email to us!
-      <i
-        className="icon-cancel"
+      <button
         onClick={[Function]}
-      />
+        type="button"
+      >
+        <i
+          className="icon-cancel"
+        />
+      </button>
     </div>
     <input
       className="emailHelpInput"
@@ -49,6 +54,7 @@ exports[`EmailButton snapshot with click simulated 2`] = `
     />
     <button
       className="emailFormButton"
+      type="button"
     >
       Send
     </button>
@@ -63,6 +69,7 @@ exports[`EmailButton snapshot with click simulated 3`] = `
   <button
     className="emailButton"
     onClick={[Function]}
+    type="button"
   >
     <i
       className="icon-mail"

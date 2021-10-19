@@ -9,7 +9,7 @@ exports[`Newsletter snapshot 1`] = `
       Sign in for our Newsletter
     </h3>
   </b>
-  <label
+  <div
     style={
       Object {
         "textAlign": "start",
@@ -17,7 +17,7 @@ exports[`Newsletter snapshot 1`] = `
     }
   >
     Sign in if you want to be informed about sales and new collections.
-  </label>
+  </div>
   <form
     className="newsletterForm"
     onSubmit={[Function]}

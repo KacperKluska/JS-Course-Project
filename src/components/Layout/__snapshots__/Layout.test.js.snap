@@ -23,12 +23,17 @@ exports[`layout snapshot 1`] = `
           >
             <li
               className="navItem"
-              onClick={[Function]}
             >
-              <i
-                className="icon-login"
-              />
-              Sign in
+              <button
+                className="navItemButton"
+                onClick={[Function]}
+                type="button"
+              >
+                <i
+                  className="icon-login"
+                />
+                Sign in
+              </button>
             </li>
           </a>
           <a
@@ -38,20 +43,30 @@ exports[`layout snapshot 1`] = `
           >
             <li
               className="navItem"
-              onClick={[Function]}
             >
-              <i />
-              Register
+              <button
+                className="navItemButton"
+                onClick={[Function]}
+                type="button"
+              >
+                <i />
+                Register
+              </button>
             </li>
           </a>
           <li
             className="navItem"
-            onClick={[Function]}
           >
-            <i
-              className="icon-search"
-            />
-            Search
+            <button
+              className="navItemButton"
+              onClick={[Function]}
+              type="button"
+            >
+              <i
+                className="icon-search"
+              />
+              Search
+            </button>
           </li>
         </ul>
       </div>
@@ -59,9 +74,10 @@ exports[`layout snapshot 1`] = `
     <nav
       id="firstNavbar"
     >
-      <div
+      <button
         className="hamburgerButton"
         onClick={[Function]}
+        type="button"
       >
         <span
           className="bar"
@@ -72,7 +88,7 @@ exports[`layout snapshot 1`] = `
         <span
           className="bar"
         />
-      </div>
+      </button>
       <a
         className="link"
         href="/"
@@ -90,18 +106,28 @@ exports[`layout snapshot 1`] = `
         <li
           className="navItem"
         >
-          <i
-            className="icon-gift"
-          />
-          Gift Certificate
+          <button
+            className="navItemButton"
+            type="button"
+          >
+            <i
+              className="icon-gift"
+            />
+            Gift Certificate
+          </button>
         </li>
         <li
           className="navItem"
         >
-          <i
-            className="icon-basket"
-          />
-          Cart
+          <button
+            className="navItemButton"
+            type="button"
+          >
+            <i
+              className="icon-basket"
+            />
+            Cart
+          </button>
         </li>
       </ul>
     </nav>
@@ -118,46 +144,71 @@ exports[`layout snapshot 1`] = `
         <li
           className="navItem"
         >
-          <i />
-          For him
-        </li>
-        <li
-          className="navItem"
-        >
-          <i />
-          For her
-        </li>
-        <li
-          className="navItem"
-        >
-          <i />
-          Kids
-        </li>
-        <li
-          className="navItem"
-          onClick={[Function]}
-        >
-          <i />
-          <a
-            className="navbarLink"
-            href="/"
-            onClick={[Function]}
+          <button
+            className="navItemButton"
+            type="button"
           >
-            About
-          </a>
+            <i />
+            For him
+          </button>
         </li>
         <li
           className="navItem"
-          onClick={[Function]}
         >
-          <i />
-          <a
-            className="navbarLink"
-            href="/"
-            onClick={[Function]}
+          <button
+            className="navItemButton"
+            type="button"
           >
-            Contact
-          </a>
+            <i />
+            For her
+          </button>
+        </li>
+        <li
+          className="navItem"
+        >
+          <button
+            className="navItemButton"
+            type="button"
+          >
+            <i />
+            Kids
+          </button>
+        </li>
+        <li
+          className="navItem"
+        >
+          <button
+            className="navItemButton"
+            onClick={[Function]}
+            type="button"
+          >
+            <i />
+            <a
+              className="navbarLink"
+              href="/"
+              onClick={[Function]}
+            >
+              About
+            </a>
+          </button>
+        </li>
+        <li
+          className="navItem"
+        >
+          <button
+            className="navItemButton"
+            onClick={[Function]}
+            type="button"
+          >
+            <i />
+            <a
+              className="navbarLink"
+              href="/"
+              onClick={[Function]}
+            >
+              Contact
+            </a>
+          </button>
         </li>
       </ul>
     </div>
@@ -168,12 +219,17 @@ exports[`layout snapshot 1`] = `
   >
     <li
       className="navItem"
-      onClick={[Function]}
     >
-      <i
-        className="icon-cancel"
-      />
-      Close
+      <button
+        className="navItemButton"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          className="icon-cancel"
+        />
+        Close
+      </button>
     </li>
     <input
       id="searchInput"
@@ -300,6 +356,7 @@ exports[`layout snapshot 1`] = `
     <button
       className="emailButton"
       onClick={[Function]}
+      type="button"
     >
       <i
         className="icon-mail"
@@ -320,15 +377,15 @@ exports[`layout snapshot 1`] = `
             Help
           </h3>
         </b>
-        <label>
+        <div>
           Returns
-        </label>
-        <label>
+        </div>
+        <div>
           Change
-        </label>
-        <label>
+        </div>
+        <div>
           FAQ
-        </label>
+        </div>
       </div>
       <div
         className="footerCollumn"
@@ -338,12 +395,12 @@ exports[`layout snapshot 1`] = `
             Payment and shipment
           </h3>
         </b>
-        <label>
+        <div>
           Payment forms
-        </label>
-        <label>
+        </div>
+        <div>
           Shipment forms
-        </label>
+        </div>
       </div>
       <div
         className="newsletter"
@@ -353,7 +410,7 @@ exports[`layout snapshot 1`] = `
             Sign in for our Newsletter
           </h3>
         </b>
-        <label
+        <div
           style={
             Object {
               "textAlign": "start",
@@ -361,7 +418,7 @@ exports[`layout snapshot 1`] = `
           }
         >
           Sign in if you want to be informed about sales and new collections.
-        </label>
+        </div>
         <form
           className="newsletterForm"
           onSubmit={[Function]}

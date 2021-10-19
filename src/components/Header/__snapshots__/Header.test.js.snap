@@ -22,12 +22,17 @@ exports[`Header snapshot 1`] = `
         >
           <li
             className="navItem"
-            onClick={[Function]}
           >
-            <i
-              className="icon-login"
-            />
-            Sign in
+            <button
+              className="navItemButton"
+              onClick={[Function]}
+              type="button"
+            >
+              <i
+                className="icon-login"
+              />
+              Sign in
+            </button>
           </li>
         </a>
         <a
@@ -37,20 +42,30 @@ exports[`Header snapshot 1`] = `
         >
           <li
             className="navItem"
-            onClick={[Function]}
           >
-            <i />
-            Register
+            <button
+              className="navItemButton"
+              onClick={[Function]}
+              type="button"
+            >
+              <i />
+              Register
+            </button>
           </li>
         </a>
         <li
           className="navItem"
-          onClick={[Function]}
         >
-          <i
-            className="icon-search"
-          />
-          Search
+          <button
+            className="navItemButton"
+            onClick={[Function]}
+            type="button"
+          >
+            <i
+              className="icon-search"
+            />
+            Search
+          </button>
         </li>
       </ul>
     </div>
@@ -58,9 +73,10 @@ exports[`Header snapshot 1`] = `
   <nav
     id="firstNavbar"
   >
-    <div
+    <button
       className="hamburgerButton"
       onClick={[Function]}
+      type="button"
     >
       <span
         className="bar"
@@ -71,7 +87,7 @@ exports[`Header snapshot 1`] = `
       <span
         className="bar"
       />
-    </div>
+    </button>
     <a
       className="link"
       href="/"
@@ -89,18 +105,28 @@ exports[`Header snapshot 1`] = `
       <li
         className="navItem"
       >
-        <i
-          className="icon-gift"
-        />
-        Gift Certificate
+        <button
+          className="navItemButton"
+          type="button"
+        >
+          <i
+            className="icon-gift"
+          />
+          Gift Certificate
+        </button>
       </li>
       <li
         className="navItem"
       >
-        <i
-          className="icon-basket"
-        />
-        Cart
+        <button
+          className="navItemButton"
+          type="button"
+        >
+          <i
+            className="icon-basket"
+          />
+          Cart
+        </button>
       </li>
     </ul>
   </nav>
