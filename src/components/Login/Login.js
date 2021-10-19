@@ -5,7 +5,8 @@ import Sectionlogo from '../SectionLogo/SectionLogo';
 export default function Login() {
   /**
    * TODO
-   * I need to move styles to global file, becouse register uses the same styles classes
+   * I need to move styles to global file,
+   * because register uses the same styles classes
    */
   return (
     <div className="emptyScreen">
