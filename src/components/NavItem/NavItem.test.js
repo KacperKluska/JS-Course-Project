@@ -4,7 +4,6 @@ let wrapper;
 
 beforeAll(() => {
   wrapper = mount(<NavItem icon="icon-search">Test me</NavItem>);
-  console.log(wrapper);
 });
 
 test('simulate click', () => {
