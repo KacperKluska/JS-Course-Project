@@ -4,9 +4,14 @@ exports[`NavItem snapshot 1`] = `
 <li
   className="navItem"
 >
-  <i
-    className="icon-search"
-  />
-  Test me
+  <button
+    className="navItemButton"
+    type="button"
+  >
+    <i
+      className="icon-search"
+    />
+    Test me
+  </button>
 </li>
 `;

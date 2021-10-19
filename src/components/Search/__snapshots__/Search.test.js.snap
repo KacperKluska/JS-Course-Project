@@ -7,10 +7,15 @@ exports[`Search snapshot, different snap test 1`] = `
   <li
     className="navItem"
   >
-    <i
-      className="icon-cancel"
-    />
-    Close
+    <button
+      className="navItemButton"
+      type="button"
+    >
+      <i
+        className="icon-cancel"
+      />
+      Close
+    </button>
   </li>
   <input
     id="searchInput"
@@ -27,10 +32,15 @@ exports[`Search snapshot, different snap test 2`] = `
   <li
     className="navItem"
   >
-    <i
-      className="icon-cancel"
-    />
-    Close
+    <button
+      className="navItemButton"
+      type="button"
+    >
+      <i
+        className="icon-cancel"
+      />
+      Close
+    </button>
   </li>
   <input
     id="searchInput"
@@ -64,10 +74,15 @@ exports[`Search snapshot, different snap test 4`] = `
   <li
     class="navItem"
   >
-    <i
-      class="icon-cancel"
-    />
-    Close
+    <button
+      class="navItemButton"
+      type="button"
+    >
+      <i
+        class="icon-cancel"
+      />
+      Close
+    </button>
   </li>
   <input
     id="searchInput"
