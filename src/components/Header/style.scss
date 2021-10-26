@@ -30,10 +30,6 @@
   display: flex;
   height: 100%;
   z-index: 100;
-
-  .navItemButton {
-    padding: 1rem;
-  }
 }
 
 #outsideAlert {
@@ -54,6 +50,10 @@
 #rightNav {
   list-style: none;
   height: 100%;
+
+  .navItemButton {
+    padding: 1rem;
+  }
 
   li {
     // padding: 1rem;
