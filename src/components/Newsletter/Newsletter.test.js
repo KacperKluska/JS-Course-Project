@@ -14,8 +14,6 @@ afterEach(() => {
 });
 
 test("simulate click", () => {
-  // const spyFunction = jest.fn();
-  console.log(wrapper.find("button"));
   wrapper
     .find("input")
     .simulate("change", { target: { value: "test@gmail.com" } });

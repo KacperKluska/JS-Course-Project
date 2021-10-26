@@ -1,17 +1,17 @@
-import "./style.scss";
-import InfoText from "../InfoText/InfoText";
-import mainPhoto from "../../images/barney5.jpg";
-import headerPhoto from "../../images/barney6.jpg";
-import asidePhoto from "../../images/barney3.jpg";
-import suit1 from "../../images/suit4.jpg";
-import suit2 from "../../images/suit2.jpg";
-import suit3 from "../../images/suit3.jpg";
+import './style.scss';
+import InfoText from '../../InfoText/InfoText';
+import mainPhoto from '../../../images/barney5.jpg';
+import headerPhoto from '../../../images/barney6.jpg';
+import asidePhoto from '../../../images/barney3.jpg';
+import suit1 from '../../../images/suit4.jpg';
+import suit2 from '../../../images/suit2.jpg';
+import suit3 from '../../../images/suit3.jpg';
 
 export default function MainPage() {
   return (
     <div>
       <div className="mainPhoto">
-        <img src={mainPhoto} alt="Barney Stinson"></img>
+        <img src={mainPhoto} alt="Barney Stinson" />
       </div>
       <InfoText title="About">
         <p>
@@ -56,25 +56,25 @@ export default function MainPage() {
         </h1>
         <div className="gridCollage">
           <div className="photo headerImg">
-            <img src={headerPhoto} alt="Suit 1"></img>
+            <img src={headerPhoto} alt="Suit 1" />
           </div>
           <div className="photo asideImg">
-            <img src={asidePhoto} alt="Suit 1"></img>
+            <img src={asidePhoto} alt="Suit 1" />
           </div>
           <div className="photo normalIMG">
-            <img src={suit1} alt="Suit 1"></img>
+            <img src={suit1} alt="Suit 1" />
           </div>
           <div className="photo normalIMG">
-            <img src={suit2} alt="Suit 2"></img>
+            <img src={suit2} alt="Suit 2" />
           </div>
           <div className="photo normalIMG">
-            <img src={suit3} alt="Suit 3"></img>
+            <img src={suit3} alt="Suit 3" />
           </div>
         </div>
       </div>
       <InfoText title="Contact">
         <p>
-          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero
           quisquam omnis fugit hic, nobis eum sit natus ipsum voluptas
           recusandae commodi molestias temporibus, non voluptatem incidunt
           dignissimos, suscipit assumenda? Ut, assumenda maxime. Temporibus est

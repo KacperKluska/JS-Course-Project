@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmailButton snapshot with click simulated 1`] = `
+<div
+  className="fixedToRight"
+>
+  <button
+    className="emailButton"
+    onClick={[Function]}
+    type="button"
+  >
+    <i
+      className="icon-mail"
+    />
+  </button>
+</div>
+`;
+
+exports[`EmailButton snapshot with click simulated 2`] = `
+<div
+  className="fixedToRight"
+>
+  <form
+    className="emailForm active"
+  >
+    <div
+      className="navigation"
+    >
+      Write email to us!
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          className="icon-cancel"
+        />
+      </button>
+    </div>
+    <input
+      className="emailHelpInput"
+      placeholder="Full name"
+      required={true}
+    />
+    <input
+      className="emailHelpInput"
+      placeholder="Your email"
+      required={true}
+      type="email"
+    />
+    <textarea
+      className="emailHelpInput emailHelpTextarea"
+      placeholder="Type here..."
+      required={true}
+    />
+    <button
+      className="emailFormButton"
+      type="button"
+    >
+      Send
+    </button>
+  </form>
+</div>
+`;
+
+exports[`EmailButton snapshot with click simulated 3`] = `
+<div
+  className="fixedToRight"
+>
+  <button
+    className="emailButton"
+    onClick={[Function]}
+    type="button"
+  >
+    <i
+      className="icon-mail"
+    />
+  </button>
+</div>
+`;

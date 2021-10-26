@@ -1,14 +1,15 @@
-import "./style.scss";
+import './style.scss';
 
 export default function HamburgerButton({ onClick, trigger }) {
   return (
-    <div
+    <button
+      type="button"
       onClick={onClick}
-      className={`hamburgerButton${trigger === "active" ? " hidden" : ""}`}
+      className={`hamburgerButton${trigger === 'active' ? ' hidden' : ''}`}
     >
-      <span className="bar"></span>
-      <span className="bar"></span>
-      <span className="bar"></span>
-    </div>
+      <span className="bar" />
+      <span className="bar" />
+      <span className="bar" />
+    </button>
   );
 }

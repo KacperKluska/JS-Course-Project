@@ -1,13 +1,13 @@
-import React from "react";
-import "./style.scss";
+import React from 'react';
+import './style.scss';
 
 const Newsletter = () => {
-  const [email, setEmail] = React.useState("");
+  const [email, setEmail] = React.useState('');
 
   const sendEmail = (event) => {
     event.preventDefault();
     alert(`Sent email to ${email}`);
-    setEmail("");
+    setEmail('');
   };
 
   return (
@@ -15,9 +15,9 @@ const Newsletter = () => {
       <b>
         <h3>Sign in for our Newsletter</h3>
       </b>
-      <label style={{ textAlign: "start" }}>
+      <div style={{ textAlign: 'start' }}>
         Sign in if you want to be informed about sales and new collections.
-      </label>
+      </div>
       <form className="newsletterForm" onSubmit={sendEmail}>
         <input
           className="newsletterInput"
@@ -28,7 +28,7 @@ const Newsletter = () => {
           onChange={(e) => {
             setEmail(e.target.value);
           }}
-        ></input>
+        />
         <button type="submit" className="newsletterButton">
           Sign in
         </button>

@@ -1,6 +1,6 @@
-import "./App.scss";
-import Layout from "./components/Layout/Layout";
-import { BrowserRouter as Router } from "react-router-dom";
+import './App.scss';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Layout from './components/Layout/Layout';
 
 function App() {
   return (

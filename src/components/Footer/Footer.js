@@ -1,5 +1,5 @@
-import Newsletter from "../Newsletter/Newsletter";
-import "./style.scss";
+import Newsletter from '../Newsletter/Newsletter';
+import './style.scss';
 
 export default function Footer() {
   return (
@@ -9,17 +9,17 @@ export default function Footer() {
           <b>
             <h3>Help</h3>
           </b>
-          <label>Returns</label>
-          <label>Change</label>
-          <label>FAQ</label>
+          <div>Returns</div>
+          <div>Change</div>
+          <div>FAQ</div>
         </div>
         <div className="footerCollumn">
           <b>
             <h3>Payment and shipment</h3>
           </b>
 
-          <label>Payment forms</label>
-          <label>Shipment forms</label>
+          <div>Payment forms</div>
+          <div>Shipment forms</div>
         </div>
         <Newsletter />
       </div>

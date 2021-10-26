@@ -1,0 +1,31 @@
+.errorScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  min-height: calc(
+    100vh - 50px - 80px - 300px
+  ); //50px - navbar, 80px - header, +/- 300px - footer
+  width: 100%;
+
+  background-color: transparent;
+
+  padding: 2rem;
+
+  h1::after {
+    content: "";
+    background-color: black;
+    height: 1px;
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+
+.linkA {
+  color: black;
+}
+.linkA:hover {
+  color: blue;
+  text-decoration: underline;
+}

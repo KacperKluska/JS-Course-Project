@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import NavItem from "../NavItem/NavItem";
-import CustomLink from "../CustomLink/CustomLink";
 import "./style.scss";
 
 export default function Navbar() {

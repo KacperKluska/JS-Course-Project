@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import "./style.scss";
+import { useState } from 'react';
+import './style.scss';
 
 const EmailButton = () => {
   const [buttonState, setButtonState] = useState(true);
-  const [activeClass, setActiveClass] = useState("");
+  const [activeClass, setActiveClass] = useState('');
 
   const handleClick = () => {
-    setButtonState((prev) => (prev = !prev));
-    if (activeClass === "") {
-      setActiveClass("active");
+    setButtonState((prev) => !prev);
+    if (activeClass === '') {
+      setActiveClass('active');
       setTimeout(() => {
-        setActiveClass("");
+        setActiveClass('');
       }, 500);
     }
   };
@@ -21,7 +21,9 @@ const EmailButton = () => {
         <form className={`emailForm ${activeClass}`}>
           <div className="navigation">
             Write email to us!
-            <i className="icon-cancel" onClick={handleClick} />
+            <button type="button" onClick={handleClick}>
+              <i className="icon-cancel" />
+            </button>
           </div>
           <input className="emailHelpInput" placeholder="Full name" required />
           <input
@@ -35,11 +37,13 @@ const EmailButton = () => {
             placeholder="Type here..."
             required
           />
-          <button className="emailFormButton">Send</button>
+          <button type="button" className="emailFormButton">
+            Send
+          </button>
         </form>
       )}
       {buttonState && (
-        <button className="emailButton" onClick={handleClick}>
+        <button type="button" className="emailButton" onClick={handleClick}>
           <i className="icon-mail" />
         </button>
       )}

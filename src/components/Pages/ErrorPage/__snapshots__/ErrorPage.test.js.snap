@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorPage snapshot 1`] = `
+<div
+  className="errorScreen"
+>
+  <h1>
+    404 page not found
+  </h1>
+  <p>
+    Couldn't find localhost
+    /
+    <br />
+    This page doesn't exist. Try to go back.
+    <br />
+    Click
+     
+    <a
+      className="linkA"
+      href="/"
+      onClick={[Function]}
+    >
+      <b>
+        here
+      </b>
+    </a>
+     
+    to go back to main page
+  </p>
+</div>
+`;

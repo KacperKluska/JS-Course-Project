@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect } from 'react';
 
 function useOutsideAlerter(ref, func) {
   useEffect(() => {
@@ -8,20 +8,31 @@ function useOutsideAlerter(ref, func) {
       }
     }
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [ref, func]);
 }
 
-export default function OutsideAlerter(props) {
+export default function OutsideAlerter({ func, id, style, children }) {
   const wrapperRef = useRef(null);
-  useOutsideAlerter(wrapperRef, props.func);
+  useOutsideAlerter(wrapperRef, func);
 
   return (
-    <div id={props.id} className={props.class} ref={wrapperRef}>
-      {props.children}
+    <div id={id} className={style} ref={wrapperRef}>
+      {children}
     </div>
   );
 }
+
+// export default function OutsideAlerter({ props }) {
+//   const wrapperRef = useRef(null);
+//   useOutsideAlerter(wrapperRef, props.func);
+
+//   return (
+//     <div id={props.id} className={props.style} ref={wrapperRef}>
+//       {props.children}
+//     </div>
+//   );
+// }

@@ -1,6 +1,6 @@
-import "./style.scss";
-import CustomLink from "../CustomLink/CustomLink";
-import Sectionlogo from "../SectionLogo/SectionLogo";
+import './style.scss';
+import CustomLink from '../CustomLink/CustomLink';
+import Sectionlogo from '../SectionLogo/SectionLogo';
 
 export default function Register() {
   return (
@@ -13,17 +13,13 @@ export default function Register() {
           </header>
           <div className="inputs">
             Name
-            <input type="text" placeholder="Name..." required></input>
+            <input type="text" placeholder="Name..." required />
             Email
-            <input type="email" placeholder="Email..." required></input>
+            <input type="email" placeholder="Email..." required />
             Password
-            <input type="password" placeholder="Password..." required></input>
+            <input type="password" placeholder="Password..." required />
             Password
-            <input
-              type="password"
-              placeholder="Repeat password..."
-              required
-            ></input>
+            <input type="password" placeholder="Repeat password..." required />
           </div>
           <div className="submitButtons">
             <div>
