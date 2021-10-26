@@ -1,4 +1,4 @@
-@import "./_colors";
+@import './_colors';
 
 * {
   margin: 0;
@@ -34,3 +34,129 @@ a {
   text-decoration: none;
   color: white;
 }
+
+// #############  login and register classes ##############
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  width: 50%;
+  min-width: 300px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  width: 100%;
+
+  input {
+    width: 90%;
+
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+
+    font-size: 1rem;
+
+    outline: none;
+    border: 1px solid black;
+
+    &:focus {
+      border: 1px solid $blue-button-color;
+    }
+  }
+}
+
+.underlineLink {
+  color: black;
+
+  &:hover {
+    color: $blue-button-color;
+    text-decoration: underline;
+  }
+}
+
+.loginSubmitButton {
+  height: 2rem;
+  width: 100px;
+
+  background-color: $success-color;
+  border: 1px solid $success-color - #111;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+
+  margin-top: 1.5rem;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $success-color + #111;
+    border-color: blue;
+  }
+}
+
+.loginInfo {
+  width: 40%;
+  padding: 0rem 1rem;
+}
+
+.loginInfoList {
+  padding-left: 1rem;
+  margin-top: 1rem;
+
+  li {
+    margin-top: 5px;
+  }
+}
+
+.loginInfoButton {
+  height: 2rem;
+  width: 100px;
+
+  background-color: $blue-button-color;
+  border: 1px solid green;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+
+  margin-top: 1.5rem;
+
+  &:hover {
+    background-color: $blue-button-color - #111;
+  }
+}
+
+.loginInfoMessage {
+  margin-top: 2rem;
+
+  &.success {
+    color: $success-color;
+  }
+
+  &.failure {
+    color: $danger-color;
+  }
+}
+
+@media (max-width: 600px) {
+  .loginInfo {
+    width: 100%;
+
+    margin-top: 3rem;
+    padding: 0.5rem;
+  }
+
+  .loginInfoList {
+    padding-left: 1rem;
+    margin-top: 1rem;
+
+    li {
+      margin-top: 5px;
+    }
+  }
+}
+
+// #############  login and register classes ##############
