@@ -3,11 +3,6 @@ import CustomLink from '../CustomLink/CustomLink';
 import Sectionlogo from '../SectionLogo/SectionLogo';
 
 export default function Login() {
-  /**
-   * TODO
-   * I need to move styles to global file,
-   * because register uses the same styles classes
-   */
   return (
     <div className="emptyScreen">
       <Sectionlogo>Sign in!</Sectionlogo>
@@ -26,7 +21,7 @@ export default function Login() {
             <CustomLink path="/error">
               <div className="underlineLink">Forgot password ?</div>
             </CustomLink>
-            <button className="submitButton" type="submit">
+            <button className="loginSubmitButton" type="submit">
               Login
             </button>
           </div>
