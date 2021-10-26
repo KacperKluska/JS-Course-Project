@@ -46,7 +46,7 @@ a {
   min-width: 300px;
 }
 
-.inputs {
+.loginInputs {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -63,6 +63,10 @@ a {
 
     outline: none;
     border: 1px solid black;
+
+    &.failure {
+      border: 1px solid $danger-color;
+    }
 
     &:focus {
       border: 1px solid $blue-button-color;
