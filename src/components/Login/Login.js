@@ -33,7 +33,7 @@ export default function Login() {
           <ul className="loginInfoList">
             <li>Watch your package status</li>
             <li>Shopping history</li>
-            <li>Posibility of getting discount</li>
+            <li>Possibility of getting discount</li>
             <li>Autocomplete form</li>
           </ul>
           <CustomLink path="/register">
