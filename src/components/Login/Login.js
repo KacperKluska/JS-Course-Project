@@ -31,7 +31,7 @@ export default function Login() {
         setMessage(signUpData.message);
       }
     } catch (err) {
-      console.log('🚀 ~ file: Register.js ~ line 33 ~ registerUser ~ err', err);
+      // console.log(err);
     }
   };
 
@@ -67,6 +67,11 @@ export default function Login() {
             <CustomLink path="/error">
               <div className="underlineLink">Forgot password ?</div>
             </CustomLink>
+            <h3
+              className={`loginInfoMessage ${!error ? 'success' : 'failure'}`}
+            >
+              {message}
+            </h3>
             <button className="loginSubmitButton" type="submit">
               Login
             </button>
@@ -87,9 +92,6 @@ export default function Login() {
               Sign up
             </button>
           </CustomLink>
-          <h3 className={`loginInfoMessage ${!error ? 'success' : 'failure'}`}>
-            {message}
-          </h3>
         </div>
       </section>
     </div>
