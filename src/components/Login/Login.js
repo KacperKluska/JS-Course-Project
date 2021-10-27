@@ -1,4 +1,5 @@
 import './style.scss';
+import { useHistory } from 'react-router-dom';
 import { useState } from 'react/cjs/react.development';
 import CustomLink from '../CustomLink/CustomLink';
 import Sectionlogo from '../SectionLogo/SectionLogo';
@@ -8,6 +9,7 @@ export default function Login() {
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
   const [error, setError] = useState(false);
+  const history = useHistory();
 
   const signIn = async (e) => {
     e.preventDefault();
@@ -29,6 +31,7 @@ export default function Login() {
       } else {
         setError(false);
         setMessage(signUpData.message);
+        history.replace({ pathname: '/' });
       }
     } catch (err) {
       // console.log(err);
