@@ -1,0 +1,53 @@
+.flexHorizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  //   align-items: center;
+
+  width: 80%;
+  min-height: 300px;
+}
+
+.personalData {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  width: 300px;
+
+  margin-top: 3rem;
+}
+
+.shipmentData {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  width: 300px;
+
+  margin-top: 3rem;
+}
+
+.sectionTitle::after {
+  content: '';
+  background-color: black;
+  display: block;
+  height: 2px;
+  width: 100%;
+}
+
+.accountInput {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  input {
+    padding: 0.5rem;
+
+    outline: none;
+
+    &:focus {
+      border: 2px solid blue;
+    }
+  }
+}
