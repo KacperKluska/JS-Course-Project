@@ -1,8 +1,10 @@
 import './style.scss';
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react/cjs/react.development';
+import { useContext } from 'react';
 import CustomLink from '../CustomLink/CustomLink';
 import Sectionlogo from '../SectionLogo/SectionLogo';
+import { UserContext } from '../../context/UserContext';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -10,6 +12,8 @@ export default function Login() {
   const [message, setMessage] = useState('');
   const [error, setError] = useState(false);
   const history = useHistory();
+  const { isLogged } = useContext(UserContext);
+  const [, setUserLogged] = isLogged;
 
   const signIn = async (e) => {
     e.preventDefault();
@@ -19,6 +23,7 @@ export default function Login() {
         headers: {
           'Content-Type': 'application/json',
         },
+        credentials: 'include',
         body: JSON.stringify({
           email,
           password,
@@ -32,6 +37,7 @@ export default function Login() {
         setError(false);
         setMessage(signUpData.message);
         history.replace({ pathname: '/' });
+        setUserLogged(true);
       }
     } catch (err) {
       // console.log(err);
