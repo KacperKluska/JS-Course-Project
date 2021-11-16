@@ -19,8 +19,7 @@ export default function Register() {
     e.preventDefault();
     const result = validate(setMessage, password, password2, name, surname);
     setValidateError(!result);
-    // console.log(`fetch = ${fetchError}`);
-    // console.log(`validate = ${validateError}`);
+
     if (result) {
       try {
         const singUpResponse = await fetch('http://localhost:3001/register', {

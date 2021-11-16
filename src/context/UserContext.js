@@ -20,7 +20,7 @@ export const UserContextProvider = ({ children }) => {
         setUserLogged(false);
       }
     } catch (err) {
-      // console.log(err);
+      console.error(err);
     }
   }, [userLogged]);
 
