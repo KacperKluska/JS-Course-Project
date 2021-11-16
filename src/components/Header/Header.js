@@ -1,12 +1,15 @@
 import './style.scss';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import NavItem from '../NavItem/NavItem';
 import OutsideAlerter from '../OutsideClick/OutsideAlerter';
 import HamburgerButton from '../HamburgerButton/HamburgerButton';
 import CustomLink from '../CustomLink/CustomLink';
+import { UserContext } from '../../context/UserContext';
 
 export default function Header({ searchRef, searchVisible, setSearchVisible }) {
   const [leftMenu, setLeftMenu] = useState('');
+  const { isLogged } = useContext(UserContext);
+  const [userLogged] = isLogged;
 
   const handleLeftMenuShow = () => {
     setLeftMenu('active');
@@ -38,25 +41,40 @@ export default function Header({ searchRef, searchVisible, setSearchVisible }) {
       >
         <div id="leftNavDiv">
           <ul id="leftNav" className={leftMenu}>
-            <CustomLink path="/login">
-              <NavItem
-                onClick={() => {
-                  handleLeftMenuClose();
-                }}
-                icon="icon-login"
-              >
-                Sign in
-              </NavItem>
-            </CustomLink>
-            <CustomLink path="/register">
-              <NavItem
-                onClick={() => {
-                  handleLeftMenuClose();
-                }}
-              >
-                Register
-              </NavItem>
-            </CustomLink>
+            {!userLogged && (
+              <CustomLink path="/login">
+                <NavItem
+                  onClick={() => {
+                    handleLeftMenuClose();
+                  }}
+                  icon="icon-login"
+                >
+                  Sign in
+                </NavItem>
+              </CustomLink>
+            )}
+            {!userLogged && (
+              <CustomLink path="/register">
+                <NavItem
+                  onClick={() => {
+                    handleLeftMenuClose();
+                  }}
+                >
+                  Register
+                </NavItem>
+              </CustomLink>
+            )}
+            {userLogged && (
+              <CustomLink path="/account">
+                <NavItem
+                  onClick={() => {
+                    handleLeftMenuClose();
+                  }}
+                >
+                  Account
+                </NavItem>
+              </CustomLink>
+            )}
             <NavItem
               icon={searchVisible === 'active' ? 'icon-cancel' : 'icon-search'}
               onClick={() => {
