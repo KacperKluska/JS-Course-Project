@@ -7,13 +7,13 @@ import suit1 from '../../../images/suit4.jpg';
 import suit2 from '../../../images/suit2.jpg';
 import suit3 from '../../../images/suit3.jpg';
 
-export default function MainPage() {
+export default function MainPage({ ref1, ref2 }) {
   return (
     <div>
       <div className="mainPhoto">
         <img src={mainPhoto} alt="Barney Stinson" />
       </div>
-      <InfoText title="About">
+      <InfoText title="About" scrollRef={ref1}>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo velit
           nulla eius ducimus quia suscipit minus consectetur eaque, in iusto
@@ -72,7 +72,7 @@ export default function MainPage() {
           </div>
         </div>
       </div>
-      <InfoText title="Contact">
+      <InfoText title="Contact" scrollRef={ref2}>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero
           quisquam omnis fugit hic, nobis eum sit natus ipsum voluptas
