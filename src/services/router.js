@@ -1,8 +1,9 @@
-const API_HOST = 'http://localhost:3001';
+// eslint-disable-next-line import/no-extraneous-dependencies
+require('dotenv').config();
 
 export default async function login(email, password) {
   try {
-    const signInResponse = await fetch(`${API_HOST}/login`, {
+    const signInResponse = await fetch(`${process.env.API_HOST}/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
