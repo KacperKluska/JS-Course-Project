@@ -6,6 +6,7 @@ import asidePhoto from '../../../images/barney3.jpg';
 import suit1 from '../../../images/suit4.jpg';
 import suit2 from '../../../images/suit2.jpg';
 import suit3 from '../../../images/suit3.jpg';
+import { navItems } from '../../Navbar/Navbar';
 
 export default function MainPage() {
   return (
@@ -13,7 +14,7 @@ export default function MainPage() {
       <div className="mainPhoto">
         <img src={mainPhoto} alt="Barney Stinson" />
       </div>
-      <InfoText title="About">
+      <InfoText title="About" scrollRef={navItems[3].ref}>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo velit
           nulla eius ducimus quia suscipit minus consectetur eaque, in iusto
@@ -72,7 +73,7 @@ export default function MainPage() {
           </div>
         </div>
       </div>
-      <InfoText title="Contact">
+      <InfoText title="Contact" scrollRef={navItems[4].ref}>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero
           quisquam omnis fugit hic, nobis eum sit natus ipsum voluptas

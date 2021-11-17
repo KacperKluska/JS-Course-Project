@@ -1,8 +1,8 @@
-import "./style.scss";
+import './style.scss';
 
-export default function InfoText({ title, children }) {
+export default function InfoText({ title, scrollRef, children }) {
   return (
-    <section id={title} className="infoText">
+    <section ref={scrollRef} id={title} className="infoText">
       <header>
         <h1>{title}</h1>
       </header>
