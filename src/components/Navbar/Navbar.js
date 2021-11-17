@@ -1,13 +1,22 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import NavItem from '../NavItem/NavItem';
 import './style.scss';
 
-export default function Navbar({ ref1, ref2 }) {
-  const scrollToElById = (id) => {
+export const navItems = [
+  { label: 'For him' },
+  { label: 'For her' },
+  { label: 'Kids' },
+  { label: 'About', ref: React.createRef() },
+  { label: 'Contact', ref: React.createRef() },
+];
+
+export default function Navbar() {
+  const scrollToElement = (ref) => {
+    console.log('🚀 ~ file: Navbar.js ~ line 16 ~ scrollToElement ~ ref', ref);
     setTimeout(() => {
-      const element = id === 'About' ? ref1 : ref2;
-      if (element) {
-        const offset = element.current.offsetTop;
+      if (ref && ref.current) {
+        const offset = ref.current.offsetTop;
         window.scrollTo({ top: offset - 50, behavior: 'smooth' });
       }
     }, 0);
@@ -17,19 +26,17 @@ export default function Navbar({ ref1, ref2 }) {
     <nav className="sticky">
       <div className="secondNavbar">
         <ul className="thirdList">
-          <NavItem>For him</NavItem>
-          <NavItem>For her</NavItem>
-          <NavItem>Kids</NavItem>
-          <NavItem onClick={() => scrollToElById('About')}>
-            <Link className="navbarLink" to="/">
-              About
-            </Link>
-          </NavItem>
-          <NavItem onClick={() => scrollToElById('Contact')}>
-            <Link className="navbarLink" to="/">
-              Contact
-            </Link>
-          </NavItem>
+          {navItems.map((item) => (
+            <NavItem onClick={() => scrollToElement(item.ref)}>
+              {item.ref ? (
+                <Link className="navbarLink" to="/">
+                  {item.label}
+                </Link>
+              ) : (
+                item.label
+              )}
+            </NavItem>
+          ))}
         </ul>
       </div>
     </nav>

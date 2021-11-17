@@ -14,8 +14,6 @@ import ErrorPage from '../Pages/ErrorPage/ErrorPage';
 export default function Layout() {
   const [searchVisible, setSearchVisible] = useState('none');
   const searchRef = useRef();
-  const scrollRef1 = useRef();
-  const scrollRef2 = useRef();
   const handleSearchVisible = () => {
     setSearchVisible((prev) => {
       if (prev === 'active') {
@@ -35,7 +33,7 @@ export default function Layout() {
         searchVisible={searchVisible}
         setSearchVisible={handleSearchVisible}
       />
-      <Navbar ref1={scrollRef1} ref2={scrollRef2} />
+      <Navbar />
       <Search
         searchRef={searchRef}
         styleClass={searchVisible}
@@ -44,7 +42,7 @@ export default function Layout() {
       <main>
         <Switch>
           <Route path="/" exact>
-            <MainPage ref1={scrollRef1} ref2={scrollRef2} />
+            <MainPage />
           </Route>
           <Route path="/login">
             <Login />
