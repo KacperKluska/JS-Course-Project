@@ -34,7 +34,8 @@ export default function Login() {
         history.replace({ pathname: '/' });
       }
     } catch (err) {
-      // console.log(err);
+      setError(true);
+      setMessage("Couldn't connect to server");
     }
   };
 
