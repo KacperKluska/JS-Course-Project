@@ -2,10 +2,10 @@ import './style.scss';
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react/cjs/react.development';
 import { useContext } from 'react';
-import CustomLink from '../CustomLink/CustomLink';
-import Sectionlogo from '../SectionLogo/SectionLogo';
-import { UserContext } from '../../context/UserContext';
-import { login } from '../../services/requests';
+import CustomLink from '../../CustomLink/CustomLink';
+import Sectionlogo from '../../SectionLogo/SectionLogo';
+import { UserContext } from '../../../context/UserContext';
+import { login } from '../../../services/requests';
 
 export default function Login() {
   const [email, setEmail] = useState('');

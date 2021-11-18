@@ -1,11 +1,11 @@
 import './style.scss';
 import React from 'react';
 import { useState } from 'react/cjs/react.development';
-import CustomLink from '../CustomLink/CustomLink';
-import Sectionlogo from '../SectionLogo/SectionLogo';
+import CustomLink from '../../CustomLink/CustomLink';
+import Sectionlogo from '../../SectionLogo/SectionLogo';
 import RegisterInputs from './RegisterInputs';
 import validate from './validate';
-import { register } from '../../services/requests';
+import { register } from '../../../services/requests';
 
 export default function Register() {
   const [message, setMessage] = useState('');
