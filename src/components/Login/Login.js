@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import CustomLink from '../CustomLink/CustomLink';
 import Sectionlogo from '../SectionLogo/SectionLogo';
 import { UserContext } from '../../context/UserContext';
-import login from '../../services/router';
+import { login } from '../../services/requests';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -22,7 +22,10 @@ export default function Login() {
       const { data, status } = await login(email, password);
       if (status !== 200) {
         setError(true);
-        setMessage(data.error);
+        // eslint-disable-next-line no-unused-expressions
+        status === 404
+          ? setMessage("Couldn't connect to the server")
+          : setMessage(data.error);
       } else {
         setError(false);
         setMessage(data.message);
