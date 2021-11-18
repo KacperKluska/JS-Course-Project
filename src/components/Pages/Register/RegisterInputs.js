@@ -1,18 +1,6 @@
 import React from 'react';
 
-const RegisterInputs = ({
-  name,
-  setName,
-  surname,
-  setSurname,
-  email,
-  setEmail,
-  password,
-  setPassword,
-  password2,
-  setPassword2,
-  error,
-}) => (
+const RegisterInputs = ({ userData, handleUserData, error }) => (
   <div className="loginInputs">
     Name
     <input
@@ -20,9 +8,9 @@ const RegisterInputs = ({
       type="text"
       placeholder="Name..."
       required
-      value={name}
+      value={userData.name}
       onChange={(e) => {
-        setName(e.target.value);
+        handleUserData({ name: e.target.value });
       }}
     />
     Surname
@@ -31,9 +19,9 @@ const RegisterInputs = ({
       type="text"
       placeholder="Surname..."
       required
-      value={surname}
+      value={userData.surname}
       onChange={(e) => {
-        setSurname(e.target.value);
+        handleUserData({ surname: e.target.value });
       }}
     />
     Email
@@ -42,9 +30,9 @@ const RegisterInputs = ({
       type="email"
       placeholder="Email..."
       required
-      value={email}
+      value={userData.email}
       onChange={(e) => {
-        setEmail(e.target.value);
+        handleUserData({ email: e.target.value });
       }}
     />
     Password
@@ -53,9 +41,9 @@ const RegisterInputs = ({
       type="password"
       placeholder="Password..."
       required
-      value={password}
+      value={userData.password}
       onChange={(e) => {
-        setPassword(e.target.value);
+        handleUserData({ password: e.target.value });
       }}
     />
     Repeat password
@@ -64,9 +52,9 @@ const RegisterInputs = ({
       type="password"
       placeholder="Repeat password..."
       required
-      value={password2}
+      value={userData.password2}
       onChange={(e) => {
-        setPassword2(e.target.value);
+        handleUserData({ password2: e.target.value });
       }}
     />
   </div>

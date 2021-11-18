@@ -1,55 +1,65 @@
 import './style.scss';
+import React from 'react';
 import { useState } from 'react/cjs/react.development';
-import CustomLink from '../CustomLink/CustomLink';
-import Sectionlogo from '../SectionLogo/SectionLogo';
+import CustomLink from '../../CustomLink/CustomLink';
+import Sectionlogo from '../../SectionLogo/SectionLogo';
 import RegisterInputs from './RegisterInputs';
 import validate from './validate';
+import { register } from '../../../services/requests';
 
 export default function Register() {
-  const [name, setName] = useState('');
-  const [surname, setSurname] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [password2, setPassword2] = useState('');
-  const [message, setMessage] = useState('elo');
+  const [message, setMessage] = useState('');
   const [fetchError, setFetchError] = useState(false);
   const [validateError, setValidateError] = useState(false);
 
+  const defaultUserData = {
+    name: '',
+    surname: '',
+    email: '',
+    password: '',
+    password2: '',
+  };
+
+  const [userData, setUserData] = React.useState({
+    ...defaultUserData,
+  });
+
+  const handleUserData = (data) => {
+    setUserData((prev) => ({ ...prev, ...data }));
+  };
+
   const registerUser = async (e) => {
     e.preventDefault();
-    const result = validate(setMessage, password, password2, name, surname);
+    const result = validate(
+      setMessage,
+      userData.password,
+      userData.password2,
+      userData.name,
+      userData.surname,
+    );
     setValidateError(!result);
-    // console.log(`fetch = ${fetchError}`);
-    // console.log(`validate = ${validateError}`);
+
     if (result) {
       try {
-        const singUpResponse = await fetch('http://localhost:3001/register', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            name,
-            surname,
-            email,
-            password,
-          }),
-        });
-        const signUpData = await singUpResponse.json();
-        if (singUpResponse.status !== 200) {
+        const { data, status } = await register(
+          userData.name,
+          userData.surname,
+          userData.email,
+          userData.password,
+        );
+        if (status !== 200) {
           setFetchError(true);
-          setMessage(signUpData.error);
+          // eslint-disable-next-line no-unused-expressions
+          status === 404
+            ? setMessage("Couldn't connect to the server")
+            : setMessage(data.error);
         } else {
           setFetchError(false);
-          setMessage(signUpData.message);
-          setName('');
-          setSurname('');
-          setEmail('');
-          setPassword('');
-          setPassword2('');
+          setMessage(data.message);
+          setUserData({ ...defaultUserData });
         }
       } catch (err) {
-        // console.log(err);
+        console.error(err);
       }
     }
   };
@@ -63,16 +73,8 @@ export default function Register() {
             <h1>Register</h1>
           </header>
           <RegisterInputs
-            name={name}
-            setName={setName}
-            surname={surname}
-            setSurname={setSurname}
-            email={email}
-            setEmail={setEmail}
-            password={password}
-            setPassword={setPassword}
-            password2={password2}
-            setPassword2={setPassword2}
+            userData={userData}
+            handleUserData={handleUserData}
             error={validateError}
           />
           <div className="submitButtons">

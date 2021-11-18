@@ -1,8 +1,11 @@
 import './style.scss';
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react/cjs/react.development';
-import CustomLink from '../CustomLink/CustomLink';
-import Sectionlogo from '../SectionLogo/SectionLogo';
+import { useContext } from 'react';
+import CustomLink from '../../CustomLink/CustomLink';
+import Sectionlogo from '../../SectionLogo/SectionLogo';
+import { UserContext } from '../../../context/UserContext';
+import { login } from '../../../services/requests';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -10,34 +13,33 @@ export default function Login() {
   const [message, setMessage] = useState('');
   const [error, setError] = useState(false);
   const history = useHistory();
+  const { isLogged } = useContext(UserContext);
+  const [, setUserLogged] = isLogged;
 
   const signIn = async (e) => {
     e.preventDefault();
     try {
-      const singInResponse = await fetch('http://localhost:3001/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email,
-          password,
-        }),
-      });
-      const signUpData = await singInResponse.json();
-      if (singInResponse.status !== 200) {
+      const { data, status } = await login(email, password);
+      if (status !== 200) {
         setError(true);
-        setMessage(signUpData.error);
+        // eslint-disable-next-line no-unused-expressions
+        status === 404
+          ? setMessage("Couldn't connect to the server")
+          : setMessage(data.error);
       } else {
         setError(false);
-        setMessage(signUpData.message);
+        setMessage(data.message);
         history.replace({ pathname: '/' });
+        setUserLogged(true);
       }
     } catch (err) {
       setError(true);
       setMessage("Couldn't connect to server");
     }
   };
+
+  const handleEmailChange = (e) => setEmail(e.target.value);
+  const handlePasswordChange = (e) => setPassword(e.target.value);
 
   return (
     <div className="emptyScreen">
@@ -55,7 +57,7 @@ export default function Login() {
               placeholder="Email..."
               required
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={handleEmailChange}
             />
             Password
             <input
@@ -64,7 +66,7 @@ export default function Login() {
               placeholder="Password..."
               required
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={handlePasswordChange}
             />
           </div>
           <div className="submitButtons">

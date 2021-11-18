@@ -6,10 +6,11 @@ import Footer from '../Footer/Footer';
 import Search from '../Search/Search';
 import '../../fontello/css/fontello.css';
 import MainPage from '../Pages/MainPage/MainPage';
-import Login from '../Login/Login';
-import Register from '../Register/Register';
+import Login from '../Pages/Login/Login';
+import Register from '../Pages/Register/Register';
 import EmailButton from '../EmailButton/EmailButton';
 import ErrorPage from '../Pages/ErrorPage/ErrorPage';
+import AccountPage from '../Pages/AccountPage/AccountPage';
 
 export default function Layout() {
   const [searchVisible, setSearchVisible] = useState('none');
@@ -49,6 +50,9 @@ export default function Layout() {
           </Route>
           <Route path="/register">
             <Register />
+          </Route>
+          <Route path="/account">
+            <AccountPage />
           </Route>
           <Route path="*">
             <ErrorPage errorCode="404 Page not found!">
