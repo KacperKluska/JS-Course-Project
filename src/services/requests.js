@@ -23,6 +23,27 @@ export async function login(email, password) {
   }
 }
 
+export async function register(name, surname, email, password) {
+  try {
+    const singUpResponse = await fetch(`${API_HOST}/register`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name,
+        surname,
+        email,
+        password,
+      }),
+    });
+    const data = await singUpResponse.json();
+    return { data, status: singUpResponse.status };
+  } catch (error) {
+    return { data: { error }, status: 404 };
+  }
+}
+
 export async function verifyUser() {
   try {
     const response = await fetch(`${process.env.API_HOST}/verify_user`, {
