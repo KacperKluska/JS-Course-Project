@@ -1,16 +1,19 @@
-import { BrowserRouter as Router } from "react-router-dom";
-import Header from "./Header";
+import { BrowserRouter as Router } from 'react-router-dom';
+import Header from './Header';
+import { UserContextProvider } from '../../context/UserContext';
 
 let wrapper;
 
 beforeAll(() => {
   wrapper = mount(
-    <Router>
-      <Header />
-    </Router>
+    <UserContextProvider>
+      <Router>
+        <Header />
+      </Router>
+    </UserContextProvider>,
   );
 });
 
-test("Header snapshot", () => {
+test('Header snapshot', () => {
   expect(wrapper).toMatchSnapshot();
 });

@@ -1,16 +1,19 @@
-import { BrowserRouter } from "react-router-dom";
-import Layout from "./Layout";
+import { BrowserRouter } from 'react-router-dom';
+import Layout from './Layout';
+import { UserContextProvider } from '../../context/UserContext';
 
 let wrapper;
 
 beforeAll(() => {
   wrapper = mount(
-    <BrowserRouter>
-      <Layout />
-    </BrowserRouter>
+    <UserContextProvider>
+      <BrowserRouter>
+        <Layout />
+      </BrowserRouter>
+    </UserContextProvider>,
   );
 });
 
-test("layout snapshot", () => {
+test('layout snapshot', () => {
   expect(wrapper).toMatchSnapshot();
 });
