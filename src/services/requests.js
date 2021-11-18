@@ -37,3 +37,25 @@ export async function verifyUser() {
     return { status: 400 };
   }
 }
+
+export async function refreshToken() {
+  try {
+    const response = await fetch(`${process.env.API_HOST}/refresh_token`, {
+      credentials: 'include',
+    });
+    return response.status;
+  } catch (err) {
+    return { status: 400 };
+  }
+}
+
+export async function logoutUser() {
+  try {
+    const response = await fetch(`${process.env.API_HOST}/logout`, {
+      credentials: 'include',
+    });
+    return response.status;
+  } catch (err) {
+    return { status: 400 };
+  }
+}
