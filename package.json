@@ -23,7 +23,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-test-renderer": "^17.0.2",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "dotenv": "^10.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -52,7 +53,6 @@
   "devDependencies": {
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
     "babel-eslint": "^10.1.0",
-    "dotenv": "^10.0.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "enzyme-to-json": "^3.6.2",
     "eslint": "^7.32.0",
