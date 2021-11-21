@@ -27,7 +27,7 @@ export default function Navbar() {
       <div className="secondNavbar">
         <ul className="thirdList">
           {navItems.map((item) => (
-            <NavItem onClick={() => scrollToElement(item.ref)}>
+            <NavItem key={item.label} onClick={() => scrollToElement(item.ref)}>
               {item.ref ? (
                 <Link className="navbarLink" to="/">
                   {item.label}
