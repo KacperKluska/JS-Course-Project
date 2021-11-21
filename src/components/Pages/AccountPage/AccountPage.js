@@ -1,43 +1,35 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './style.scss';
 import SectionLogo from '../../SectionLogo/SectionLogo';
-import { UserContext } from '../../../context/UserContext';
+import { getUserData, refreshToken } from '../../../services/requests';
 
 const AccountPage = () => {
   const [name, setName] = React.useState('');
   const [surname, setSurname] = React.useState('');
   const [email, setEmail] = React.useState('');
 
-  const { userId } = useContext(UserContext);
-  const [id] = userId;
-
-  const getUserData = async () => {
+  const getData = async () => {
     try {
-      const response = await fetch(
-        `http://localhost:3001/account/user_data?id=${id}`,
-        {
-          credentials: 'include',
-        },
-      );
-      if (response.status === 200) {
-        const userData = await response.json();
-        setName(userData.name);
-        setSurname(userData.surname);
-        setEmail(userData.email);
+      const { data, status } = await getUserData();
+      if (status === 200) {
+        setName(data.name);
+        setSurname(data.surname);
+        setEmail(data.email);
       } else {
-        setName('Error');
-        setSurname('Error');
-        setEmail('Error');
+        setName('Server error');
+        setSurname('Server error');
+        setEmail('Server error');
       }
     } catch (err) {
-      setName('Error');
-      setSurname('Error');
-      setEmail('Error');
+      setName('Server error');
+      setSurname('Server error');
+      setEmail('Server error');
     }
   };
 
   React.useEffect(() => {
-    getUserData();
+    refreshToken();
+    getData();
   }, []);
 
   return (
