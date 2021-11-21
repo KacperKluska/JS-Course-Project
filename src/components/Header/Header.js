@@ -5,11 +5,12 @@ import OutsideAlerter from '../OutsideClick/OutsideAlerter';
 import HamburgerButton from '../HamburgerButton/HamburgerButton';
 import CustomLink from '../CustomLink/CustomLink';
 import { UserContext } from '../../context/UserContext';
+import { logoutUser } from '../../services/requests';
 
 export default function Header({ searchRef, searchVisible, setSearchVisible }) {
   const [leftMenu, setLeftMenu] = useState('');
   const { isLogged } = useContext(UserContext);
-  const [userLogged] = isLogged;
+  const [userLogged, setUserLogged] = isLogged;
 
   const handleLeftMenuShow = () => {
     setLeftMenu('active');
@@ -25,6 +26,12 @@ export default function Header({ searchRef, searchVisible, setSearchVisible }) {
       }
       return '';
     });
+  };
+
+  const logOut = () => {
+    handleLeftMenuClose();
+    setUserLogged(false);
+    logoutUser();
   };
 
   const handleSearch = () => {
@@ -72,6 +79,17 @@ export default function Header({ searchRef, searchVisible, setSearchVisible }) {
                   }}
                 >
                   Account
+                </NavItem>
+              </CustomLink>
+            )}
+            {userLogged && (
+              <CustomLink path="/">
+                <NavItem
+                  onClick={() => {
+                    logOut();
+                  }}
+                >
+                  Log out
                 </NavItem>
               </CustomLink>
             )}
