@@ -1,4 +1,5 @@
 import React from 'react';
+import { verifyUser } from '../services/requests';
 
 export const UserContext = React.createContext('');
 
@@ -8,13 +9,9 @@ export const UserContextProvider = ({ children }) => {
 
   React.useEffect(async () => {
     try {
-      const response = await fetch('http://localhost:3001/verify_user', {
-        credentials: 'include',
-      });
+      const response = await verifyUser();
       if (response.status === 200) {
-        const data = await response.json();
-        setId(data.id);
-        console.log(data.id);
+        setId(response.data.id);
       } else {
         setId('');
         setUserLogged(false);
