@@ -4,16 +4,14 @@ import { verifyUser } from '../services/requests';
 export const UserContext = React.createContext('');
 
 export const UserContextProvider = ({ children }) => {
-  const [id, setId] = React.useState('');
   const [userLogged, setUserLogged] = React.useState(false);
 
   React.useEffect(async () => {
     try {
       const response = await verifyUser();
       if (response.status === 200) {
-        setId(response.data.id);
+        setUserLogged(true);
       } else {
-        setId('');
         setUserLogged(false);
       }
     } catch (err) {
@@ -22,9 +20,7 @@ export const UserContextProvider = ({ children }) => {
   }, [userLogged]);
 
   return (
-    <UserContext.Provider
-      value={{ userId: [id, setId], isLogged: [userLogged, setUserLogged] }}
-    >
+    <UserContext.Provider value={{ isLogged: [userLogged, setUserLogged] }}>
       {children}
     </UserContext.Provider>
   );
