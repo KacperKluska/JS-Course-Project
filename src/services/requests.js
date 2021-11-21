@@ -92,3 +92,15 @@ export async function getUserData() {
     return { data: { err }, status: 400 };
   }
 }
+
+export async function getUserShipmentData() {
+  try {
+    const response = await fetch(`${API_HOST}/account/shipment_data`, {
+      credentials: 'include',
+    });
+    const data = await response.json();
+    return { data, status: response.status };
+  } catch (err) {
+    return { data: { err }, status: 400 };
+  }
+}
