@@ -8,13 +8,16 @@ const AccountPage = () => {
   const [surname, setSurname] = React.useState('');
   const [email, setEmail] = React.useState('');
 
-  const { isLogged } = useContext(UserContext);
-  const [userId] = isLogged;
+  const { userId } = useContext(UserContext);
+  const [id] = userId;
 
   const getUserData = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3001/user?id=${userId.id}`,
+        `http://localhost:3001/account/user_data?id=${id}`,
+        {
+          credentials: 'include',
+        },
       );
       if (response.status === 200) {
         const userData = await response.json();
