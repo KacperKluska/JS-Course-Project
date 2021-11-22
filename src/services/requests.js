@@ -73,6 +73,7 @@ export async function refreshToken() {
 export async function logoutUser() {
   try {
     const response = await fetch(`${API_HOST}/logout`, {
+      method: 'DELETE',
       credentials: 'include',
     });
     return response.status;
