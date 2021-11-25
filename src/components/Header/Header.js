@@ -111,8 +111,12 @@ export default function Header({ searchRef, searchVisible, setSearchVisible }) {
           <h1 id="logo">SuitUp</h1>
         </CustomLink>
         <ul id="rightNav">
-          <NavItem icon="icon-gift">Gift Certificate</NavItem>
-          <NavItem icon="icon-basket">Cart</NavItem>
+          <NavItem isDisabled icon="icon-gift">
+            Gift Certificate
+          </NavItem>
+          <NavItem isDisabled icon="icon-basket">
+            Cart
+          </NavItem>
         </ul>
       </nav>
     </header>
