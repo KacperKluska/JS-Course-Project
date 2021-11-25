@@ -1,5 +1,5 @@
 import React from 'react';
-import { verifyUser } from '../services/requests';
+import { refreshToken, verifyUser } from '../services/requests';
 
 export const UserContext = React.createContext('');
 
@@ -8,11 +8,14 @@ export const UserContextProvider = ({ children }) => {
 
   React.useEffect(async () => {
     try {
-      const response = await verifyUser();
-      if (response.status === 200) {
-        setUserLogged(true);
-      } else {
-        setUserLogged(false);
+      const { status } = await refreshToken();
+      if (status === 200) {
+        const response = await verifyUser();
+        if (response.status === 200) {
+          setUserLogged(true);
+        } else {
+          setUserLogged(false);
+        }
       }
     } catch (err) {
       console.error(err);
