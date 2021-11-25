@@ -64,7 +64,7 @@ export async function refreshToken() {
     const response = await fetch(`${API_HOST}/refresh_token`, {
       credentials: 'include',
     });
-    return response.status;
+    return { status: response.status };
   } catch (err) {
     return { status: 400 };
   }
