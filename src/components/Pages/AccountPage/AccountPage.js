@@ -38,9 +38,13 @@ const AccountPage = () => {
             <h2>Account settings</h2>
           </header>
           {userInputsData.map((item) => (
-            <label htmlFor={item.id} className="accountInput">
-              {item.label}:
-              <input type="text" id={item.id} value={item.value} readOnly />
+            <label key={item.id} htmlFor={item.id} className="accountInput">
+              <input
+                type="text"
+                id={item.id}
+                value={item.value ? item.value : 'loading...'}
+                readOnly
+              />
             </label>
           ))}
         </section>
@@ -49,9 +53,13 @@ const AccountPage = () => {
             <h2>Shipment details</h2>
           </header>
           {userShipmentInputsData.map((item) => (
-            <label htmlFor={item.id} className="accountInput">
-              {item.label}:
-              <input type="text" id={item.id} value={item.value} readOnly />
+            <label key={item.id} htmlFor={item.id} className="accountInput">
+              <input
+                type="text"
+                id={item.id}
+                value={item.value ? item.value : 'loading...'}
+                readOnly
+              />
             </label>
           ))}
         </section>
