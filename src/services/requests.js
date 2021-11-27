@@ -46,7 +46,7 @@ export async function register(name, surname, email, password) {
 
 export async function verifyUser() {
   try {
-    const response = await fetch(`${process.env.API_HOST}/verify_user`, {
+    const response = await fetch(`${API_HOST}/verify_user`, {
       credentials: 'include',
     });
     if (response.status === 200) {
@@ -61,7 +61,19 @@ export async function verifyUser() {
 
 export async function refreshToken() {
   try {
-    const response = await fetch(`${process.env.API_HOST}/refresh_token`, {
+    const response = await fetch(`${API_HOST}/refresh_token`, {
+      credentials: 'include',
+    });
+    return { status: response.status };
+  } catch (err) {
+    return { status: 400 };
+  }
+}
+
+export async function logoutUser() {
+  try {
+    const response = await fetch(`${API_HOST}/logout`, {
+      method: 'DELETE',
       credentials: 'include',
     });
     return response.status;
@@ -70,13 +82,26 @@ export async function refreshToken() {
   }
 }
 
-export async function logoutUser() {
+export async function getUserData() {
   try {
-    const response = await fetch(`${process.env.API_HOST}/logout`, {
+    const response = await fetch(`${API_HOST}/account/user_data`, {
       credentials: 'include',
     });
-    return response.status;
+    const data = await response.json();
+    return { data, status: response.status };
   } catch (err) {
-    return { status: 400 };
+    return { data: { err }, status: 400 };
+  }
+}
+
+export async function getUserShipmentData() {
+  try {
+    const response = await fetch(`${API_HOST}/account/shipment_data`, {
+      credentials: 'include',
+    });
+    const data = await response.json();
+    return { data, status: response.status };
+  } catch (err) {
+    return { data: { err }, status: 400 };
   }
 }

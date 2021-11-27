@@ -1,43 +1,32 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './style.scss';
 import SectionLogo from '../../SectionLogo/SectionLogo';
-import { UserContext } from '../../../context/UserContext';
+import { refreshToken } from '../../../services/requests';
+import {
+  defaultUserData,
+  defaultUserShipmentData,
+  getData,
+  getShipmentData,
+  getUserInputsData,
+  getUserShipmentInputsData,
+} from './logic';
 
 const AccountPage = () => {
-  const [name, setName] = React.useState('');
-  const [surname, setSurname] = React.useState('');
-  const [email, setEmail] = React.useState('');
+  const [userData, setUserData] = React.useState({
+    ...defaultUserData,
+  });
 
-  const { userId } = useContext(UserContext);
-  const [id] = userId;
+  const [userShipmentData, setUserShipmentData] = React.useState({
+    ...defaultUserShipmentData,
+  });
 
-  const getUserData = async () => {
-    try {
-      const response = await fetch(
-        `http://localhost:3001/account/user_data?id=${id}`,
-        {
-          credentials: 'include',
-        },
-      );
-      if (response.status === 200) {
-        const userData = await response.json();
-        setName(userData.name);
-        setSurname(userData.surname);
-        setEmail(userData.email);
-      } else {
-        setName('Error');
-        setSurname('Error');
-        setEmail('Error');
-      }
-    } catch (err) {
-      setName('Error');
-      setSurname('Error');
-      setEmail('Error');
-    }
-  };
+  const userInputsData = getUserInputsData(userData);
+  const userShipmentInputsData = getUserShipmentInputsData(userShipmentData);
 
-  React.useEffect(() => {
-    getUserData();
+  React.useEffect(async () => {
+    await refreshToken();
+    await getData(setUserData);
+    await getShipmentData(setUserShipmentData);
   }, []);
 
   return (
@@ -48,43 +37,31 @@ const AccountPage = () => {
           <header className="sectionTitle">
             <h2>Account settings</h2>
           </header>
-          <label htmlFor="name" className="accountInput">
-            Name:
-            <input type="text" id="name" value={name} readOnly />
-          </label>
-          <label htmlFor="surname" className="accountInput">
-            Surname:
-            <input type="text" id="surname" value={surname} readOnly />
-          </label>
-          <label htmlFor="email" className="accountInput">
-            Email:
-            <input type="text" id="email" value={email} readOnly />
-          </label>
+          {userInputsData.map((item) => (
+            <label key={item.id} htmlFor={item.id} className="accountInput">
+              <input
+                type="text"
+                id={item.id}
+                value={item.value ? item.value : 'loading...'}
+                readOnly
+              />
+            </label>
+          ))}
         </section>
         <section className="shipmentData">
           <header className="sectionTitle">
             <h2>Shipment details</h2>
           </header>
-          <label htmlFor="country" className="accountInput">
-            Country:
-            <input type="text" id="country" value={name} readOnly />
-          </label>
-          <label htmlFor="city" className="accountInput">
-            City:
-            <input type="text" id="city" value={surname} readOnly />
-          </label>
-          <label htmlFor="street" className="accountInput">
-            Street:
-            <input type="text" id="street" value={email} readOnly />
-          </label>
-          <label htmlFor="house_number" className="accountInput">
-            House number:
-            <input type="text" id="house_number" value={surname} readOnly />
-          </label>
-          <label htmlFor="phone_number" className="accountInput">
-            Phone number:
-            <input type="text" id="phone_number" value={email} readOnly />
-          </label>
+          {userShipmentInputsData.map((item) => (
+            <label key={item.id} htmlFor={item.id} className="accountInput">
+              <input
+                type="text"
+                id={item.id}
+                value={item.value ? item.value : 'loading...'}
+                readOnly
+              />
+            </label>
+          ))}
         </section>
       </div>
     </article>

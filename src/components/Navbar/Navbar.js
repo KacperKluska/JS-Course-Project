@@ -4,16 +4,15 @@ import NavItem from '../NavItem/NavItem';
 import './style.scss';
 
 export const navItems = [
-  { label: 'For him' },
-  { label: 'For her' },
-  { label: 'Kids' },
-  { label: 'About', ref: React.createRef() },
-  { label: 'Contact', ref: React.createRef() },
+  { label: 'For him', isDisabled: false },
+  { label: 'For her', isDisabled: true },
+  { label: 'Kids', isDisabled: true },
+  { label: 'About', isDisabled: false, ref: React.createRef() },
+  { label: 'Contact', isDisabled: false, ref: React.createRef() },
 ];
 
 export default function Navbar() {
   const scrollToElement = (ref) => {
-    console.log('🚀 ~ file: Navbar.js ~ line 16 ~ scrollToElement ~ ref', ref);
     setTimeout(() => {
       if (ref && ref.current) {
         const offset = ref.current.offsetTop;
@@ -27,7 +26,11 @@ export default function Navbar() {
       <div className="secondNavbar">
         <ul className="thirdList">
           {navItems.map((item) => (
-            <NavItem key={item.label} onClick={() => scrollToElement(item.ref)}>
+            <NavItem
+              key={item.label}
+              isDisabled={item.isDisabled}
+              onClick={() => scrollToElement(item.ref)}
+            >
               {item.ref ? (
                 <Link className="navbarLink" to="/">
                   {item.label}

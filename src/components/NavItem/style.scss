@@ -12,6 +12,10 @@
   height: 100%;
 }
 
+.navItemButton.disabled {
+  color: gray;
+}
+
 @media (max-width: 550px) {
   .navItem {
     padding: 0.5rem;

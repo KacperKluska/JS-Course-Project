@@ -8,7 +8,8 @@ exports[`Search snapshot, different snap test 1`] = `
     className="navItem"
   >
     <button
-      className="navItemButton"
+      className="navItemButton false"
+      disabled={false}
       type="button"
     >
       <i
@@ -33,7 +34,8 @@ exports[`Search snapshot, different snap test 2`] = `
     className="navItem"
   >
     <button
-      className="navItemButton"
+      className="navItemButton false"
+      disabled={false}
       type="button"
     >
       <i
@@ -75,7 +77,7 @@ exports[`Search snapshot, different snap test 4`] = `
     class="navItem"
   >
     <button
-      class="navItemButton"
+      class="navItemButton false"
       type="button"
     >
       <i

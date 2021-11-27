@@ -25,7 +25,8 @@ exports[`layout snapshot 1`] = `
               className="navItem"
             >
               <button
-                className="navItemButton"
+                className="navItemButton false"
+                disabled={false}
                 onClick={[Function]}
                 type="button"
               >
@@ -45,7 +46,8 @@ exports[`layout snapshot 1`] = `
               className="navItem"
             >
               <button
-                className="navItemButton"
+                className="navItemButton false"
+                disabled={false}
                 onClick={[Function]}
                 type="button"
               >
@@ -58,7 +60,8 @@ exports[`layout snapshot 1`] = `
             className="navItem"
           >
             <button
-              className="navItemButton"
+              className="navItemButton false"
+              disabled={false}
               onClick={[Function]}
               type="button"
             >
@@ -107,7 +110,8 @@ exports[`layout snapshot 1`] = `
           className="navItem"
         >
           <button
-            className="navItemButton"
+            className="navItemButton disabled"
+            disabled={true}
             type="button"
           >
             <i
@@ -120,7 +124,8 @@ exports[`layout snapshot 1`] = `
           className="navItem"
         >
           <button
-            className="navItemButton"
+            className="navItemButton disabled"
+            disabled={true}
             type="button"
           >
             <i
@@ -145,7 +150,8 @@ exports[`layout snapshot 1`] = `
           className="navItem"
         >
           <button
-            className="navItemButton"
+            className="navItemButton false"
+            disabled={false}
             onClick={[Function]}
             type="button"
           >
@@ -157,7 +163,8 @@ exports[`layout snapshot 1`] = `
           className="navItem"
         >
           <button
-            className="navItemButton"
+            className="navItemButton disabled"
+            disabled={true}
             onClick={[Function]}
             type="button"
           >
@@ -169,7 +176,8 @@ exports[`layout snapshot 1`] = `
           className="navItem"
         >
           <button
-            className="navItemButton"
+            className="navItemButton disabled"
+            disabled={true}
             onClick={[Function]}
             type="button"
           >
@@ -181,7 +189,8 @@ exports[`layout snapshot 1`] = `
           className="navItem"
         >
           <button
-            className="navItemButton"
+            className="navItemButton false"
+            disabled={false}
             onClick={[Function]}
             type="button"
           >
@@ -199,7 +208,8 @@ exports[`layout snapshot 1`] = `
           className="navItem"
         >
           <button
-            className="navItemButton"
+            className="navItemButton false"
+            disabled={false}
             onClick={[Function]}
             type="button"
           >
@@ -224,7 +234,8 @@ exports[`layout snapshot 1`] = `
       className="navItem"
     >
       <button
-        className="navItemButton"
+        className="navItemButton false"
+        disabled={false}
         onClick={[Function]}
         type="button"
       >

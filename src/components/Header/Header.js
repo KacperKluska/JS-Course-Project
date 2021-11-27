@@ -5,11 +5,12 @@ import OutsideAlerter from '../OutsideClick/OutsideAlerter';
 import HamburgerButton from '../HamburgerButton/HamburgerButton';
 import CustomLink from '../CustomLink/CustomLink';
 import { UserContext } from '../../context/UserContext';
+import { logoutUser } from '../../services/requests';
 
 export default function Header({ searchRef, searchVisible, setSearchVisible }) {
   const [leftMenu, setLeftMenu] = useState('');
   const { isLogged } = useContext(UserContext);
-  const [userLogged] = isLogged;
+  const [userLogged, setUserLogged] = isLogged;
 
   const handleLeftMenuShow = () => {
     setLeftMenu('active');
@@ -25,6 +26,12 @@ export default function Header({ searchRef, searchVisible, setSearchVisible }) {
       }
       return '';
     });
+  };
+
+  const logOut = () => {
+    handleLeftMenuClose();
+    setUserLogged(false);
+    logoutUser();
   };
 
   const handleSearch = () => {
@@ -75,6 +82,17 @@ export default function Header({ searchRef, searchVisible, setSearchVisible }) {
                 </NavItem>
               </CustomLink>
             )}
+            {userLogged && (
+              <CustomLink path="/">
+                <NavItem
+                  onClick={() => {
+                    logOut();
+                  }}
+                >
+                  Log out
+                </NavItem>
+              </CustomLink>
+            )}
             <NavItem
               icon={searchVisible === 'active' ? 'icon-cancel' : 'icon-search'}
               onClick={() => {
@@ -93,8 +111,12 @@ export default function Header({ searchRef, searchVisible, setSearchVisible }) {
           <h1 id="logo">SuitUp</h1>
         </CustomLink>
         <ul id="rightNav">
-          <NavItem icon="icon-gift">Gift Certificate</NavItem>
-          <NavItem icon="icon-basket">Cart</NavItem>
+          <NavItem isDisabled icon="icon-gift">
+            Gift Certificate
+          </NavItem>
+          <NavItem isDisabled icon="icon-basket">
+            Cart
+          </NavItem>
         </ul>
       </nav>
     </header>

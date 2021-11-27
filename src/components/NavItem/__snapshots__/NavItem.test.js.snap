@@ -5,7 +5,8 @@ exports[`NavItem snapshot 1`] = `
   className="navItem"
 >
   <button
-    className="navItemButton"
+    className="navItemButton false"
+    disabled={false}
     type="button"
   >
     <i

@@ -1,23 +1,21 @@
 import React from 'react';
+import { refreshToken, verifyUser } from '../services/requests';
 
 export const UserContext = React.createContext('');
 
 export const UserContextProvider = ({ children }) => {
-  const [id, setId] = React.useState('');
   const [userLogged, setUserLogged] = React.useState(false);
 
   React.useEffect(async () => {
     try {
-      const response = await fetch('http://localhost:3001/verify_user', {
-        credentials: 'include',
-      });
-      if (response.status === 200) {
-        const data = await response.json();
-        setId(data.id);
-        console.log(data.id);
-      } else {
-        setId('');
-        setUserLogged(false);
+      const { status } = await refreshToken();
+      if (status === 200) {
+        const response = await verifyUser();
+        if (response.status === 200) {
+          setUserLogged(true);
+        } else {
+          setUserLogged(false);
+        }
       }
     } catch (err) {
       console.error(err);
@@ -25,9 +23,7 @@ export const UserContextProvider = ({ children }) => {
   }, [userLogged]);
 
   return (
-    <UserContext.Provider
-      value={{ userId: [id, setId], isLogged: [userLogged, setUserLogged] }}
-    >
+    <UserContext.Provider value={{ isLogged: [userLogged, setUserLogged] }}>
       {children}
     </UserContext.Provider>
   );
