@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import NavbarDropdown from '../NavbarDropdown/NavbarDropdown';
 import NavItem from '../NavItem/NavItem';
 import './style.scss';
 
 export const navItems = [
-  { label: 'For him', isDisabled: false },
   { label: 'For her', isDisabled: true },
   { label: 'Kids', isDisabled: true },
   { label: 'About', isDisabled: false, ref: React.createRef() },
@@ -21,10 +21,13 @@ export default function Navbar() {
     }, 0);
   };
 
+  const forHimItems = [{ name: 'Suits' }, { name: 'Shoes' }];
+
   return (
     <nav className="sticky">
       <div className="secondNavbar">
         <ul className="thirdList">
+          <NavbarDropdown title="For him" items={forHimItems} />
           {navItems.map((item) => (
             <NavItem
               key={item.label}
