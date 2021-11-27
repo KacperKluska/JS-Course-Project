@@ -14,7 +14,7 @@ export default function MainPage() {
       <div className="mainPhoto">
         <img src={mainPhoto} alt="Barney Stinson" />
       </div>
-      <InfoText title="About" scrollRef={navItems[3].ref}>
+      <InfoText title="About" scrollRef={navItems[2].ref}>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo velit
           nulla eius ducimus quia suscipit minus consectetur eaque, in iusto
@@ -73,7 +73,7 @@ export default function MainPage() {
           </div>
         </div>
       </div>
-      <InfoText title="Contact" scrollRef={navItems[4].ref}>
+      <InfoText title="Contact" scrollRef={navItems[3].ref}>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero
           quisquam omnis fugit hic, nobis eum sit natus ipsum voluptas
