@@ -8,7 +8,7 @@ function NavbarDropdown({ title, items }) {
       <div className="navDropdownTitle">{title}</div>
       <ul className="navDropdownList">
         {items.map((item) => (
-          <Link key={item.name} to="/account">
+          <Link key={item.name} to="/products">
             <li className="navDropdownItem">{item.name}</li>
           </Link>
         ))}
