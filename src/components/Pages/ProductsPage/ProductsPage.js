@@ -13,6 +13,13 @@ function ProductsPage() {
     setLoading(false);
   }, []);
 
+  /**
+   * TODO
+   * check if products is an empty array
+   * if so print "Couldn't find proper products"
+   * correct line 30 and 35
+   */
+
   return (
     <article className="emptyScreen">
       <ProductFilters />
@@ -25,8 +32,9 @@ function ProductsPage() {
         )}
         {!loading && (
           <section className="productsList">
-            {products.data.map((product) => (
-              <div className="productCard" key={product.name}>
+            {products.data.map((product, index) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <div className="productCard" key={`${product.name}_${index}`}>
                 <div className="productCardImage">img here</div>
                 <div className="productCardDescription">
                   <h3>{product.name}</h3>
