@@ -117,3 +117,15 @@ export async function getAllProducts() {
     return { data: { err }, status: 400 };
   }
 }
+
+export async function getAllProductsFilters() {
+  try {
+    const response = await fetch(`${API_HOST}/products/filters`, {
+      credentials: 'include',
+    });
+    const data = await response.json();
+    return { data, status: response.status };
+  } catch (err) {
+    return { data: { err }, status: 400 };
+  }
+}
