@@ -12,6 +12,13 @@ function ProductsPage() {
   const [loading, setLoading] = useState(true);
   const [products, setProducts] = useState([]);
   const [filtersArrays, setFiltersArrays] = useState([]);
+  const [filtersValues, setFiltersValues] = useState({
+    pattern: null,
+    color: null,
+    figure: null,
+    type: null,
+    category: null,
+  });
 
   useEffect(async () => {
     setLoading(true);
@@ -27,7 +34,13 @@ function ProductsPage() {
   return (
     <article className="emptyScreen">
       {loading && <LoadingPage />}
-      {!loading && <ProductFilters filtersArrays={filtersArrays} />}
+      {!loading && (
+        <ProductFilters
+          filtersArrays={filtersArrays}
+          filtersValues={filtersValues}
+          setFiltersValues={setFiltersValues}
+        />
+      )}
       {!loading && <ProductsList products={products} />}
     </article>
   );

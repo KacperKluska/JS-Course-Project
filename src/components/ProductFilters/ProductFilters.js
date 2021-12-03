@@ -2,15 +2,8 @@ import './style.scss';
 import { useState } from 'react';
 import { filters, handleListShow, handleFilterValue } from './logic';
 
-function ProductFilters({ filtersArrays }) {
+function ProductFilters({ filtersArrays, filtersValues, setFiltersValues }) {
   const [selectedFilter, setSelectedFilter] = useState({});
-  const [filtersValues, setFiltersValues] = useState({
-    pattern: null,
-    color: null,
-    figure: null,
-    type: null,
-    category: null,
-  });
 
   return (
     <section className="productFilters">
