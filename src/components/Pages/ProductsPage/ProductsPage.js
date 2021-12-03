@@ -6,6 +6,7 @@ import {
 } from '../../../services/requests';
 import ProductFilters from '../../ProductFilters/ProductFilters';
 import ProductsList from '../../ProductsList/ProductsList';
+import LoadingPage from '../LoadingPage/LoadingPage';
 
 function ProductsPage() {
   const [loading, setLoading] = useState(true);
@@ -25,6 +26,7 @@ function ProductsPage() {
 
   return (
     <article className="emptyScreen">
+      {loading && <LoadingPage />}
       {!loading && <ProductFilters filtersArrays={filtersArrays} />}
       {!loading && <ProductsList products={products} />}
     </article>
