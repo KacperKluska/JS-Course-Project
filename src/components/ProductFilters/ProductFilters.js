@@ -1,4 +1,3 @@
-/* eslint-disable prefer-destructuring */
 import './style.scss';
 import React, { useState, useEffect } from 'react';
 import { getAllProductsFilters } from '../../services/requests';
@@ -8,6 +7,14 @@ function ProductFilters() {
   const [loading, setLoading] = useState(true);
   const [filtersArrays, setFiltersArrays] = useState([]);
 
+  const [filtersValues, setFiltersValues] = useState({
+    pattern: null,
+    color: null,
+    figure: null,
+    type: null,
+    category: null,
+  });
+
   const filters = [
     { name: 'Pattern' },
     { name: 'Color' },
@@ -16,15 +23,9 @@ function ProductFilters() {
     { name: 'Category' },
   ];
 
-  // , setChoseValues
-
-  const [choseValues] = useState([
-    { name: null },
-    { name: null },
-    { name: null },
-    { name: null },
-    { name: null },
-  ]);
+  const handleFilterValue = (key, newValue) => {
+    setFiltersValues((prev) => ({ ...prev, [key.toLowerCase()]: newValue }));
+  };
 
   const handleListShow = (newFilter) => {
     if (
@@ -37,7 +38,7 @@ function ProductFilters() {
 
   useEffect(async () => {
     const response = await getAllProductsFilters();
-    setFiltersArrays(response.data);
+    if (response.status === 200) setFiltersArrays(response.data);
     setLoading(false);
   }, []);
 
@@ -56,9 +57,9 @@ function ProductFilters() {
               >
                 <span>
                   {filter.name}:{' '}
-                  {choseValues[index].name === null
+                  {Object.entries(filtersValues)[index][1] === null
                     ? '(select)'
-                    : choseValues[index].name}
+                    : Object.entries(filtersValues)[index][1]}
                 </span>
                 <i
                   className={`${
@@ -70,40 +71,44 @@ function ProductFilters() {
               </button>
               {selectedFilter.name === filter.name && (
                 <ul className="filtersSelectList">
-                  {filtersArrays[index].array.map((item) => (
-                    <button
-                      type="button"
-                      onClick={() => {
-                        console.log(item.value);
-                        handleListShow(filter);
-                      }}
-                      key={item.id}
-                      className="filtersSelectItem"
-                    >
-                      {item.value}
-                    </button>
-                  ))}
+                  {filtersArrays.length !== 0
+                    ? filtersArrays[index].array.map((item) => (
+                        <button
+                          type="button"
+                          onClick={() => {
+                            handleFilterValue(filter.name, item.value);
+                            handleListShow(filter);
+                          }}
+                          key={item.id}
+                          className="filtersSelectItem"
+                        >
+                          {item.value}
+                        </button>
+                      ))
+                    : null}
                 </ul>
               )}
             </div>
           </div>
         ))}
-      Price from:
-      <input
-        className="priceInput"
-        type="number"
-        step="1"
-        min="0"
-        max="10000"
-      />
-      to:
-      <input
-        className="priceInput"
-        type="number"
-        step="1"
-        min="0"
-        max="10000"
-      />
+      <div>
+        Price from:
+        <input
+          className="priceInput"
+          type="number"
+          step="1"
+          min="0"
+          max="10000"
+        />
+        to:
+        <input
+          className="priceInput"
+          type="number"
+          step="1"
+          min="0"
+          max="10000"
+        />
+      </div>
     </section>
   );
 }
