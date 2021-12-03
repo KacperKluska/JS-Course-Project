@@ -13,11 +13,11 @@ function ProductsPage() {
   const [products, setProducts] = useState([]);
   const [filtersArrays, setFiltersArrays] = useState([]);
   const [filtersValues, setFiltersValues] = useState({
+    category: null,
+    type: null,
     pattern: null,
     color: null,
     figure: null,
-    type: null,
-    category: null,
   });
 
   useEffect(async () => {

@@ -1,9 +1,9 @@
 export const filters = [
+  { name: 'Category' },
+  { name: 'Type' },
   { name: 'Pattern' },
   { name: 'Color' },
   { name: 'Figure' },
-  { name: 'Type' },
-  { name: 'Category' },
 ];
 
 export const handleFilterValue = (setFiltersValues, key, newValue) => {

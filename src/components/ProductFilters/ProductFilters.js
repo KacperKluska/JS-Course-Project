@@ -19,7 +19,7 @@ function ProductFilters({ filtersArrays, filtersValues, setFiltersValues }) {
               className="filtersSelectButton"
             >
               <span>
-                {filter.name}:{' '}
+                {`${filter.name}: `}
                 {Object.entries(filtersValues)[index][1] === null
                   ? '(select)'
                   : Object.entries(filtersValues)[index][1]}
