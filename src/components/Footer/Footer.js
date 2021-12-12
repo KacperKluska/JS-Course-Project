@@ -40,7 +40,7 @@ export default function Footer() {
           </a>
         </div>
       </div>
-      <b>Copyrigth &copy; Kacper Kluska 2021. JavaScript course</b>
+      <b>Copyright &copy; Kacper Kluska 2021. JavaScript course</b>
     </footer>
   );
 }
