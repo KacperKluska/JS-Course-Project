@@ -12,6 +12,8 @@
   color: white;
   height: 50px;
 
+  font-size: 20px !important;
+
   .thirdList {
     display: flex;
     flex-direction: row;
@@ -26,14 +28,18 @@
       justify-content: center;
       width: 100%;
       height: 100%;
-      border-right: $primary-color - #111 solid 1px;
+      border-right: $information-color solid 1px;
+
+      button {
+        font-size: 20px;
+      }
 
       &:first-child {
-        border-left: $primary-color - #111 solid 1px;
+        border-left: $information-color solid 1px;
       }
 
       &:hover {
-        background-color: $primary-color + #111;
+        background-color: $information-color;
       }
     }
   }
@@ -43,6 +49,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  color: black;
 
   width: 100%;
   height: 100%;

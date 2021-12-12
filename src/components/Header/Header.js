@@ -108,15 +108,11 @@ export default function Header({ searchRef, searchVisible, setSearchVisible }) {
       <nav id="firstNavbar">
         <HamburgerButton trigger={leftMenu} onClick={handleLeftMenuShow} />
         <CustomLink path="/">
-          <h1 id="logo">SuitUp</h1>
+          <h1 className="logo">SuitUp</h1>
         </CustomLink>
         <ul id="rightNav">
-          <NavItem isDisabled icon="icon-gift">
-            Gift Certificate
-          </NavItem>
-          <NavItem isDisabled icon="icon-basket">
-            Cart
-          </NavItem>
+          <NavItem icon="icon-gift">Gift Certificate</NavItem>
+          <NavItem icon="icon-basket">Cart</NavItem>
         </ul>
       </nav>
     </header>

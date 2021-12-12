@@ -5,8 +5,8 @@ import NavItem from '../NavItem/NavItem';
 import './style.scss';
 
 export const navItems = [
-  { label: 'For her', isDisabled: true },
-  { label: 'Kids', isDisabled: true },
+  { label: 'For her', isDisabled: false },
+  { label: 'Kids', isDisabled: false },
   { label: 'About', isDisabled: false, ref: React.createRef() },
   { label: 'Contact', isDisabled: false, ref: React.createRef() },
 ];

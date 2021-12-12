@@ -4,11 +4,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
 }
 
 html,
 body {
-  font-size: 16px;
+  font-size: 20px;
   background-color: $background-color;
 }
 
@@ -84,21 +86,25 @@ a {
 }
 
 .loginSubmitButton {
-  height: 2rem;
-  width: 100px;
+  // height: 3rem;
+  // width: 150px;
 
   background-color: $success-color;
-  border: 1px solid $success-color - #111;
+  border: none;
+  //border: 1px solid $success-color - #111;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
 
-  // margin-top: 1.5rem;
+  font-size: 20px;
+
+  padding-inline: 1.7rem;
+  padding-block: 0.8rem;
 
   &:hover {
     cursor: pointer;
-    background-color: $success-color + #111;
-    border-color: blue;
+    background-color: $information-color;
+    //border-color: blue;
   }
 }
 
@@ -117,19 +123,23 @@ a {
 }
 
 .loginInfoButton {
-  height: 2rem;
-  width: 100px;
+  padding-inline: 1.7rem;
+  padding-block: 0.8rem;
 
-  background-color: $blue-button-color;
-  border: 1px solid green;
+  background-color: $success-color;
+  //border: 1px solid green;
+  border: none;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
 
+  font-size: 20px;
+
   margin-top: 1.5rem;
 
   &:hover {
-    background-color: $blue-button-color - #111;
+    cursor: pointer;
+    background-color: $information-color;
   }
 }
 
