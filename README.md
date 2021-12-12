@@ -6,13 +6,23 @@ It is a web application for shops with suits etc. It was made for my Javascript 
 
 ## Main page
 ![image](https://user-images.githubusercontent.com/50757117/145733722-4e409d01-3cae-4699-9965-b9ddce8edc14.png)
-![image](https://user-images.githubusercontent.com/50757117/145733651-cd37d8be-c645-4d33-a32b-cee74d3bd61b.png)
+![image](https://user-images.githubusercontent.com/50757117/145734234-969eabb3-6867-42b5-bdb3-678a8b60fa77.png)
+![image](https://user-images.githubusercontent.com/50757117/145734249-e0fcfc6e-6c16-4e40-ad86-2d4334db2443.png)
 
 ## Login page
 ![image](https://user-images.githubusercontent.com/50757117/145733675-4f39e102-cf35-4f9a-94c4-6c6a041d6506.png)
 
 ## Register page
 ![image](https://user-images.githubusercontent.com/50757117/145733685-b55f9de6-f341-4afd-8423-765097c30ac8.png)
+
+## Features
+
+- login
+- register
+- checking personal data
+- edit personal data (in progress)
+- checking products list (in progress)
+- filters products list (in progress)
 
 ## Install
 
