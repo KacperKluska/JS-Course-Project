@@ -1,4 +1,4 @@
-@import "../.././_colors";
+@import '../.././_colors';
 
 .sticky {
   position: sticky;
@@ -12,6 +12,8 @@
   color: white;
   height: 50px;
 
+  font-size: 20px !important;
+
   .thirdList {
     display: flex;
     flex-direction: row;
@@ -20,30 +22,25 @@
     list-style: none;
     height: 100%;
 
-    .thirdNavbaritem {
-      font-size: 3rem;
-      border-right: 1px solid $primary-color - #111;
-    }
-
-    .thirdNavbaritem:hover {
-      background-color: $primary-color + #111;
-    }
-
-    li {
+    .navItem {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 100%;
       height: 100%;
-      border-right: $primary-color - #111 solid 1px;
-    }
+      border-right: $information-color solid 1px;
 
-    li:first-child {
-      border-left: $primary-color - #111 solid 1px;
-    }
+      button {
+        font-size: 20px;
+      }
 
-    li:hover {
-      background-color: $primary-color + #111;
+      &:first-child {
+        border-left: $information-color solid 1px;
+      }
+
+      &:hover {
+        background-color: $information-color;
+      }
     }
   }
 }
@@ -52,6 +49,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  color: black;
 
   width: 100%;
   height: 100%;

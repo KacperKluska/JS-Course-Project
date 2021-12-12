@@ -12,6 +12,7 @@ import EmailButton from '../EmailButton/EmailButton';
 import ErrorPage from '../Pages/ErrorPage/ErrorPage';
 import AccountPage from '../Pages/AccountPage/AccountPage';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
+import ProductsPage from '../Pages/ProductsPage/ProductsPage';
 
 export default function Layout() {
   const [searchVisible, setSearchVisible] = useState('none');
@@ -53,6 +54,9 @@ export default function Layout() {
             needAuth={false}
           />
           <ProtectedRoute path="/account" component={AccountPage} />
+          <Route path="/products">
+            <ProductsPage />
+          </Route>
           <Route path="*">
             <ErrorPage errorCode="404 Page not found!">
               Try to go back.

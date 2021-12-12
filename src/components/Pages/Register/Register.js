@@ -2,7 +2,7 @@ import './style.scss';
 import React from 'react';
 import { useState } from 'react/cjs/react.development';
 import CustomLink from '../../CustomLink/CustomLink';
-import Sectionlogo from '../../SectionLogo/SectionLogo';
+// import Sectionlogo from '../../SectionLogo/SectionLogo';
 import RegisterInputs from './RegisterInputs';
 import validate from './validate';
 import { register } from '../../../services/requests';
@@ -66,7 +66,7 @@ export default function Register() {
 
   return (
     <div className="emptyScreen">
-      <Sectionlogo>Sign up!</Sectionlogo>
+      {/* <Sectionlogo>Sign up!</Sectionlogo> */}
       <section className="login">
         <form className="loginForm" onSubmit={registerUser}>
           <header>

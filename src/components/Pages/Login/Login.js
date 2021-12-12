@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { useState } from 'react/cjs/react.development';
 import { useContext } from 'react';
 import CustomLink from '../../CustomLink/CustomLink';
-import Sectionlogo from '../../SectionLogo/SectionLogo';
+// import Sectionlogo from '../../SectionLogo/SectionLogo';
 import { UserContext } from '../../../context/UserContext';
 import { login } from '../../../services/requests';
 
@@ -43,7 +43,7 @@ export default function Login() {
 
   return (
     <div className="emptyScreen">
-      <Sectionlogo>Sign in!</Sectionlogo>
+      {/* <Sectionlogo>Sign in!</Sectionlogo> */}
       <section className="login">
         <form className="loginForm" onSubmit={signIn}>
           <header>

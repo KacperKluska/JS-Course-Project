@@ -1,4 +1,4 @@
-@import "../../colors.scss";
+@import '../../colors.scss';
 
 .newsletter {
   display: flex;
@@ -28,6 +28,8 @@
   color: black;
   font-size: 1rem;
 
+  border: 1px solid #352b2b;
+
   &:focus {
     border: 3px solid $blue-button-color;
   }
@@ -35,20 +37,20 @@
 
 .newsletterButton {
   height: 3rem;
-  width: 80px;
+  width: 100px;
 
   // padding: 0.5rem;
 
-  background-color: $blue-button-color;
+  background-color: $information-color;
 
-  color: white;
+  color: black;
   font-size: 1rem;
 
-  border: none;
+  border: 1px solid #352b2b;
 
   &:hover {
     cursor: pointer;
-    background-color: $blue-button-color - #222;
+    background-color: $information-color - #222;
   }
 }
 
