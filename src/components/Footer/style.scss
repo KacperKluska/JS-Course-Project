@@ -1,4 +1,4 @@
-@import "../../_colors";
+@import '../../_colors';
 
 footer {
   background-color: $primary-color;
@@ -11,7 +11,7 @@ footer {
   }
 }
 
-.footerCollumns {
+.footerColumns {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -21,7 +21,7 @@ footer {
   margin-bottom: 3rem;
 }
 
-.footerCollumn {
+.footerColumn {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

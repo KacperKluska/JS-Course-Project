@@ -4,8 +4,8 @@ import './style.scss';
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="footerCollumns">
-        <div className="footerCollumn">
+      <div className="footerColumns">
+        <div className="footerColumn">
           <b>
             <h3>Help</h3>
           </b>
@@ -13,7 +13,7 @@ export default function Footer() {
           <div>Change</div>
           <div>FAQ</div>
         </div>
-        <div className="footerCollumn">
+        <div className="footerColumn">
           <b>
             <h3>Payment and shipment</h3>
           </b>
