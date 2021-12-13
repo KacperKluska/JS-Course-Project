@@ -1,4 +1,46 @@
-@import "../../../_colors";
+@import '../../../_colors';
+
+.mainPageImage {
+  display: flex;
+  position: relative;
+}
+
+.mainPageImageText {
+  position: absolute;
+  top: 10%;
+  left: 15%;
+
+  width: 30%;
+
+  font-size: 100px;
+  font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  color: white;
+}
+
+.mainPageImageButton {
+  position: absolute;
+  top: 53%;
+  left: 15%;
+
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+
+  background-color: transparent;
+  outline: none;
+  border: 5px solid white;
+
+  padding: 1rem 2rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.image {
+  width: 100%;
+}
 
 .mainPhoto {
   display: flex;
@@ -21,99 +63,5 @@
       max-width: 100%;
       height: auto;
     }
-  }
-}
-
-.imagesDiv {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1rem;
-
-  min-height: calc(100vh - 50px);
-  width: 100%;
-
-  padding: 3rem;
-}
-
-#flexPhotos {
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3rem;
-}
-
-.photo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.photo:hover img {
-  transform: scale(1.08);
-}
-
-.photo img {
-  height: 100%;
-  transition: transform 0.5s ease-in-out;
-}
-
-.gridCollage {
-  display: grid;
-  grid-template-columns: 20% 20% 20% 40%;
-  grid-auto-rows: minmax(250px, 350px);
-  justify-items: center;
-  gap: 1rem;
-
-  width: 80%;
-}
-
-.headerImg {
-  grid-column: 1 / 4;
-  background-color: transparent;
-}
-
-.asideImg {
-  grid-column: 4;
-  grid-row: 1 / 3;
-  background-color: transparent;
-}
-
-.normalIMG {
-  grid-row: 2;
-  background-color: transparent;
-}
-
-@media (max-width: 1200px) {
-  .gridCollage {
-    grid-template-columns: 1fr;
-    grid-auto-rows: minmax(250px, 350px);
-    gap: 1rem;
-    height: auto;
-
-    width: 95%;
-  }
-
-  .headerImg {
-    display: none;
-  }
-
-  .asideImg {
-    grid-column: 1;
-    width: 100%;
-    height: auto;
-    background-color: transparent;
-  }
-
-  .normalIMG {
-    grid-column: 1;
-    grid-row: inherit;
-    background-color: transparent;
   }
 }
