@@ -6,11 +6,11 @@
 
   background-color: $primary-color;
 
-  border-inline: $information-color solid 1px;
+  border-inline: $secondary-color solid 1px;
 
   &:hover {
     cursor: pointer;
-    background-color: $information-color;
+    background-color: $secondary-color;
     .navDropdownList {
       display: flex;
     }
@@ -33,6 +33,7 @@
   width: 100%;
 
   background-color: $primary-color;
+  border: 1px solid $button-hover-color;
 
   list-style: none;
 }
@@ -46,16 +47,17 @@
   min-height: 50px;
 
   padding-inline: 1rem;
-  border-inline: $information-color solid 1px;
+  border-inline: $secondary-color solid 1px;
 
   background-color: transparent;
-  border-top: $information-color solid 1px;
+  border: none;
+  border-top: $secondary-color solid 1px;
 
   &:hover {
-    background-color: $information-color;
+    background-color: $secondary-color;
   }
 
   &:last-child {
-    border-bottom: $information-color solid 1px;
+    border-bottom: $secondary-color solid 1px;
   }
 }

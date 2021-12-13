@@ -9,17 +9,17 @@ export default function Footer() {
           <b>
             <h3>Help</h3>
           </b>
-          <div>Returns</div>
-          <div>Change</div>
-          <div>FAQ</div>
+          <div className="footerColumnItem">Returns</div>
+          <div className="footerColumnItem">Change</div>
+          <div className="footerColumnItem">FAQ</div>
         </div>
         <div className="footerColumn">
           <b>
             <h3>Payment and shipment</h3>
           </b>
 
-          <div>Payment forms</div>
-          <div>Shipment forms</div>
+          <div className="footerColumnItem">Payment forms</div>
+          <div className="footerColumnItem">Shipment forms</div>
         </div>
         <Newsletter />
       </div>

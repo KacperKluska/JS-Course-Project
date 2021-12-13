@@ -8,7 +8,7 @@
   background-color: $primary-color;
   color: white;
 
-  border-bottom: $information-color solid 1px;
+  border-bottom: $secondary-color solid 1px;
   height: 80px;
 
   position: relative;
@@ -63,7 +63,7 @@
   }
 
   li:hover {
-    background-color: $information-color;
+    background-color: $secondary-color;
   }
 }
 

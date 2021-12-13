@@ -1,18 +1,20 @@
 .navItem {
-  //color: white;
   cursor: pointer;
   font-size: 20px;
 }
 
 .navItemButton {
   background-color: transparent;
-  //color: white;
   border: none;
   cursor: pointer;
   width: 100%;
   height: 100%;
 
   font-size: 16px;
+
+  i {
+    font-size: 20px;
+  }
 
   a {
     font-size: 20px;
