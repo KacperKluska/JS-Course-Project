@@ -1,6 +1,5 @@
 import './style.scss';
 import InfoText from '../../InfoText/InfoText';
-import mainPhoto from '../../../images/barney5.jpg';
 import headerPhoto from '../../../images/barney6.jpg';
 import asidePhoto from '../../../images/barney3.jpg';
 import suit1 from '../../../images/suit4.jpg';
@@ -12,7 +11,10 @@ export default function MainPage() {
   return (
     <div>
       <div className="mainPhoto">
-        <img src={mainPhoto} alt="Barney Stinson" />
+        <img
+          src="http://localhost:3001/get/image/main_image.jpg"
+          alt="Barney Stinson"
+        />
       </div>
       <div className="imagesDiv">
         <h1 className="title">
