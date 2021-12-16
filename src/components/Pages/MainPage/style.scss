@@ -5,13 +5,14 @@
   position: relative;
 }
 
-.mainPageImageText {
+.mainPageImageCaption {
   position: absolute;
   top: 10%;
   left: 15%;
-
   width: 30%;
+}
 
+.mainPageImageText {
   font-size: 100px;
   font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: bold;
@@ -19,10 +20,6 @@
 }
 
 .mainPageImageButton {
-  position: absolute;
-  top: 53%;
-  left: 15%;
-
   font-size: 40px;
   font-weight: bold;
   color: white;
@@ -32,6 +29,7 @@
   border: 5px solid white;
 
   padding: 1rem 2rem;
+  margin-top: 20px;
 
   transition: all 0.3s;
 
@@ -60,6 +58,17 @@
   }
 }
 
+@media (max-width: 1300px) {
+  .mainPageImageCaption {
+    top: 5%;
+    left: 5%;
+    width: 40%;
+  }
+  .mainPageImageText {
+    font-size: 80px;
+  }
+}
+
 @media (max-width: 1000px) {
   .mainPhoto {
     height: auto;
@@ -68,5 +77,39 @@
       max-width: 100%;
       height: auto;
     }
+  }
+}
+
+@media (max-width: 900px) {
+  .mainPageImageCaption {
+    top: 3%;
+    left: 3%;
+    width: 40%;
+  }
+  .mainPageImageText {
+    font-size: 50px;
+  }
+  .mainPageImageButton {
+    font-size: 20px;
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .mainPageImageCaption {
+    top: 2%;
+    left: 2%;
+    width: 50%;
+  }
+  .mainPageImageText {
+    font-size: 30px;
+  }
+  .mainPageImageButton {
+    font-size: 16px;
+
+    padding: 0.3rem 1rem;
+    margin-top: 0.3rem;
+
+    border: 2px solid white;
   }
 }

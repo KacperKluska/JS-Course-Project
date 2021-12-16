@@ -19,10 +19,12 @@ export default function MainPage() {
           src="http://localhost:3001/get/image/main_page_suit_1.jpg"
           alt="hi"
         />
-        <div className="mainPageImageText">Winter collection 50% on sale</div>
-        <button className="mainPageImageButton" type="button">
-          Show
-        </button>
+        <div className="mainPageImageCaption">
+          <div className="mainPageImageText">Winter collection 50% on sale</div>
+          <button className="mainPageImageButton" type="button">
+            Show
+          </button>
+        </div>
       </section>
       <InfoText title="About Us" scrollRef={navItems[2].ref}>
         <p>
