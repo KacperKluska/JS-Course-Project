@@ -33,8 +33,13 @@
 
   padding: 1rem 2rem;
 
+  transition: all 0.3s;
+
   &:hover {
     cursor: pointer;
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
   }
 }
 
