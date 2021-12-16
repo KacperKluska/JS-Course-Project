@@ -26,6 +26,7 @@ export default function MainPage() {
           </button>
         </div>
       </section>
+
       <InfoText title="About Us" scrollRef={navItems[2].ref}>
         <div>
           <p>
@@ -39,6 +40,29 @@ export default function MainPage() {
           </p>
         </div>
       </InfoText>
+      <section className="mainPageImage2">
+        <div className="gridItem">
+          <img
+            className="gridImage gridItem1"
+            src="http://localhost:3001/get/image/woman_suit_1.jpg"
+            alt="hi"
+          />
+        </div>
+        <div className="gridItem gridItem2">
+          <img
+            className="gridImage"
+            src="http://localhost:3001/get/image/woman_suit_2.jpg"
+            alt="hi"
+          />
+        </div>
+        <div className="gridItem gridItem3">
+          <img
+            className="gridImage"
+            src="http://localhost:3001/get/image/woman_suit_3.jpg"
+            alt="hi"
+          />
+        </div>
+      </section>
     </div>
   );
 }

@@ -58,14 +58,76 @@
   }
 }
 
+.mainPageImage2 {
+  display: grid;
+  grid-template-areas: 'left center right';
+
+  position: relative;
+  width: 100%;
+  min-height: 10vh;
+
+  overflow: hidden;
+}
+
+.mainPageImage2::after {
+  content: 'Check new women collection';
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 2px;
+
+  width: 100%;
+
+  margin-top: 1.4rem;
+
+  background-color: transparent;
+}
+
+.gridItem {
+  display: flex;
+  width: auto;
+}
+
+.gridItem1 {
+  grid-area: left;
+}
+
+.gridItem2 {
+  grid-area: center;
+}
+
+.gridItem3 {
+  grid-area: right;
+}
+
+.gridImage {
+  width: 100%;
+}
+
 @media (max-width: 1300px) {
   .mainPageImageCaption {
     top: 5%;
     left: 5%;
     width: 40%;
   }
+
   .mainPageImageText {
     font-size: 80px;
+  }
+
+  .mainPageImage2::after {
+    margin-top: 0.4rem;
+
+    font-size: 70px;
+    letter-spacing: 0px;
   }
 }
 
@@ -86,12 +148,22 @@
     left: 3%;
     width: 40%;
   }
+
+  .mainPageImage2::after {
+    content: none;
+  }
+
   .mainPageImageText {
     font-size: 50px;
   }
+
   .mainPageImageButton {
     font-size: 20px;
     padding: 0.5rem 1.5rem;
+  }
+
+  .mainPageImage2 {
+    grid-template-areas: 'left' 'center' 'right';
   }
 }
 
@@ -101,9 +173,11 @@
     left: 2%;
     width: 50%;
   }
+
   .mainPageImageText {
     font-size: 30px;
   }
+
   .mainPageImageButton {
     font-size: 16px;
 
