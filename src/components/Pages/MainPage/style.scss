@@ -149,10 +149,6 @@
     width: 40%;
   }
 
-  .mainPageImage2::after {
-    content: none;
-  }
-
   .mainPageImageText {
     font-size: 50px;
   }
@@ -164,6 +160,19 @@
 
   .mainPageImage2 {
     grid-template-areas: 'left' 'center' 'right';
+  }
+
+  .mainPageImage2::after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 30px;
+
+    margin-top: 0rem;
+    padding: 0.3rem;
+
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 
