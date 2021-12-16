@@ -27,15 +27,17 @@ export default function MainPage() {
         </div>
       </section>
       <InfoText title="About Us" scrollRef={navItems[2].ref}>
-        <p>
-          <b>SuitUp</b> is an online store with formal clothes for men, women
-          and kids. You can shop the latest trends in fashion suits, sweaters,
-          boots and more.
+        <div>
+          <p>
+            <b>SuitUp</b> is an online store with formal clothes for men, women
+            and kids. You can shop the latest trends in fashion suits, sweaters,
+            boots and more.
+          </p>
           <p>
             We are online 24/7 at <u>SuitUp.com</u> and you can come and visit
             our local store and chose you dream suit with a specialist.
           </p>
-        </p>
+        </div>
       </InfoText>
     </div>
   );

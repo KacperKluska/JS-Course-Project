@@ -12,7 +12,7 @@ function ShipmentBonuses() {
   return (
     <section className="shipmentBonuses">
       {bonuses.map((item) => (
-        <div className="shipmentBonusesItem">
+        <div key={item.name} className="shipmentBonusesItem">
           <img src={`${source}${item.name}.png`} alt="img" />
           <span>{item.message}</span>
         </div>

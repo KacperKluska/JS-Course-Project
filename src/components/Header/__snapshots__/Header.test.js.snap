@@ -97,7 +97,7 @@ exports[`Header snapshot 1`] = `
       onClick={[Function]}
     >
       <h1
-        id="logo"
+        className="logo"
       >
         SuitUp
       </h1>
@@ -109,8 +109,8 @@ exports[`Header snapshot 1`] = `
         className="navItem"
       >
         <button
-          className="navItemButton disabled"
-          disabled={true}
+          className="navItemButton false"
+          disabled={false}
           type="button"
         >
           <i
@@ -123,8 +123,8 @@ exports[`Header snapshot 1`] = `
         className="navItem"
       >
         <button
-          className="navItemButton disabled"
-          disabled={true}
+          className="navItemButton false"
+          disabled={false}
           type="button"
         >
           <i

@@ -5,38 +5,48 @@ exports[`footer text snapshot 1`] = `
   className="footer"
 >
   <div
-    className="footerCollumns"
+    className="footerColumns"
   >
     <div
-      className="footerCollumn"
+      className="footerColumn"
     >
       <b>
         <h3>
           Help
         </h3>
       </b>
-      <div>
+      <div
+        className="footerColumnItem"
+      >
         Returns
       </div>
-      <div>
+      <div
+        className="footerColumnItem"
+      >
         Change
       </div>
-      <div>
+      <div
+        className="footerColumnItem"
+      >
         FAQ
       </div>
     </div>
     <div
-      className="footerCollumn"
+      className="footerColumn"
     >
       <b>
         <h3>
           Payment and shipment
         </h3>
       </b>
-      <div>
+      <div
+        className="footerColumnItem"
+      >
         Payment forms
       </div>
-      <div>
+      <div
+        className="footerColumnItem"
+      >
         Shipment forms
       </div>
     </div>
@@ -120,7 +130,7 @@ exports[`footer text snapshot 1`] = `
     </div>
   </div>
   <b>
-    Copyrigth © Kacper Kluska 2021. JavaScript course
+    Copyright © Kacper Kluska 2021. JavaScript course
   </b>
 </footer>
 `;
