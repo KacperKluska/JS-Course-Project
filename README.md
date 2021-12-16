@@ -17,14 +17,15 @@ It is a web application for shops with suits etc. It was made for my Javascript 
 ## Main page
 ![image](https://user-images.githubusercontent.com/50757117/145733722-4e409d01-3cae-4699-9965-b9ddce8edc14.png)
 ![image](https://user-images.githubusercontent.com/50757117/145902924-562ce7d6-e150-4966-94b5-c9e26e0623f2.png)
-![image](https://user-images.githubusercontent.com/50757117/145734234-969eabb3-6867-42b5-bdb3-678a8b60fa77.png)
-![image](https://user-images.githubusercontent.com/50757117/145734249-e0fcfc6e-6c16-4e40-ad86-2d4334db2443.png)
+![image](https://user-images.githubusercontent.com/50757117/146457798-4c53891b-5b8a-4c1b-8071-0786a82fa660.png)
+![image](https://user-images.githubusercontent.com/50757117/146457698-164e3ed0-2e92-4b7b-b29b-7a00b4a52f5a.png)
 
 ## Login page
 ![image](https://user-images.githubusercontent.com/50757117/145733675-4f39e102-cf35-4f9a-94c4-6c6a041d6506.png)
 
 ## Register page
-![image](https://user-images.githubusercontent.com/50757117/145733685-b55f9de6-f341-4afd-8423-765097c30ac8.png)
+![image](https://user-images.githubusercontent.com/50757117/146457925-513b54bf-621f-40b5-b05b-a876ac7375e6.png)
+
 ## Install
 
 To run this project download and open it. Write `npm i` to install packages and then `npm start` to run the app.
