@@ -19,22 +19,50 @@ export default function MainPage() {
           src="http://localhost:3001/get/image/main_page_suit_1.jpg"
           alt="hi"
         />
-        <div className="mainPageImageText">Winter collection 50% on sale</div>
-        <button className="mainPageImageButton" type="button">
-          Show
-        </button>
+        <div className="mainPageImageCaption">
+          <div className="mainPageImageText">Winter collection 50% on sale</div>
+          <button className="mainPageImageButton" type="button">
+            Show
+          </button>
+        </div>
       </section>
+
       <InfoText title="About Us" scrollRef={navItems[2].ref}>
-        <p>
-          <b>SuitUp</b> is an online store with formal clothes for men, women
-          and kids. You can shop the latest trends in fashion suits, sweaters,
-          boots and more.
+        <div>
+          <p>
+            <b>SuitUp</b> is an online store with formal clothes for men, women
+            and kids. You can shop the latest trends in fashion suits, sweaters,
+            boots and more.
+          </p>
           <p>
             We are online 24/7 at <u>SuitUp.com</u> and you can come and visit
             our local store and chose you dream suit with a specialist.
           </p>
-        </p>
+        </div>
       </InfoText>
+      <section className="mainPageImage2">
+        <div className="gridItem">
+          <img
+            className="gridImage gridItem1"
+            src="http://localhost:3001/get/image/woman_suit_1.jpg"
+            alt="hi"
+          />
+        </div>
+        <div className="gridItem gridItem2">
+          <img
+            className="gridImage"
+            src="http://localhost:3001/get/image/woman_suit_2.jpg"
+            alt="hi"
+          />
+        </div>
+        <div className="gridItem gridItem3">
+          <img
+            className="gridImage"
+            src="http://localhost:3001/get/image/woman_suit_3.jpg"
+            alt="hi"
+          />
+        </div>
+      </section>
     </div>
   );
 }

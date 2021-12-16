@@ -5,13 +5,14 @@
   position: relative;
 }
 
-.mainPageImageText {
+.mainPageImageCaption {
   position: absolute;
   top: 10%;
   left: 15%;
-
   width: 30%;
+}
 
+.mainPageImageText {
   font-size: 100px;
   font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: bold;
@@ -19,10 +20,6 @@
 }
 
 .mainPageImageButton {
-  position: absolute;
-  top: 53%;
-  left: 15%;
-
   font-size: 40px;
   font-weight: bold;
   color: white;
@@ -32,9 +29,15 @@
   border: 5px solid white;
 
   padding: 1rem 2rem;
+  margin-top: 20px;
+
+  transition: all 0.3s;
 
   &:hover {
     cursor: pointer;
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
   }
 }
 
@@ -55,6 +58,79 @@
   }
 }
 
+.mainPageImage2 {
+  display: grid;
+  grid-template-areas: 'left center right';
+
+  position: relative;
+  width: 100%;
+  min-height: 10vh;
+
+  overflow: hidden;
+}
+
+.mainPageImage2::after {
+  content: 'Check new women collection';
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 2px;
+
+  width: 100%;
+
+  margin-top: 1.4rem;
+
+  background-color: transparent;
+}
+
+.gridItem {
+  display: flex;
+  width: auto;
+}
+
+.gridItem1 {
+  grid-area: left;
+}
+
+.gridItem2 {
+  grid-area: center;
+}
+
+.gridItem3 {
+  grid-area: right;
+}
+
+.gridImage {
+  width: 100%;
+}
+
+@media (max-width: 1300px) {
+  .mainPageImageCaption {
+    top: 5%;
+    left: 5%;
+    width: 40%;
+  }
+
+  .mainPageImageText {
+    font-size: 80px;
+  }
+
+  .mainPageImage2::after {
+    margin-top: 0.4rem;
+
+    font-size: 70px;
+    letter-spacing: 0px;
+  }
+}
+
 @media (max-width: 1000px) {
   .mainPhoto {
     height: auto;
@@ -63,5 +139,60 @@
       max-width: 100%;
       height: auto;
     }
+  }
+}
+
+@media (max-width: 900px) {
+  .mainPageImageCaption {
+    top: 3%;
+    left: 3%;
+    width: 40%;
+  }
+
+  .mainPageImageText {
+    font-size: 50px;
+  }
+
+  .mainPageImageButton {
+    font-size: 20px;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .mainPageImage2 {
+    grid-template-areas: 'left' 'center' 'right';
+  }
+
+  .mainPageImage2::after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 30px;
+
+    margin-top: 0rem;
+    padding: 0.3rem;
+
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (max-width: 600px) {
+  .mainPageImageCaption {
+    top: 2%;
+    left: 2%;
+    width: 50%;
+  }
+
+  .mainPageImageText {
+    font-size: 30px;
+  }
+
+  .mainPageImageButton {
+    font-size: 16px;
+
+    padding: 0.3rem 1rem;
+    margin-top: 0.3rem;
+
+    border: 2px solid white;
   }
 }

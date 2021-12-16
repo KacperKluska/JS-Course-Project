@@ -4,10 +4,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
 
   width: 100%;
-  height: 200px;
+  min-height: 200px;
 
   background-color: $secondary_color;
 }
@@ -18,4 +19,18 @@
   align-items: center;
 
   gap: 1rem;
+  margin: 2rem;
+}
+
+@media (max-width: 900px) {
+  .shipmentBonuses {
+    img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  .shipmentBonusesItem {
+    margin: 1rem;
+  }
 }
