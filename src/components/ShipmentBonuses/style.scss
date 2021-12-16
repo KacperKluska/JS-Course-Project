@@ -21,3 +21,16 @@
   gap: 1rem;
   margin: 2rem;
 }
+
+@media (max-width: 900px) {
+  .shipmentBonuses {
+    img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  .shipmentBonusesItem {
+    margin: 1rem;
+  }
+}
